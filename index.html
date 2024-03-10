@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="'stylesheet" href="styles/utility.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/inventory.css">
+    <link rel="stylesheet" href="styles/battle.css">
+    <link rel="stylesheet" href="styles/map.css">
+    <link rel="stylesheet" href="styles/enemyStyles.css">
+    <link rel="stylesheet" href="styles/familiarStyles.css">
+    <link rel="stylesheet" href="styles/harvest.css">
+    <link rel="stylesheet" href="styles/pickClass.css">
+    <link rel="stylesheet" href="styles/playerStatistics.css">
+    <link rel="stylesheet" href="styles/rollContainer.css">
+    <link rel="stylesheet" href="styles/divMenu.css">
+    <link rel="stylesheet" href="styles/equip.css">
+    <link rel="stylesheet" href="styles/merchant.css">
+    <link rel="stylesheet" href="styles/building.css">
+    <link rel="stylesheet" href="styles/farming.css">
+    <link rel="stylesheet" href="styles/houses.css">
+    <title>webRPG</title>
+</head>
+
+<body>
+
+<div class="instructions-to-game-page hide">
+    <div class="instruction-container">
+        <!-- make this text align center -->
+        <h1 id="text-instructions">Instructions</h1>
+        <p id="text-instructions">You must first go to the map and click on one of the world tiles. This will bring you into a battle.</p>
+        <p id="text-instructions">In this battle, you can use Attack, Defend, 3 types of special attack, use a mana potion, a healing potion, or switch to your familiar.</p>
+        <p id="text-instructions">Through battle you will earn gold that you can use to start production, buy weapons and armor, or use to buy houses.</p>
+        <p id="text-instructions">Houses give you population to spend on elemental essences to purchase familiars.</p>
+        <p id="text-instructions">You can use the buy items from the merchant, which will go into your inventory.</p>
+        <p id="text-instructions">From the inventory, you can choose to equip items. You can go to the equip tab to see equipped items and unequip them.</p>
+        <p id="text-instructions">You will gain levels and your attributes will increase with each battle.</p>
+        <p id="text-instructions">To see these instructions again, you can hit the space bar at any time.</p>
+        <button class="button-done-with-instructions">Continue</button>
+    </div>
+</div>
+    
+<div class="end-of-battle-screen hide">
+    <h1 class="blue-color">Rewards</h1>
+    <div class="div-reward-container">
+        <p>You have received the following rewards for completing the battle.</p>
+        <p class="p-battle-rewards">Gold: </p>
+        <p class="p-battle-rewards">Wood: </p>
+        <p class="p-battle-rewards">Stone: </p>
+        <p class="p-battle-rewards">Lumber: </p>
+    </div>
+    <button class="button-remove-reward-screen">
+        Continue
+    </button>
+</div>
+<!-- Not finished make sure to come back to scene -->
+<div class="div-scene-container">
+   <div class="div-scene-constituents">
+    <h1 class="h1-scene">Scene Title</h1>
+    <div class="div-inside-image">
+
+    </div>
+    <div class="p-story-container">
+        <p class="p-story-info">
+            This is the information for the story
+        </p>
+    </div>
+    <button class="button-further-story">Next</button>
+   </div>
+</div>
+<!-- End of not finished scene -->
+
+
+
+<!-- Start of Instructions -->
+
+    <div class="div-instructions-container hide">
+        <h1>Instructions</h1>
+        <div class="div-instructions">
+            <p>Welcome to the webRPG</p>
+            <p>This game has crafting, buying and using familiars, a map connected to battles and rewards, farming, and building houses to get workers to harvest mana.</p>
+            <button class="button-instructions">Merchant</button>
+            <button class="button-instructions">Inventory</button>
+            <button class="button-instructions">Equipped Items</button>
+            <button class="button-instructions">Familiars</button>
+            <button class="button-instructions">Collecting</button>
+            <button class="button-instructions">Map</button>
+            <button class="button-instructions">Building</button>
+            <button class="button-instructions">Harvesting</button>
+            
+            <div class="div-instructions-textbox">
+
+                <textbox class="textbox-instructions"></textbox>
+                <p>If you need to see the instructions again, press the space bar.</p>
+                <p>To remove the instructions window press the space bar.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of Instructions -->
+
+    <!-- Start of the Menu -->
+    
+    <div class="div-menu hide">
+        <h1 class="h1-menu-item hide">Player Statistics</h1>
+        <h1 class="h1-menu-item hide">Merchant</h1>
+        <h1 class="h1-menu-item hide">Equippable</h1>
+        <h1 class="h1-menu-item hide">Inventory</h1>
+        <h1 class="h1-menu-item hide">Familiars</h1>
+        <h1 class="h1-menu-item hide">Collecting</h1>
+        <h1 class="h1-menu-item hide">Map</h1>
+        <h1 class="h1-menu-item hide">Building</h1>
+        <h1 class="h1-menu-item hide">Harvesting</h1>
+    </div>
+
+<!-- End of the Menu -->
+
+<!-- Start of the Farming  -->
+<div class="div-farming-container hide">
+    <h1>Farming</h1>
+   <h1>Essence Cost</h1>
+   
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Value</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Corn</td>
+        <td class="td-quantity-farm"></td>
+        <td class="td-value-farm"></td>
+        <td class="td-price-farm">0</td>
+         <td><button class="sell-farm-btn">Sell</button>
+        <button class="upgrade-farm-btn">Plant Corn</button></td>
+      </tr>
+      <tr>
+        <td>Carrots</td>
+        <td class="td-quantity-farm"></td>
+        <td class="td-value-farm"></td>
+        <td class="td-price-farm">0</td>
+         <td><button class="sell-farm-btn">Sell</button>
+        <button class="upgrade-farm-btn">Plant Carrots</button></td>
+      </tr>
+      <tr>
+        <td>Potatoes</td>
+        <td class="td-quantity-farm"></td>
+        <td class="td-value-farm"></td>
+        <td class="td-price-farm">0</td>
+         <td><button class="sell-farm-btn">Sell</button>
+        <button class="upgrade-farm-btn">Plant Potatoes</button></td>
+      </tr>
+      <tr>
+        <td>Chickens</td>
+        <td class="td-quantity-farm"></td>
+        <td class="td-value-farm"></td>
+        <td class="td-price-farm">0</td>
+         <td><button class="sell-farm-btn">Sell</button>
+        <button class="upgrade-farm-btn">Buy More Chickens</button></td>
+      </tr>
+      <tr>
+        <td>Cows</td>
+        <td class="td-quantity-farm"></td>
+        <td class="td-value-farm"></td>
+        <td class="td-price-farm">0</td>
+        <td><button class="sell-farm-btn">Sell</button>
+        <button class="upgrade-farm-btn">Buy more Cows</button></td>
+      </tr>
+      <tr>
+        <td>Pigs</td>
+        <td class="td-quantity-farm"></td>
+        <td class="td-value-farm"></td>
+        <td class="td-price-farm">0</td>
+         <td><button class="sell-farm-btn">Sell</button>
+        <button class="upgrade-farm-btn">Buy more Pigs</button></td>
+      </tr>
+      <tr>
+        <td>Eggs</td>
+        <td class="td-quantity-farm"></td>
+        <td class="td-value-farm"></td>
+        <td class="td-price-farm"></td>
+         <td><button class="sell-farm-btn">Sell Eggs</button>
+      </tr>
+    </tbody>
+  </table>
+
+    
+</div>
+
+
+<!-- End of the farming -->
+
+<!-- Start of the div familiar container -->
+
+    <div class="div-familiar-container hide">
+        <h1 class="blue-color">Familiars</h1>
+        <p><span id="span-essence-count">0</span></p>
+   <p><span id="span-essence-count">0</span></p>
+   <p><span id="span-essence-count">0</span></p>
+   <p><span id="span-essence-count">0</span></p>
+   <p><span id="span-essence-count">0</span></p>
+   <p><span id="span-essence-count">0</span></p>
+        <div class="option container">
+            <h1>Switch Familiar Screen</h1>
+            <button class="button-familiar-available">Available</button>
+            <button class="button-familiar-owned">Owned</button>
+        </div>
+        <h1 class="blue-color">Familiars</h1>
+        <div class="div-familiar-container-list">
+
+        </div>
+       
+        <div class="div-familiar-container-list-owned">
+            
+        </div>
+    </div>
+
+<!-- End of the code for the familiars -->
+    
+<!-- Start of the choosing class code -->
+
+    <div class="div-choose-class hide">
+
+        <div class="div-player-choice hide">
+            <h1>Priest</h1>
+            <div class="div-class-image priestProfileIMG">
+              
+            </div>
+            <div class="div-class-special-abilities">
+                <p>Special Moves:</p>
+                <p class="div-special-ability">Mace Smack. Deals 2.6 * normal damage.</p>
+                <p class="div-special-ability">Holy Light. Deals 3.6 * normal damage.</p>
+                <p class="div-special-ability">Aura of Pain. Deals 5.6 * normal damage.</p>
+                <h1 class="div-description"></h1>
+            </div>
+            <button class="button-choose-class">Choose</button>
+        </div>
+
+        <div class="div-player-choice hide">
+            <h1>Fighter</h1>
+            <div class="div-class-image fighterProfileIMG">
+             
+            </div>
+            <div class="div-class-special-abilities">
+                <p>Special Moves:</p>
+                <p class="div-special-ability">Heavy Swing. Deals 1.6 * normal damage.</p>
+                <p class="div-special-ability">Cleave. Deals 1.9 * normal damage.</p>
+                <p class="div-special-ability">Overhead Slash. Deals 2.3 * normal Damage.</p>
+                <h1 class="div-description"></h1>
+            </div>
+            <button class="button-choose-class">Choose</button>
+        </div>
+
+
+        <div class="div-player-choice hide">
+            <h1>Wizard</h1>
+            <div class="div-class-image wizardProfileIMG">
+           
+            </div>
+            <div class="div-class-special-abilities">
+                <p>Special Moves:</p>
+                <p class="div-special-ability">Cryo Orb. Deals 2.5 * normal damage</p>
+                <p class="div-special-ability">Fireball. Deals 6.5 * normal damage</p>
+                <p class="div-special-ability">Lightening Bolt. Deals 8.5 * normal damage</p>
+                <h1 class="div-description"></h1>
+            </div>
+            <button class="button-choose-class">Choose</button>
+        </div>
+
+        <div class="div-player-choice hide">
+            <h1>Assassin</h1>
+            <div class="div-class-image assassinProfileIMG">
+               
+            </div>
+            <div class="div-class-special-abilities">
+                <p>Special Moves:</p>
+                <p class="div-special-ability">Stab in Back. Deals 2.6 * normal damage.</p>
+                <p class="div-special-ability">Deals 3.6 * normal damage.</p>
+                <p class="div-special-ability">Deals 5.6 * normal damage.</p>
+                <h1 class="div-description"></h1>
+            </div>
+            <button class="button-choose-class">Choose</button>
+        </div>
+    </div>
+
+
+    <!-- End of code for picking character for start of game -->
+
+    <!-- Start of code for the dice roll -->
+    <div class="roll-die-container hide">
+        <h1>Roll Die for Statistics</h1>
+        <button class="roll-die button-roll-die">Roll</button>
+        <button class="roll-die-accept button-roll-die">Accept</button>
+        <div class="div-character-dice-roll-container">
+
+        </div>
+    </div>
+    <!-- End of code fo dice roll -->
+
+    <!-- Start of code fo merchant -->
+    <div class="div-merchant hide">
+        <h1>Welcome to the merchant</h1>
+        <h1>Player Gold: <span class="span-player-gold" id="span-player-gold">0</span></h1>
+        <h1>Player Health: <span class="span-player-health">0</span></h1>
+        <h1>Player Mana: <span class="span-player-mana">0</span></h1>
+        <div class="div-item-container">
+
+        </div>
+        </div>
+        <!-- End of Merchant code -->
+
+        <!-- Start of player inventory -->
+        <div class="div-inventory-container-container hide">
+            <h1 class="h1-inventory">Inventory</h1>
+            <div class="div-inventory-container">
+
+            </div>
+        </div>
+    <!-- End of inventory code -->
+
+    
+<!-- End of Player Statitics  -->
+
+<!-- Start of the battle overlay -->
+<div class="battle-overlay hide">
+    <div class="div-battle-container">
+<!-- Player side -->
+        <div class="div-battle-player-side">
+            <div class="div-container-player-side">
+                <div class="div-container-player-side-img">
+
+                </div>
+                <div class="div-container-player-side-stats">
+
+                </div>
+
+            </div>
+            <div class="button-controls-for-player-combat">
+                <button class="button-player-control">Attack</button>
+                <button class="button-player-control">Defend</button>
+                <button class="button-player-control">Special 1</button>
+                <button class="button-player-control">Special 2</button>
+                <button class="button-player-control">Special 3</button>
+                <button class="button-player-control">HP Potion</button>
+                <button class="button-player-control">MP Potion</button>
+                <button class="button-player-control">Switch</button>
+            </div>
+
+        </div>
+<!-- Enemy side -->
+        <div class="div-battle-enemy-side">
+
+<div class="div-container-enemy-side">
+    <div class="div-container-enemy-side-img">
+
+    </div>
+    <div class="div-container-enemy-side-stats">
+        
+    </div>
+                
+            </div>
+        </div>
+        <div class="button-controls-for-enemy-combat">
+                
+        </div>
+    </div>
+</div>
+<!-- End of the battle overlay -->
+
+
+<!-- Start of the  equip code -->
+<div class="div-player-equip-area hide">
+    <div class="div-armor-head hide div-equip-slot">
+        <h1>Head</h1>
+        <button class="button-unequip">Unequip</button>
+
+    </div>
+    <div class="div-armor-torso hide div-equip-slot">
+        <h1>Torso</h1>
+        <button class="button-unequip">Unequip</button>
+
+    </div>
+    <div class="div-armor-arms hide div-equip-slot">
+        <h1>Arms</h1>
+        <button class="button-unequip">Unequip</button>
+
+    </div>
+    <div class="div-armor-hands hide div-equip-slot">
+        <h1>Hands</h1>
+        <button class="button-unequip">Unequip</button>
+
+    </div>
+
+    <div class="div-armor-legs hide div-equip-slot">
+        <h1>Legs</h1>
+        <button class="button-unequip">Unequip</button>
+
+    </div>
+
+    <div class="div-armor-feet hide div-equip-slot">
+        <h1>Feet</h1>
+        <button class="button-unequip">Unequip</button>
+
+    </div>
+    <div class="div-weaponRight hide div-equip-slot">
+        <h1>Weapon-R</h1>
+        <button class="button-unequip">Unequip</button>
+
+    </div>
+    <div class="div-weaponLeft hide div-equip-slot">
+        <h1>Weapon-L</h1>
+        <button class="button-unequip">Unequip</button>
+    </div>
+    <div class="div-ringRight hide div-equip-slot">
+        <h1>Ring-R</h1>
+        <button class="button-unequip">Unequip</button>
+
+    </div>
+    <div class="div-ringLeft hide div-equip-slot">
+        <h1>Ring-L</h1>
+        <button class="button-unequip">Unequip</button>
+
+    </div>
+    <div class="div-belt hide div-equip-slot">
+        <h1>Belt</h1>
+        <button class="button-unequip">Unequip</button>
+
+    </div>
+    <div class="div-necklace hide div-equip-slot">
+        <h1>Necklace</h1>
+        <button class="button-unequip">Unequip</button>
+
+    </div>
+</div>
+
+<!-- End of the code for Equip Section-->
+
+
+
+<!-- Player Statistics  -->
+
+<div class="div-battle-window hide">
+
+
+    <div class="div-contain-all-statistics">
+        <div class="div-player-statistics">
+        </div>
+    </div>
+</div>
+
+
+<!-- Start of Map -->
+
+<div class="div-map-container hide">
+    <h1 class="h1-map-level">Map Level: 0</h1>
+    <h1 class="h1-map-level-h1">Click a Map Tile to Proceed to Battle.</h1>
+    <div class="div-map-piece-container">
+
+    </div>
+</div>
+<!-- End of the map -->
+
+
+
+<!-- Start of building -->
+<div class="div-all-building-container hide">
+    <div class="div-construction-buildings">
+        <h1>Houses</h1>
+        <div class="button-build-house-container">
+            <div class="buttons-build-house-left-side">
+                <p>Construct Houses</p>
+                <button class="button-build-house">Small</button>
+                <button class="button-build-house">Medium</button>
+                <button class="button-build-house">Large</button>
+                <h1 class="h1-population">Population: 0</h1>
+            </div>
+        </div>
+    </div>
+    
+    <div class="display-requirements-player-resources">
+        <h2>House Building Requirements</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Resource</th>
+                    <th>Small</th>
+                    <th>Medium</th>
+                    <th>Large</th>
+                    <th>Have</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Gold</td>
+                    <td class="td-requirement-build-house-small"></td>
+                    <td class="td-requirement-build-house-medium"></td>
+                    <td class="td-requirement-build-house-large"></td>
+                    <td class="td-player-resources"></td>
+                </tr>
+                <tr>
+                    <td>Wood</td>
+                    <td class="td-requirement-build-house-small"></td>
+                    <td class="td-requirement-build-house-medium"></td>
+                    <td class="td-requirement-build-house-large"></td>
+                    <td class="td-player-resources"></td>
+                </tr>
+                <tr>
+                    <td>Stone</td>
+                    <td class="td-requirement-build-house-small"></td>
+                    <td class="td-requirement-build-house-medium"></td>
+                    <td class="td-requirement-build-house-large"></td>
+                    <td class="td-player-resources"></td>
+                </tr>
+                <tr>
+                    <td>Lumber</td>
+                    <td class="td-requirement-build-house-small"></td>
+                    <td class="td-requirement-build-house-medium"></td>
+                    <td class="td-requirement-build-house-large"></td>
+                    <td class="td-player-resources"></td>
+                </tr>
+                
+                
+                <!-- Add more rows as needed for other resources -->
+            </tbody>
+        </table>
+    </div>
+    <div class="container-for-houses">
+        <h1>Houses</h1>
+        <p>Each house generates 1 random essence per house.</p>
+        <p>Only three of each house will be displayed.</p>
+        <div class="div-house-container">
+            
+        </div>
+    </div>
+</div>
+    
+    
+ <!-- End of the building section -->
+
+
+
+
+    <!-- Harvesting start -->
+
+    <div class="div-harvesting-container hide">
+        <h1>Harvest</h1>
+        <h1 class="h1-population-harvest">Population: 0</h1>
+<div class="div-harvesting-container">
+<div class="div-harvesting-elements-container">
+
+    <!-- elements -->
+    <!-- Fire -->
+<div class="div-elements-harvest-item">
+<h1 class="h1-element-title">
+Fire
+</h1>
+<div class="img-for-harvest img-fire-harvest">
+
+</div>
+<h1 class="h1-harvest-requirements">5 Population</h1>
+<h1 class="h1-harvest-return">2 Fire Essence</h1>
+<h1 class="h1-total-essence">Current Essence: 0</h1>
+<button class="button-harvest-mana">Harvest</button>
+</div>
+<!-- Air -->
+<div class="div-elements-harvest-item">
+    <h1 class="h1-element-title">
+    Air
+    </h1>
+    <div class="img-for-harvest img-air-harvest">
+    
+    </div>
+    <h1 class="h1-harvest-requirements">5 Population</h1>
+    <h1 class="h1-harvest-return">2 Air Essence</h1>
+    <h1 class="h1-total-essence">Current Essence: 0</h1>
+    <button class="button-harvest-mana">Harvest</button>
+    </div>
+<!-- Water -->
+    <div class="div-elements-harvest-item">
+        <h1 class="h1-element-title">
+        Water
+        </h1>
+        <div class="img-for-harvest img-water-harvest">
+        
+        </div>
+        <h1 class="h1-harvest-requirements">5 Population</h1>
+        <h1 class="h1-harvest-return">2 Water Essence</h1>
+        <h1 class="h1-total-essence">Current Essence: 0</h1>
+        <button class="button-harvest-mana">Harvest</button>
+        </div>
+<!-- Earth -->
+        <div class="div-elements-harvest-item">
+            <h1 class="h1-element-title">
+            Earth
+            </h1>
+            <div class="img-for-harvest img-earth-harvest">
+            
+            </div>
+            <h1 class="h1-harvest-requirements">5 Population</h1>
+            <h1 class="h1-harvest-return">2 Earth Essence</h1>
+            <h1 class="h1-total-essence">Current Essence: 0</h1>
+            <button class="button-harvest-mana">Harvest</button>
+            </div>
+<!-- Light -->
+            <div class="div-elements-harvest-item">
+                <h1 class="h1-element-title">
+                Light
+                </h1>
+                <div class="img-for-harvest img-light-harvest">
+                
+                </div>
+                <h1 class="h1-harvest-requirements">5 Population</h1>
+                <h1 class="h1-harvest-return">2 Light Essence</h1>
+                <h1 class="h1-total-essence">Current Essence: 0</h1>
+                <button class="button-harvest-mana">Harvest</button>
+                </div>
+<!-- Dark -->
+                <div class="div-elements-harvest-item">
+                    <h1 class="h1-element-title">
+                    Dark
+                    </h1>
+                    <div class="img-for-harvest img-dark-harvest">
+                    
+                    </div>
+                    <h1 class="h1-harvest-requirements">5 Population</h1>
+                    <h1 class="h1-harvest-return">2 Dark Essence</h1>
+                    <h1 class="h1-total-essence">Current Essence: 0</h1>
+                    <button class="button-harvest-mana">Harvest</button>
+                    </div>
+
+                    <!-- End of elements -->
+</div>
+</div>
+    </div>
+</div>
+    <!-- End of the harvesting section -->
+
+
+    <script src="/playerFunctions/createRandomEnemies.js"></script>
+    <script src="/FamiliarFunctions/createRandomFamiliar.js"></script>
+    <script src="/merchantFunctions/createRandom/createRandomBoots.js"></script>
+    <script src="/merchantFunctions/createRandom/createRandomArms.js"></script>
+    <script src="/merchantFunctions/createRandom/createRandomBelts.js"></script>
+    <script src="/merchantFunctions/createRandom/createRandomBreastPlates.js"></script>
+    <script src="/merchantFunctions/createRandom/createRandomHats.js"></script>
+    <script src="/merchantFunctions/createRandom/createRandomBelts.js"></script>
+    <script src="/merchantFunctions/createRandom/createRandomLegs.js"></script>
+    <script src="/merchantFunctions/createRandom/createRandomNecklaces.js"></script>
+    <script src="/merchantFunctions/createRandom/createRandomRings.js"></script>
+    <script src="/merchantFunctions/createRandom/createRandomWeapons.js"></script>
+    <script src="/FamiliarFunctions/unlockNewFamiliars.js"></script>
+    <script src="EventListeners/UI/keydownInstructions.js"></script>
+    <script src="EventListeners/UI/buttonsInstructions.js"></script>
+    <script src="/classes/House.js"></script>
+    <script src="/displayFunctions/displayResourceFarm.js"></script>
+    <script src="/EventListeners/UI/buttonBuildHouse.js"></script>
+    <script src="/classes/ResourceFarm.js"></script>
+    <script src="updateEssenceCount.js"></script>
+    <script src="/displayFunctions/displayFamiliarClass.js"></script>
+    <script src="/playerFunctions/battleButtons.js"></script>
+    <script src="/displayFunctions/setBattleButtons.js"></script>
+    <script src="/EventListeners/UI/playerChoices.js"></script>
+    <script src="/EventListeners/buttonRollDie.js"></script>
+    <script src="/EventListeners/UI/buttonsEquipItems.js"></script>
+    <script src="/EventListeners/UI/buttonSellFarmItems.js"></script>
+    <script src="/EventListeners/UI/h1MenuItemsAll.js"></script>
+    <script src="/classes/Farm.js"></script>
+    <script src="/displayFunctions/createFamiliars.js"></script>
+    <script src="/displayFunctions/displayPlayerFamiliars.js"></script>
+    <script src="/utilityFunctions/giveIdtoList.js"></script>
+    <script src="/merchantFunctions/createMerchantDisplay.js"></script>
+    <script src="/merchantFunctions/createMerchantItem.js"></script>
+    <script src="/playerFunctions/createDifferentClasses.js"></script>
+    <script src="/playerFunctions/rollDie.js"></script>
+    <script src="/utilityFunctions/disableButtons.js"></script>
+    <script src="displayFunctions/createItemDisplay.js"></script>
+    <script src="classes/Item.js"></script>
+    <script src="classes/Scene.js"></script>
+    <script src="classes/SceneDisplayer.js"></script>
+    <script src="displayFunctions/displayPlayerClassRollObject.js"></script>
+    <script src="/playerFunctions/activatePlayerStatistics.js"></script>
+    <script src="displayFunctions/displayPlayerClass.js"></script>
+    <script src="/displayFunctions/displayEnemyClass.js"></script>
+    <script src="/playerFunctions/manipulateHealth.js"></script>
+    <script src="classes/PlayerClass.js"></script>
+    <script src="classes/Familiar.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+
+</html>
+

@@ -1,0 +1,29 @@
+.container-for-houses{
+    margin: 0 auto;
+    width: 80vw;
+    height:25vh;
+}
+
+.div-house-container{
+    display:flex;
+    flex-wrap: flex;
+}
+
+.house{
+    background-image: url(/images/house/house.jpg);
+    width:200px;
+    height:200px;
+}
+.medium-house{
+    background-image: url(/images/house/mediumhouse.jpg);
+    width:200px;
+    height:200px;
+}
+.large-house{
+    background-image: url(/images/house/largehouse.jpg);
+    width:200px;
+    height:200px;
+}
+
+/* Need to write styles for the houses. */
+/* Also edit container to be flex and have flex wrap. I will limit the images to 10, but each house will have small medium large */

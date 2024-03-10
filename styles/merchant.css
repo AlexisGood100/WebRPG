@@ -1,0 +1,81 @@
+/* Futuristic Merchant Styles */
+
+.div-merchant {
+    text-align: center;
+    background-color: #1e1e1e; /* Dark futuristic background color */
+    border: 2px solid #61dafb; /* Futuristic blue border */
+    border-radius: 10px; /* Rounded corners for a sleek look */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Futuristic glow effect */
+    padding: 20px;
+    transition: background-color 0.3s ease; /* Smooth transition effect for hover */
+}
+
+.div-item-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.div-merchant:hover {
+    background-color: #282c34; /* Slightly darker background on hover */
+}
+
+.div-merchant h1 {
+    color: blue; /* Futuristic blue text color */
+    transition: color 0.3s ease; /* Smooth transition effect for hover */
+    margin:1rem;
+}
+
+.div-merchant h1:hover {
+    color: #ff00ff; /* Futuristic purple text color on hover */
+}
+
+.span-player-gold,
+.span-player-health,
+.span-player-mana {
+    color: #61dafb; /* Futuristic blue text color */
+}
+
+/* Start of Merchant Item Code */
+
+.div-merchant-item {
+    border: 2px solid #61dafb; /* Futuristic blue border */
+    padding: 1.5rem;
+    text-align: center;
+    width: 300px;
+    height: 250px;
+    margin: 0 auto;
+    background-color: #282c34; /* Dark bluish-gray background color */
+    border-radius: 8px; /* Slightly rounded corners for a sleek look */
+    transition: all 0.3s ease; /* Smooth transition effect for hover */
+    border-radius: 60%;
+    margin:1rem;
+}
+
+.div-merchant-item h1{
+    color:gold;
+}
+
+.div-merchant-item:hover {
+    border: 2px solid #ff00ff; /* Futuristic purple border on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Start of Material Resource Code */
+
+.div-material-resource-container {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    margin-left: 20%;
+    background-color: #1e1e1e; /* Dark futuristic background color */
+    border: 2px solid #61dafb; /* Futuristic blue border */
+    border-radius: 10px; /* Rounded corners for a sleek look */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Futuristic glow effect */
+    padding: 20px;
+    transition: background-color 0.3s ease; /* Smooth transition effect for hover */
+}
+
+.div-material-resource-container:hover {
+    background-color: #282c34; /* Slightly darker background on hover */
+}

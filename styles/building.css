@@ -1,0 +1,84 @@
+/* Default hidden state */
+.div-all-building-container {
+    opacity: 0;
+    transform: translateY(20px); /* Move down slightly to create a fade-in effect */
+    pointer-events: none; /* Disable pointer events when hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition effect */
+}
+
+.div-all-building-container td{
+    color:#61dafb;
+}
+
+/* Styles for the state */
+.div-all-building-container {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; /* Enable pointer events when */
+}
+
+/* Styles for the building title */
+.div-all-building-container h1 {
+    color: #61dafb; /* Futuristic blue text color */
+}
+
+/* Styles for the construction buildings section */
+.div-all-building-container .div-construction-buildings {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Styles for the buttons to construct houses */
+.div-all-building-container .button-build-house-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.div-all-building-container .buttons-build-house-left-side p {
+    color: #61dafb; /* Futuristic blue text color */
+}
+
+/* Styles for the population count */
+.div-all-building-container .h1-population {
+    margin-top: 10px;
+    color: #61dafb; /* Futuristic blue text color */
+}
+
+/* Styles for the house building requirements section */
+.div-all-building-container .display-requirements-player-resources {
+    margin-top: 20px;
+}
+
+.div-all-building-container h2 {
+    color: #61dafb; /* Futuristic blue text color */
+}
+
+/* Styles for the table */
+.div-all-building-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.div-all-building-container th,
+.div-all-building-container td {
+    border: 1px solid #61dafb; /* Futuristic blue border for cells */
+    text-align: left;
+    padding: 10px;
+}
+
+.div-all-building-container th {
+    background-color: #282c34; /* Dark bluish-gray background color */
+    color: #61dafb; /* Futuristic blue text color */
+}
+
+/* Styles for table rows */
+.div-all-building-container td.td-requirement-build-house-small,
+.div-all-building-container td.td-requirement-build-house-medium,
+.div-all-building-container td.td-requirement-build-house-large,
+.div-all-building-container td.td-player-resources {
+    text-align: center;
+    color: #61dafb; /* Futuristic blue text color */
+}

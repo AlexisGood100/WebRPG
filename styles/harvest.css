@@ -1,0 +1,136 @@
+/* .div-harvesting-container {
+    text-align: center;
+    margin: 2rem;
+}
+
+
+.div-harvesting-elements-container {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.div-elements-harvest-item {
+    margin: 1rem;
+}
+
+.img-for-harvest {
+    width: 350px;
+    height: 500px;
+    /* background-color: black; */
+    /* margin: 1rem; */
+/* }  */
+
+.img-fire-harvest {
+    background-image: url('/images/elements/3D_Animation_Style_Fire_3.jpg');
+    background-position: center;
+}
+
+.img-air-harvest {
+    background-image: url('/images/elements/Leonardo_Diffusion_XL_Air_Elemental_0.jpg');
+    background-position: center;
+}
+
+.img-water-harvest {
+    background-image: url('/images/elements/3D_Animation_Style_water_1.jpg');
+    background-position: center;
+}
+
+.img-earth-harvest {
+    background-image: url('/images/elements/3D_Animation_Style_Earth_0.jpg');
+    background-position: center;
+}
+
+.img-light-harvest {
+    background-image: url('/images/elements/Leonardo_Diffusion_XL_Sun_2.jpg');
+    background-position: center;
+}
+
+.img-dark-harvest {
+    background-image: url('/images/elements/Leonardo_Diffusion_XL_Shadows_3.jpg');
+    background-position: center;
+}
+
+/* Default hidden state */
+.div-harvesting-container {
+    opacity: 0;
+    transform: translateY(20px); /* Move down slightly to create a fade-in effect */
+    pointer-events: none; /* Disable pointer events when hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition effect */
+}
+
+/* Styles for the state */
+.div-harvesting-container {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; /* Enable pointer events when */
+}
+
+/* Styles for the harvesting title */
+.div-harvesting-container h1 {
+    color: #61dafb; /* Futuristic blue text color */
+}
+
+/* Styles for the population count */
+.div-harvesting-container .h1-population-harvest {
+    margin-top: 10px;
+    color: #61dafb; /* Futuristic blue text color */
+}
+
+/* Styles for the harvesting elements container */
+.div-harvesting-container .div-harvesting-elements-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Styles for each harvesting element item */
+.div-harvesting-container .div-elements-harvest-item {
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    background-color: #282c34; /* Dark bluish-gray background color */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Styles for element titles */
+.div-harvesting-container .h1-element-title {
+    color: #61dafb; /* Futuristic blue text color */
+}
+
+/* Styles for the images associated with each element */
+.div-harvesting-container .img-for-harvest {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    background-size: cover;
+    border: 1px solid #61dafb; /* Futuristic blue border */
+    border-radius: 50%;
+}
+
+/* Styles for the harvesting requirements and returns */
+.div-harvesting-container .h1-harvest-requirements,
+.div-harvesting-container .h1-harvest-return,
+.div-harvesting-container .h1-total-essence {
+    color: #61dafb; /* Futuristic blue text color */
+}
+
+/* Styles for the harvest button */
+.div-harvesting-container .button-harvest-mana {
+    background-color: #61dafb; /* Futuristic blue background color */
+    color: #282c34; /* Dark bluish-gray text color */
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Hover effect for the harvest button */
+.div-harvesting-container .button-harvest-mana:hover {
+    background-color: #282c34; /* Dark bluish-gray background color */
+    color: #61dafb; /* Futuristic blue text color */
+}

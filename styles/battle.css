@@ -1,0 +1,85 @@
+/* Battle Overlay Styles */
+.battle-overlay {
+    position: relative;
+    background-color: #121212; /* Dark futuristic background color */
+    border-radius: 10px; /* Rounded corners for a sleek look */
+    padding: 20px; /* Add padding for spacing */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Futuristic glow effect */
+    margin-top: -7rem;
+}
+
+.div-battle-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-battle-container h1{
+    font-size: 14px;
+}
+
+/* Player Side Styles */
+.div-battle-player-side {
+    flex: 1;
+}
+
+.div-container-player-side {
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: center;
+    color: #00ff00; /* Futuristic green text color */
+}
+
+/* Enemy Side Styles */
+.div-battle-enemy-side {
+    flex: 1;
+}
+
+.div-container-enemy-side {
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: center;
+    color: #ff0000; /* Futuristic red text color */
+}
+
+
+.button-controls-for-player-combat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-player-control {
+    background-color: #61dafb; /* Futuristic blue background color */
+    color: #282c34; /* Dark bluish-gray text color */
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover effect for the buttons */
+.button-player-control:hover {
+    background-color: #282c34; /* Dark bluish-gray background color */
+    color: #61dafb; /* Futuristic blue text color */
+}
+
+
+.div-player-background-img {
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+    border: white 2px solid;
+    background-position: center;
+}
+
+.div-enemy-background-img {
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+    border: gold 2px solid;
+    background-position: center;
+}
+

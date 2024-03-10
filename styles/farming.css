@@ -1,0 +1,68 @@
+/* Default hidden state */
+.div-farming-container {
+    opacity: 0;
+    transform: translateY(20px); /* Move down slightly to create a fade-in effect */
+    pointer-events: none; /* Disable pointer events when hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition effect */
+}
+
+/* Styles for the state */
+.div-farming-container {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; /* Enable pointer events when */
+}
+
+.div-farming-container h1 {
+    color: #61dafb; /* Futuristic blue text color */
+}
+
+/* Styles for the table */
+.div-farming-container table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.div-farming-container th,
+.div-farming-container td {
+    border: 1px solid #61dafb; /* Futuristic blue border for cells */
+    text-align: left;
+    padding: 10px;
+}
+.div-farming-container td{
+    color: #61dafb;
+}
+.div-farming-container th {
+    background-color: #282c34; /* Dark bluish-gray background color */
+    color: #61dafb; /* Futuristic blue text color */
+}
+
+/* Styles for table rows */
+.div-farming-container td.td-quantity-farm,
+.div-farming-container td.td-value-farm,
+.div-farming-container td.td-price-farm {
+    text-align: center;
+    color: #61dafb; /* Futuristic blue text color */
+}
+
+/* Styles for buttons */
+.div-farming-container .sell-farm-btn,
+.div-farming-container .upgrade-farm-btn {
+    background-color: #61dafb; /* Futuristic blue background color */
+    color: #1e1e1e; /* Dark text color for contrast */
+    border: none;
+    padding: 8px 16px;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition effect on hover */
+}
+
+.div-farming-container .sell-farm-btn:hover,
+.div-farming-container .upgrade-farm-btn:hover {
+    background-color: #1e1e1e; /* Darker background color on hover */
+    color:white;
+    color:indigo;
+    border:1px solid white;
+}

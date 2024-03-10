@@ -1,0 +1,90 @@
+/* Futuristic Choose Class Styles */
+
+.div-choose-class {
+    border: 2px solid #61dafb; /* Futuristic blue border */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    flex-wrap: wrap;
+    width: 90vw;
+    background-color: #1e1e1e; /* Dark futuristic background color */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Rounded corners for a sleek look */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Futuristic glow effect */
+}
+
+.div-player-choice {
+    border: 2px solid #ff00ff; /* Futuristic purple border */
+    color: #61dafb; /* Futuristic blue text color */
+    background-color: #282c34; /* Dark bluish-gray background color */
+    margin: 0.1rem;
+    padding: 1.5rem; /* Increased padding for a more futuristic feel */
+    border-radius: 8px; /* Slightly rounded corners for a sleek look */
+    transition: all 0.3s ease; /* Smooth transition effect */
+
+    /* Additional futuristic hover effect */
+    transform: scale(1);
+}
+
+.div-player-choice:hover {
+    border: 2px solid #ff00ff; /* Futuristic purple border on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.div-class-image {
+    width: 225px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px; /* Rounded corners for a sleek look */
+    overflow: hidden; /* Ensure the image stays within the border */
+}
+
+
+.button-choose-class {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-choose-class:hover{
+    background-color: #005bff;
+    border:1px solid white;
+}
+
+.assassinProfileIMG {
+    background-image: url(/images/playerClass/assassinProfile.jpg);
+}
+
+.assassinProfileIMG1 {
+    background-image: url(/images/playerClass/assassinProfile.jpg);
+        background-position: top;
+}
+
+.priestProfileIMG {
+    background-image: url(/images/playerClass/priestProfile.jpg);
+}
+.priestProfileIMG1 {
+    background-image: url(/images/playerClass/priestProfile.jpg);
+    background-position: top;
+}
+
+.wizardProfileIMG {
+    background-image: url(/images/playerClass/wizardProfile.jpg);
+}
+
+.wizardProfileIMG1 {
+    background-image: url(/images/playerClass/wizardProfile.jpg);
+    background-position:unset;
+}
+
+.fighterProfileIMG {
+    background-image: url(/images/playerClass/fighterProfile.jpg);
+}
+.fighterProfileIMG1 {
+    background-image: url(/images/playerClass/fighterProfile.jpg);
+    background-position: top;
+}

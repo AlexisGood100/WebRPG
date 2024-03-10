@@ -1,0 +1,49 @@
+/* Futuristic Roll Die Styles */
+
+.roll-die-container {
+    background-color: #1e1e1e; /* Dark futuristic background color */
+    border: 2px solid #61dafb; /* Futuristic blue border */
+    text-align: center;
+    margin: 1rem;
+    border-radius: 10px; /* Rounded corners for a sleek look */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Futuristic glow effect */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.roll-die-container h1 {
+    margin: 2rem;
+    color: #61dafb; /* Futuristic blue text color */
+}
+
+.div-character-dice-roll-container {
+    margin: 1rem;
+    padding: 1.5rem; /* Increased padding for a more futuristic feel */
+    border: 2px solid #ff00ff; /* Futuristic purple border */
+    border-radius: 8px; /* Slightly rounded corners for a sleek look */
+    background-color: #282c34; /* Dark bluish-gray background color */
+    transition: all 0.3s ease; /* Smooth transition effect */
+
+    /* Additional futuristic hover effect */
+    transform: scale(1);
+}
+
+.div-character-dice-roll-container:hover {
+    border: 2px solid #ff00ff; /* Futuristic purple border on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+
+.button-roll-die {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius:25%;
+}
+
+.button-roll-die:hover{
+    background-color: #005bff;
+    border:1px solid white;
+}

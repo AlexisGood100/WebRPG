@@ -1,0 +1,32 @@
+/* Futuristic Player Statistics Styles */
+
+.div-contain-all-statistics {
+    display: flex;
+    justify-content: center;
+    background-color: #1e1e1e; /* Dark futuristic background color */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Rounded corners for a sleek look */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Futuristic glow effect */
+}
+
+.div-player-statistics {
+    margin: 1rem;
+    padding: 1.5rem; /* Increased padding for a more futuristic feel */
+    text-align: center;
+    font-size: 16px; /* Adjusted font size for better readability */
+    color: #61dafb; /* Futuristic blue text color */
+    background-color: #282c34; /* Dark bluish-gray background color */
+    border: 2px solid #ff00ff; /* Futuristic purple border */
+    border-radius: 8px; /* Slightly rounded corners for a sleek look */
+    transition: all 0.3s ease; /* Smooth transition effect */
+
+    /* Additional futuristic hover effect */
+    transform: scale(1);
+}
+
+.div-player-statistics:hover {
+    border: 2px solid #ff00ff; /* Futuristic purple border on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+
