@@ -5,7 +5,7 @@ const randomNumber = (bound) =>{
 
 
 function createRandomFamiliar(name, imgArray, difficulty){
-    let nameArray = ['Godble', 'Jackson', 'JapBat', 'Squiggles']
+    let nameArray = ['Godble', 'Jackson', 'JapBat', 'Squiggles', 'Razha', 'Yabado', 'Bobo']
     let nameCalc = Math.floor(Math.random()*3) + 1
     let constitution = 0;
     let dexterity = 0;
