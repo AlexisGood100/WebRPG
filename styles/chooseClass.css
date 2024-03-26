@@ -1,0 +1,30 @@
+/* Individual player class choice */
+.div-player-choice {
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    text-align: center;
+    width: 220px;
+}
+
+.div-class-image {
+    margin: 1rem 0;
+}
+
+.div-class-special-abilities {
+    margin-top: 1rem;
+    font-size: 12px;
+}
+
+.div-special-ability {
+    margin: 0.5rem 0;
+}
+
+.div-description {
+    margin-top: 1rem;
+}
+
+
+
+.button-choose-class:hover {
+    background-color: #0056b3;
+}
