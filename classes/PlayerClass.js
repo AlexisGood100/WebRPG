@@ -155,6 +155,8 @@ levelUp(){
         this.generateHealth();
         this.generateMagicPower();
 }
-
+addGold(amount){
+    this.gold += amount;
+}
 };
 
