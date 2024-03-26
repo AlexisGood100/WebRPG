@@ -1,8 +1,9 @@
 
-function randomNumber(bound){
-let random_number =  Math.floor(Math.random() * bound)
-return random_number;
+const randomNumber = (bound) =>{
+    return Math.floor(Math.random() * bound);
 }
+
+
 function createRandomFamiliar(name, imgArray, difficulty){
     let nameArray = ['Godble', 'Jackson', 'JapBat', 'Squiggles']
     let nameCalc = Math.floor(Math.random()*3) + 1
