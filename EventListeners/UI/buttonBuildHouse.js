@@ -8,20 +8,28 @@ function display_house_element_updates(){
         updateEssenceEssencePage(wizard, essenceEssenceCountAll)
     }, 1000)
 }
+
+const updateWoodStoneAndGold = () => {
+    tdBuildHousePlayerHave[0].innerText = wizard.gold;
+    tdBuildHousePlayerHave[1].innerText = resourceFarm_.wood;
+    tdBuildHousePlayerHave[2].innerText = resourceFarm_.stone;
+    tdBuildHousePlayerHave[3].innerText = resourceFarm_.lumber;
+}
+const updateFarmResourceActual = () =>{
+    resourceFarm_.wood -= resourceFarm_.woodRL;
+    resourceFarm_.stone -= resourceFarm_.stoneRL;
+    resourceFarm_.lumber -= resourceFarm_.lumberRL;
+}
+
 const houseContainer = document.querySelector('.div-house-container')
 buttonBuildHouse[0].addEventListener('click', ()=>{
     current_houses +=1
     if(resourceFarm_.wood >= resourceFarm_.woodPlankRS && resourceFarm_.stone >= resourceFarm_.stoneBlockRS && resourceFarm_.lumber >= resourceFarm_.lumberRS && wizard.gold >= 0){
         population += 2;
         wizard.gold -= resourceFarm_.goldRS;
-        resourceFarm_.wood -= resourceFarm_.woodRS;
-        resourceFarm_.stone -= resourceFarm_.stoneRS;
-        resourceFarm_.lumber -= resourceFarm_.lumberRS;
+        updateFarmResourceActual()
         h1Population.innerText = `Population: ${population}`;
-        tdBuildHousePlayerHave[0].innerText = wizard.gold;
-    tdBuildHousePlayerHave[1].innerText = resourceFarm_.wood;
-    tdBuildHousePlayerHave[2].innerText = resourceFarm_.stone;
-    tdBuildHousePlayerHave[3].innerText = resourceFarm_.lumber;
+     updateWoodStoneAndGold();
     let new_house = new House()
     new_house.create_essence_clock(wizard);
     if(current_houses <= house_limit){
@@ -40,15 +48,9 @@ buttonBuildHouse[1].addEventListener('click', ()=>{
     if(resourceFarm_.wood >= resourceFarm_.woodPlankRM && resourceFarm_.stone >= resourceFarm_.stoneBlockRM && resourceFarm_.lumber >= resourceFarm_.lumberRM && wizard.gold >= resourceFarm_.goldRM){
     population += 5;
     wizard.gold -= resourceFarm_.goldRM;
+    updateFarmResourceActual()
     h1Population.innerText = `Population: ${population}`;
-    resourceFarm_.wood -= resourceFarm_.woodRM;
-    resourceFarm_.stone -= resourceFarm_.stoneRM;
-    resourceFarm_.lumber -= resourceFarm_.lumberRM;
-    h1Population.innerText = `Population: ${population}`;
-    tdBuildHousePlayerHave[0].innerText = wizard.gold;
-tdBuildHousePlayerHave[1].innerText = resourceFarm_.wood;
-tdBuildHousePlayerHave[2].innerText = resourceFarm_.stone;
-tdBuildHousePlayerHave[3].innerText = resourceFarm_.lumber;
+    updateWoodStoneAndGold();
 let new_house = new House()
     new_house.create_essence_clock(wizard);
     if(current_houses <= house_limit){
@@ -66,15 +68,9 @@ buttonBuildHouse[2].addEventListener('click', ()=>{
     if(resourceFarm_.wood >= resourceFarm_.woodPlankRL && resourceFarm_.stone >= resourceFarm_.stoneBlockRL && resourceFarm_.lumber >= resourceFarm_.lumberRL && wizard.gold >= resourceFarm_.goldRL){
     population += 7;
     wizard.gold -= resourceFarm_.goldRL;
+    updateFarmResourceActual()
     h1Population.innerText = `Population: ${population}`;
-    resourceFarm_.wood -= resourceFarm_.woodRL;
-    resourceFarm_.stone -= resourceFarm_.stoneRL;
-    resourceFarm_.lumber -= resourceFarm_.lumberRL;
-    h1Population.innerText = `Population: ${population}`;
-    tdBuildHousePlayerHave[0].innerText = wizard.gold;
-tdBuildHousePlayerHave[1].innerText = resourceFarm_.wood;
-tdBuildHousePlayerHave[2].innerText = resourceFarm_.stone;
-tdBuildHousePlayerHave[3].innerText = resourceFarm_.lumber;
+    updateWoodStoneAndGold();
 let new_house = new House()
     new_house.create_essence_clock(wizard);
     if(current_houses <= house_limit){
