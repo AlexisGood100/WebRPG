@@ -1,0 +1,29 @@
+.div-buff-spell-container {
+    display: flex;
+    padding: .2rem;
+    margin-right: 12rem;
+}
+
+#buff-spell {
+    margin: .3%;
+
+}
+
+#damage-spell {
+    margin: .3%;
+
+}
+
+
+
+.div-all-spells {
+    /* padding:1rem; */
+    text-align: center;
+    font-size: 12px;
+}
+
+.div-all-spells button:hover {
+    border: black 1px solid;
+    color: white;
+    background-color: black;
+}

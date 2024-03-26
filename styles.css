@@ -19,37 +19,9 @@ body {
 
 
 
-.div-buff-spell-container {
-    display: flex;
-    padding: .2rem;
-    margin-right: 12rem;
-}
-
-#buff-spell {
-    margin: .3%;
-
-}
-
-#damage-spell {
-    margin: .3%;
-
-}
 
 .hide {
     display: none;
-}
-
-
-.div-all-spells {
-    /* padding:1rem; */
-    text-align: center;
-    font-size: 12px;
-}
-
-.div-all-spells button:hover {
-    border: black 1px solid;
-    color: white;
-    background-color: black;
 }
 
 
@@ -60,26 +32,6 @@ h2,
 p {
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-/* Main container for class choices */
-.div-choose-class {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem;
-}
-
-
-
-/* Style the equipment slot titles */
-h1 {
-    font-size: 18px;
-    margin-bottom: 5px;
 }
 
 /* End of the Equip section */
