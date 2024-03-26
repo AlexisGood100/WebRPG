@@ -265,6 +265,7 @@ function giveReward(currentEnemy) {
 }
 const div_reward_container = document.querySelector('.end-of-battle-screen')
 const remove_reward_button = document.querySelector('.button-remove-reward-screen')
+
 remove_reward_button.addEventListener('click', ()=>{
     div_reward_container.classList.add('hide')
     document.querySelector('body').classList.remove('over-flow')
@@ -366,10 +367,10 @@ allMapSlots.forEach((mapSlot) => {   //Putting the map slots on the map and init
             let reward0 = randomNumberMaker(1000) + (randomNumberMaker(5) * reward_level);
             wizard.gold += reward0
             let reward1 = (randomNumberMaker(10) * currentDifficulty) + (randomNumberMaker(5) * reward_level);
-            let reward2 = (randomNumberMaker(10) * currentDifficulty) + (randomNumberMaker(5) * reward_level);
-            let reward3 = (randomNumberMaker(10) * currentDifficulty) + (randomNumberMaker(5) * reward_level);
             resourceFarm_.wood += reward1
+            let reward2 = (randomNumberMaker(10) * currentDifficulty) + (randomNumberMaker(5) * reward_level);
             resourceFarm_.lumber += reward2
+            let reward3 = (randomNumberMaker(10) * currentDifficulty) + (randomNumberMaker(5) * reward_level);
             resourceFarm_.stone += reward3
             display_end_of_battle_rewards_p_change(pAllBattleRewards, reward0, reward1, reward2, reward3)
         }, (currentDifficulty), arrayTestMonsters, mapLevel);
@@ -422,13 +423,17 @@ const allPlayerEssence = document.querySelectorAll('.h1-total-essence'); // Sele
 
 //end of function for creating house display
 
+const updatePopulationHarvesting = () => {
+    document.querySelector('.h1-population-harvest').innerText = `Population: ${population}`;
+    document.querySelector('.h1-population').innerText = `Population: ${population}`;
+}
+
 allHarvestingAreaButtons[0].addEventListener('click', () => { // Event listener for harvesting button
     if (population >= 2) {
         wizard.fireEssence += 2;
         allPlayerEssence[0].innerText = `Current Essence: ${wizard.fireEssence}`;
         population -= 2;
-        document.querySelector('.h1-population-harvest').innerText = `Population: ${population}`;
-        document.querySelector('.h1-population').innerText = `Population: ${population}`;
+        updatePopulationHarvesting()
         updateEssence(wizard, essenceEssenceCountAll)
     } else {
         alert('Insufficent Population.');
@@ -438,12 +443,10 @@ allHarvestingAreaButtons[0].addEventListener('click', () => { // Event listener 
 
 allHarvestingAreaButtons[1].addEventListener('click', () => { // Event listener for harvesting button
     if (population >= 2) {
-
         wizard.airEssence += 2;
         allPlayerEssence[1].innerText = `Current Essence: ${wizard.airEssence}`;
         population -= 2;
-        document.querySelector('.h1-population-harvest').innerText = `Population: ${population}`;
-        document.querySelector('.h1-population').innerText = `Population: ${population}`;
+        updatePopulationHarvesting()
         updateEssence(wizard, essenceEssenceCountAll)
     } else {
         alert('Insufficent Population.');
@@ -455,8 +458,7 @@ allHarvestingAreaButtons[2].addEventListener('click', () => { //Event listener f
         wizard.waterEssence += 2;
         allPlayerEssence[2].innerText = `Current Essence: ${wizard.waterEssence}`;
         population -= 2;
-        document.querySelector('.h1-population-harvest').innerText = `Population: ${population}`;
-        document.querySelector('.h1-population').innerText = `Population: ${population}`;
+        updatePopulationHarvesting()
         updateEssence(wizard, essenceEssenceCountAll)
     } else {
         alert('Insufficent Population.');
@@ -467,10 +469,8 @@ allHarvestingAreaButtons[3].addEventListener('click', () => { // Event listener 
     if (population >= 2) {
         wizard.earthEssence += 2;
         allPlayerEssence[3].innerText = `Current Essence: ${wizard.earthEssence}`
-        
         population -= 2;
-        document.querySelector('.h1-population-harvest').innerText = `Population: ${population}`;
-        document.querySelector('.h1-population').innerText = `Population: ${population}`;
+        updatePopulationHarvesting()
         updateEssence(wizard, essenceEssenceCountAll)
     } else {
         alert('Insufficent Population.');
@@ -481,10 +481,8 @@ allHarvestingAreaButtons[4].addEventListener('click', () => { // Event listener 
     if (population >= 2) {
         wizard.lightEssence += 2;
         allPlayerEssence[4].innerText = `Current Essence: ${wizard.lightEssence}`
-        
         population -= 2;
-        document.querySelector('.h1-population-harvest').innerText = `Population: ${population}`;
-        document.querySelector('.h1-population').innerText = `Population: ${population}`;
+        updatePopulationHarvesting()
         updateEssence(wizard, essenceEssenceCountAll)
     } else {
         alert('Insufficent Population.');
@@ -495,10 +493,8 @@ allHarvestingAreaButtons[5].addEventListener('click', () => { // Event listener 
     if (population >= 2) {
         wizard.darkEssence += 2;
         allPlayerEssence[5].innerText = `Current Essence: ${wizard.darkEssence}`
-        
         population -= 2;
-        document.querySelector('.h1-population-harvest').innerText = `Population: ${population}`;
-        document.querySelector('.h1-population').innerText = `Population: ${population}`;
+        updatePopulationHarvesting()
         updateEssence(wizard, essenceEssenceCountAll)
     } else {
         alert('Insufficent Population.');
