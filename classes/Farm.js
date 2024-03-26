@@ -33,25 +33,9 @@ class Farm {
         this.eggValue = 0;
 
     }
-    increaseChickenRate() {
-        this.chickenRate += 1;
+    increaseRate(type_of_rate){
+        type_of_rate += 1;
     }
-    increasePigRate() {
-        this.pigRate += 1;
-    }
-    increaseCornRate() {
-        this.cornRate += 1;
-    }
-    increaseCarrotRate() {
-        this.carrotRate += 1;
-    }
-    increasePotatoRate() {
-        this.potatoRate += 1;
-    }
-    increaseCowRate() {
-        this.cowRate += 1;
-    }
-
     setChickens() {
         let interval = setInterval(() => {
             this.chickens += 1 * this.chickenRate;
@@ -160,7 +144,7 @@ updateTABLE();
 buttonUpgradeFarmItems[0].addEventListener('click', () => {
     if(wizard.gold >= newFarm.cornPrice){
         wizard.gold -= newFarm.cornPrice;
-        newFarm.increaseCornRate();
+        newFarm.increaseRate(newFarm.cornRate);
         newFarm.setCorn();
         gold_span.innerText = wizard.gold;
     } else {
@@ -171,7 +155,7 @@ buttonUpgradeFarmItems[0].addEventListener('click', () => {
 buttonUpgradeFarmItems[1].addEventListener('click', () => {
     if(wizard.gold >= newFarm.carrotsPrice){
         wizard.gold -= newFarm.carrotsPrice;
-        newFarm.increaseCarrotRate();
+        newFarm.increaseRate(newFarm.carrotRate);
         newFarm.setCarrots();
         gold_span.innerText = wizard.gold;
     } else {
@@ -182,7 +166,7 @@ buttonUpgradeFarmItems[1].addEventListener('click', () => {
 buttonUpgradeFarmItems[2].addEventListener('click', () => {
     if(wizard.gold >= newFarm.potatoPrice){
         wizard.gold -= newFarm.potatoPrice;
-        newFarm.increasePotatoRate();
+        newFarm.increaseRate(newFarm.potatoRate);
         newFarm.setPotatoes();
         gold_span.innerText = wizard.gold;
     } else {
@@ -193,7 +177,7 @@ buttonUpgradeFarmItems[2].addEventListener('click', () => {
 buttonUpgradeFarmItems[3].addEventListener('click', () => {
     if(wizard.gold >= newFarm.chickenPrice){
         wizard.gold -= newFarm.chickenPrice;
-        newFarm.increaseChickenRate();
+        newFarm.increaseRate(newFarm.chickenRate);
         newFarm.setChickens();
         gold_span.innerText = wizard.gold;
     } else {
@@ -204,7 +188,7 @@ buttonUpgradeFarmItems[3].addEventListener('click', () => {
 buttonUpgradeFarmItems[4].addEventListener('click', () => {
     if(wizard.gold >= newFarm.cowPrice){
         wizard.gold -= newFarm.cowPrice;
-        newFarm.increaseCowRate();
+        newFarm.increaseRate(newFarm.cowRate);
         newFarm.setCows();
         gold_span.innerText = wizard.gold;
     } else {
@@ -215,7 +199,7 @@ buttonUpgradeFarmItems[4].addEventListener('click', () => {
 buttonUpgradeFarmItems[5].addEventListener('click', () => {
     if(wizard.gold >= newFarm.pigPrice){
         wizard.gold -= newFarm.pigPrice;
-        newFarm.increasePigRate();
+        newFarm.increaseRate(newFarm.pigRate);
         newFarm.setPigs();
         gold_span.innerText = wizard.gold;
     } else {
