@@ -1,0 +1,81 @@
+/* This is for the scene container */
+.div-scene-container{
+    margin-top: 1rem;
+    width:100vw;
+    height:100vh;
+    background-color: black;
+    margin-bottom: 10rem;
+}
+
+.div-scene-container{
+    margin-bottom: 10rem;
+    margin-top:1rem;
+}
+
+.div-scene-container button{
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius:25%;
+}
+
+.h1-scene{
+    text-align: center;
+    color:white;
+}
+
+.div-inside-image{
+    width:1000px;
+    height:600px;
+    background-color: blue;
+    margin: 0 auto;
+    border-radius: 10%;
+    border: white;
+    box-shadow: 2px 2px 2px 4px black;
+}
+
+.p-story-container{
+    width:75vw;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.firstScene{
+    background-color: orange;
+}
+
+.peace-scene{
+    background-image: url('/images/scenes/Leonardo_Diffusion_XL_beautiful_landscape_3.jpg');
+}
+
+.dragon-scene{
+    background-image: url('/images/scenes/Leonardo_Diffusion_XL_red_dragon_in_sky_0.jpg');
+}
+
+.giant-scene{
+    background-image: url('/images/scenes/Leonardo_Diffusion_XL_race_of_giants_holding_clubs_0.jpg');
+     background-position: center;
+}
+
+.council-scene{
+    background-image: url('/images/scenes/council.jpg');
+    background-position: center;
+}
+
+.sky-full-dragon{
+    background-image: url('/images/scenes/dragonSky.jpg');
+    background-position: center;
+}
+
+.dragon-horn-scene{
+    background-image: url('/images/scenes/hornscene.jpg');
+    background-position: center;
+}
+
+.peace-war{
+    background-image: url('/images/scenes/peacewar.jpg');
+    background-position: center;
+}
