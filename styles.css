@@ -6,20 +6,6 @@ body {
     text-align: center;
 }
 
-
-.div-enemy-statistics {
-    margin: 0 auto;
-    padding: 1rem;
-    margin: 1rem;
-    text-align: center;
-    font-size: 12px;
-
-}
-
-
-
-
-
 .hide {
     display: none;
 }
@@ -41,32 +27,14 @@ p {
     color:#61dafb;
 }
 
-
-.div-resource {
-    margin: .1rem;
-    padding: 1rem;
-    border: 1px solid black;
-
-}
-
 .over-flow{
     overflow: hidden;
 }
-
-
 
 .no-display{
     display: none;
 }
 
-
-.h1-for-familiar-EC{
-    color: green;
-}
-
-.h1-familiar-div-title{
-    color: #ff00ff;
-}
 
 
 

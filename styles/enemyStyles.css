@@ -93,3 +93,12 @@
 .enemy25 {
     background-image: url('/images/Enemies/enemy25.jpg');
 }
+.div-enemy-statistics {
+    margin: 0 auto;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    font-size: 12px;
+
+}
+

@@ -1,27 +1,3 @@
-/* .div-harvesting-container {
-    text-align: center;
-    margin: 2rem;
-}
-
-
-.div-harvesting-elements-container {
-    display: flex;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.div-elements-harvest-item {
-    margin: 1rem;
-}
-
-.img-for-harvest {
-    width: 350px;
-    height: 500px;
-    /* background-color: black; */
-    /* margin: 1rem; */
-/* }  */
-
 .img-fire-harvest {
     background-image: url('/images/elements/3D_Animation_Style_Fire_3.jpg');
     background-position: center;
