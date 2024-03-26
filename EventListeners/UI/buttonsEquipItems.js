@@ -9,7 +9,7 @@ buttonUnequip[0].addEventListener('click', () => {
         return;
     } else {
         let newItem = new Item(wizard.armorset.head.name, wizard.armorset.head.type, 10, () => {
-            console.log(wizard.armorset.head.defense);
+         
             
         }, wizard.armorset.head.description, false, wizard.armorset.head.imgPath, wizard.armorset.head.defense);
         
@@ -29,8 +29,7 @@ buttonUnequip[1].addEventListener('click', () => {
         return;
     } else {
         let newItem = new Item(wizard.armorset.chest.name, wizard.armorset.chest.type, 10, () => {
-            console.log(wizard.armorsechest.defense);
-            console.log(wizard.armorset.head.defense);
+           
         }, wizard.armorset.chest.description, false, wizard.armorset.chest.imgPath, wizard.armorset.chest.defense);
         
         wizard.defense -= parseFloat(wizard.armorset.chest.defense);
@@ -48,8 +47,7 @@ buttonUnequip[2].addEventListener('click', () => {
         return;
     } else {
         let newItem = new Item(wizard.armorset.arms.name, wizard.armorset.arms.type, 10, () => {
-            console.log(wizard.armorset.arms.defense);
-            console.log(wizard.armorset.arms.defense);
+           
         }, wizard.armorset.arms.description, false, wizard.armorset.arms.imgPath, wizard.armorset.arms.defense);
         
         wizard.defense -= parseFloat(wizard.armorset.arms.defense);
@@ -67,8 +65,7 @@ buttonUnequip[3].addEventListener('click', () => {
         return;
     } else {
         let newItem = new Item(wizard.armorset.hands.name, wizard.armorset.hands.type, 10, () => {
-            console.log(wizard.armorset.hands.defense);
-            console.log(wizard.armorset.hands.defense);
+            
         }, wizard.armorset.hands.description, false, wizard.armorset.hands.imgPath, wizard.armorset.hands.defense);
         
         wizard.defense -= parseFloat(wizard.armorset.hands.defense);
@@ -86,8 +83,7 @@ buttonUnequip[4].addEventListener('click', () => {
         return;
     } else {
         let newItem = new Item(wizard.armorset.legs.name, wizard.armorset.legs.type, 10, () => {
-            console.log(wizard.armorset.legs.defense);
-            console.log(wizard.armorset.legs.defense);
+            
         }, wizard.armorset.legs.description, false, wizard.armorset.legs.imgPath, wizard.armorset.legs.defense);
         
         wizard.defense -= parseFloat(wizard.armorset.legs.defense);
@@ -105,8 +101,7 @@ buttonUnequip[5].addEventListener('click', () => {
         return;
     } else {
         let newItem = new Item(wizard.armorset.feet.name, wizard.armorset.feet.type, 10, () => {
-            console.log(wizard.armorset.feet.defense);
-            console.log(wizard.armorset.feet.defense);
+            
         }, wizard.armorset.feet.description, false, wizard.armorset.feet.imgPath, wizard.armorset.feet.defense);
         
         wizard.defense -= parseFloat(wizard.armorset.feet.defense);
@@ -124,8 +119,7 @@ buttonUnequip[6].addEventListener('click', () => {
         return;
     } else {
         let newItem = new Item(wizard.weaponset.rightHand.name, wizard.weaponset.rightHand.type, 10, () => {
-            console.log(wizard.weaponset.weaponRightDiv.defense);
-            console.log(wizard.weaponset.rightHand.defense);
+
         }, wizard.weaponset.rightHand.description, false, wizard.weaponset.rightHand.imgPath, wizard.weaponset.rightHand.defense);
         
         wizard.defense -= parseFloat(wizard.weaponset.rightHand.defense);
@@ -146,8 +140,7 @@ buttonUnequip[7].addEventListener('click', () => {
         return;
     } else {
         let newItem = new Item(wizard.weaponset.leftHand.name, wizard.weaponset.leftHand.type, 10, () => {
-            console.log(wizard.armorset.leftHand.defense);
-            console.log(wizard.weaponset.leftHand.defense);
+           
         }, wizard.weaponset.leftHand.description, false, wizard.weaponset.leftHand.imgPath, wizard.weaponset.leftHand.defense);
         
         wizard.defense -= parseFloat(wizard.weaponset.leftHand.defense);
@@ -168,8 +161,7 @@ buttonUnequip[8].addEventListener('click', () => {
         return;
     } else {
         let newItem = new Item(wizard.armorset.ringRight.name, wizard.armorset.ringRight.type, 10, () => {
-            console.log(wizard.armorset.ringRight.defense);
-            console.log(wizard.armorset.ringRight.defense);
+       
         }, wizard.armorset.ringRight.description, false, wizard.armorset.ringRight.imgPath, wizard.armorset.ringRight.defense);
         
         wizard.defense -= parseFloat(wizard.armorset.ringRight.defense);
@@ -187,8 +179,7 @@ buttonUnequip[9].addEventListener('click', () => {
         return;
     } else {
         let newItem = new Item(wizard.armorset.ringLeft.name, wizard.armorset.ringLeft.type, 10, () => {
-            console.log(wizard.armorset.ringLeft.defense);
-            console.log(wizard.armorset.ringLeft.defense);
+       
         }, wizard.armorset.ringLeft.description, false, wizard.armorset.ringLeft.imgPath, wizard.armorset.ringLeft.defense);
         
         wizard.defense -= parseFloat(wizard.armorset.ringLeft.defense);
@@ -206,8 +197,6 @@ buttonUnequip[10].addEventListener('click', () => {
         return;
     } else {
         let newItem = new Item(wizard.armorset.belt.name, wizard.armorset.belt.type, 10, () => {
-            console.log(wizard.armorset.belt.defense);
-            console.log(wizard.armorset.belt.defense);
         }, wizard.armorset.belt.description, false, wizard.armorset.belt.imgPath, wizard.armorset.belt.defense);
         
         wizard.defense -= parseFloat(wizard.armorset.belt.defense);
@@ -225,8 +214,7 @@ buttonUnequip[11].addEventListener('click', () => {
         return;
     } else {
         let newItem = new Item(wizard.armorset.necklace.name, wizard.armorset.necklace.type, 10, () => {
-            console.log(wizard.armorset.necklace.defense);
-            console.log(wizard.armorset.necklace.defense);
+
         }, wizard.armorset.necklace.description, false, wizard.armorset.necklace.imgPath, wizard.armorset.necklace.defense);
         
         wizard.defense -= parseFloat(wizard.armorset.necklace.defense);
