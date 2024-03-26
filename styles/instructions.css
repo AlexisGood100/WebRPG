@@ -1,0 +1,49 @@
+.instructions-to-game-page {
+    text-align: center;
+    margin: 20px; /* Adjust margin as needed */
+    width:100vw;
+    height:100vh;
+}
+
+.instruction-container {
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding for better readability */
+
+    background-color: darkblue;
+    border-radius: 10px; /* Add rounded corners to the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+
+/* Style for the textbox instructions */
+.textbox-instructions {
+/* background-color: #f0f0f0; */
+padding: 20px;
+/* border: 1px solid #ccc; */
+color:white;
+border-radius: 5px;
+margin-bottom: 20px;
+}
+
+/* Style for the buttons within the instructions */
+.button-instructions {
+background-color: #4CAF50;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin-right: 10px;
+}
+
+/* Style for the nested h1 elements */
+#textbox-instructions h1 {
+font-size: 24px;
+color:white;
+margin-bottom: 10px;
+}
+
+#white{
+color:white;
+}
