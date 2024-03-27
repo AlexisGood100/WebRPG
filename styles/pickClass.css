@@ -40,7 +40,7 @@
 
 .div-class-image {
     width: 301px;
-    height: 500px;
+    height: 300px;
     background-size: cover;
     background-position: center;
     border-radius: 8px; /* Rounded corners for a sleek look */
@@ -62,36 +62,3 @@
     border:1px solid white;
 }
 
-.assassinProfileIMG {
-    background-image: url(/images/playerClass/assassinProfile.jpg);
-}
-
-.assassinProfileIMG1 {
-    background-image: url(/images/playerClass/assassinProfile.jpg);
-        background-position: top;
-}
-
-.priestProfileIMG {
-    background-image: url(/images/playerClass/priestProfile.jpg);
-}
-.priestProfileIMG1 {
-    background-image: url(/images/playerClass/priestProfile.jpg);
-    background-position: top;
-}
-
-.wizardProfileIMG {
-    background-image: url(/images/playerClass/wizardProfile.jpg);
-}
-
-.wizardProfileIMG1 {
-    background-image: url(/images/playerClass/wizardProfile.jpg);
-    background-position:unset;
-}
-
-.fighterProfileIMG {
-    background-image: url(/images/playerClass/fighterProfile.jpg);
-}
-.fighterProfileIMG1 {
-    background-image: url(/images/playerClass/fighterProfile.jpg);
-    background-position: top;
-}

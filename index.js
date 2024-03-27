@@ -20,6 +20,9 @@ let spanPlayerHealth = document.querySelector('.span-player-health');
 let spanPlayerMana = document.querySelector('.span-player-mana');
 document.querySelector('body').classList.add('over-flow');
 
+
+
+
 // global arrays----------------------
 
 //Setting up the familiar.
@@ -73,6 +76,11 @@ createDifferentClasses('Fighter', arrayPlayerChoices, 'fighterProfileIMG');
 createDifferentClasses('Wizard', arrayPlayerChoices, 'wizardProfileIMG');
 
 createDifferentClasses('Assassin', arrayPlayerChoices, 'assassinProfileIMG');
+
+const allStartClassChoiceImages = document.querySelectorAll('.div-class-image');
+allStartClassChoiceImages[2].style.backgroundImage = `url(${'./images/playerClass/wizardProfile.jpg'})`
+
+
 
 wizard = arrayPlayerChoices[0];
 displayPlayerClass(wizard, divPlayerStatistics);
