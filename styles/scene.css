@@ -5,11 +5,7 @@
     height:100vh;
     background-color: black;
     margin-bottom: 10rem;
-}
-
-.div-scene-container{
-    margin-bottom: 10rem;
-    margin-top:1rem;
+    border:1px solid white;
 }
 
 .div-scene-container button{
@@ -22,9 +18,17 @@
     border-radius:25%;
 }
 
+.div-scene-container button:hover{
+    background-color: #4a96e7;
+    border: 1px solid white;
+   box-shadow: 2px 2px 2px 4px black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
 .h1-scene{
     text-align: center;
     color:white;
+    margin:.5rem;
 }
 
 .div-inside-image{
@@ -33,8 +37,8 @@
     background-color: blue;
     margin: 0 auto;
     border-radius: 10%;
-    border: white;
-    box-shadow: 2px 2px 2px 4px black;
+    border: 2px solid white;
+    box-shadow: 2px 2px 4px 4px black;
 }
 
 .p-story-container{
