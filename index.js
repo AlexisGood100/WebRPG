@@ -210,20 +210,14 @@ buttonForwardScene.addEventListener('click', ()=>{
     }
     if(sceneIndex === 0){
         secondScene.setScene(h1SceneDesc, divSceneImage, pSceneDesc)
-        divSceneImage.style.backgroundImage = `url(${secondScene.imgPath})`
-        console.log('First condition')
         sceneIndex+=1
     } else {
         if(sceneIndex >= scenesArray.length - 1){
             return;
         } else {
             sceneIndex+=1
-            console.log('third condition')
             currentScene = scenesArray[sceneIndex];
-            console.log(currentScene)
             currentScene.setScene(h1SceneDesc, divSceneImage, pSceneDesc)
-            divSceneImage.style.backgroundImage = `url(${currentScene.imgPath})`
-            // console.log(currentScene)
         }
     }
 })

@@ -6,7 +6,7 @@ class Scene {
     }
     setScene(title_element, image_element, p_element){
         title_element.innerText = this.title;
-      console.log(image_element)
+        image_element.style.backgroundImage = `url(${this.imgPath})`
         p_element.innerText = this.description;
     }
 }
