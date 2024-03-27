@@ -13,19 +13,9 @@ function generateRandomNumberOf() {
     return x;
 }
 
-let rollConstitution = 0;
-let rollStrength = 0;
-let rollDexterity = 0;
-let rollIntelligence = 0;
-let rollWillpower = 0;
-let rollCharisma = 0;
-let rollTotal = 0;
-
-
 
 const buttonRoll = document.querySelector('.roll-die');
 buttonRoll.addEventListener('click', () => {
-    playerClassRollObject.innerHTML = '';
     rollDie(divPlayerStatistics)
     displayPlayerClassRollObject(playerClassDiceRollObject, playerClassRollObject)
 })
