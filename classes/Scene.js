@@ -6,7 +6,7 @@ class Scene {
     }
     setScene(title_element, image_element, p_element){
         title_element.innerText = this.title;
-        image_element.classList.add(this.imgPath);
+      console.log(image_element)
         p_element.innerText = this.description;
     }
 }
