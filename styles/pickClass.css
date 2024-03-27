@@ -1,15 +1,22 @@
 /* Futuristic Choose Class Styles */
 
 .div-choose-class {
-    border: 2px solid #61dafb; /* Futuristic blue border */
+    /* border: 2px solid #61dafb; Futuristic blue border */
     display: flex;
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
     flex-wrap: wrap;
+    justify-content: center;
     width: 90vw;
     background-color: #1e1e1e; /* Dark futuristic background color */
     border-radius: 10px; /* Rounded corners for a sleek look */
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Futuristic glow effect */
+    margin:0 auto;
+
+}
+
+.add-margin{
+    margin-top:3%;
 }
 
 .div-player-choice {
@@ -17,22 +24,23 @@
     color: #61dafb; /* Futuristic blue text color */
     background-color: #282c34; /* Dark bluish-gray background color */
     margin: 0.1rem;
-    padding: 1.5rem; /* Increased padding for a more futuristic feel */
+    padding: .5rem; /* Increased padding for a more futuristic feel */
     border-radius: 8px; /* Slightly rounded corners for a sleek look */
     transition: all 0.3s ease; /* Smooth transition effect */
-
     /* Additional futuristic hover effect */
     transform: scale(1);
 }
 
+
+
 .div-player-choice:hover {
-    border: 2px solid #ff00ff; /* Futuristic purple border on hover */
+    border: 2px solid gold; /* Futuristic purple border on hover */
     transform: scale(1.05); /* Slightly scale up on hover */
 }
 
 .div-class-image {
-    width: 225px;
-    height: 300px;
+    width: 301px;
+    height: 500px;
     background-size: cover;
     background-position: center;
     border-radius: 8px; /* Rounded corners for a sleek look */

@@ -195,6 +195,7 @@ let currentScene = null;
 buttonForwardScene.addEventListener('click', ()=>{
     if(sceneIndex >= scenesArray.length - 1){
         divSceneContainer.remove();
+        document.querySelector('.div-choose-class').classList.add('add-margin')
         document.querySelectorAll('.div-player-choice').forEach((choice)=>{
             choice.classList.remove('hide')
         })
