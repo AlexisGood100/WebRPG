@@ -8,7 +8,6 @@
     flex-wrap: wrap;
     width: 90vw;
     background-color: #1e1e1e; /* Dark futuristic background color */
-    padding: 20px; /* Add padding for spacing */
     border-radius: 10px; /* Rounded corners for a sleek look */
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Futuristic glow effect */
 }

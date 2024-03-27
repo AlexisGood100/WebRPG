@@ -1,7 +1,6 @@
 /* Futuristic Player Equip Area Styles */
 
 .div-player-equip-area {
-    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     border-radius: 5px;
@@ -28,7 +27,6 @@
 /* Style the equipment slots */
 .div-equip-slot {
     margin-top: 10px;
-    padding: 10px;
     border: 2px solid #61dafb; /* Futuristic blue border */
     background-color: #282c34; /* Dark bluish-gray background color */
     border-radius: 8px; /* Slightly rounded corners for a sleek look */
