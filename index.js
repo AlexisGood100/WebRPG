@@ -23,7 +23,11 @@ document.querySelector('body').classList.add('over-flow');
 // global arrays----------------------
 
 //Setting up the familiar.
+const randomNumberMaker = (bounds) =>{
+return Math.floor(Math.random() * bounds);
+}
 const familiar3 = new Familiar('Friendy', 'Fire', 'familiar1', randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), null, null, null, 'Smack', 'Crack', 'Popple', 5);
+
 
 let currentEnemy = familiar3;
 let currentFamiliar = familiar3;
@@ -513,16 +517,16 @@ updateEssenceEssencePage(wizard, essenceEssenceCountAll)
 
 function createMerchantItemsLoop(){ // Creating the first set of merchant items and displaying them. (random items)
     for(let i = 0; i <= 3; i++){
-        createMerchantItem(createRandomBoots('Boots', arrayBootImages), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomBoots('Hands', arrayBootImages), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomHats('Head', arrayHatsImages), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomWeapon('Weapon', arrayWeaponImages), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomLegs('Legs', arrayLegsImages), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomChestPlate('Chest', arrayChestPlateImages), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomNecklace('Necklace', arrayNecklaceImages), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomRing('Rings', arrayRingImages), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomBelts('Belt', arrayRingImages), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomArms('Arms', arrayRingImages), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+        createMerchantItem(createRandomItem('Boots', arrayBootImages, 'Boots'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+         // createMerchantItem(createRandomItem('Hands', arrayHa), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+        createMerchantItem(createRandomItem('Head', arrayHatsImages, 'Head'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+        createMerchantItem(createRandomItem('Weapon', arrayWeaponImages, 'Weapon'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+        createMerchantItem(createRandomItem('Legs', arrayLegsImages, 'Legs'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+        createMerchantItem(createRandomItem('Chest', arrayChestPlateImages, 'Chest'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+        createMerchantItem(createRandomItem('Necklace', arrayNecklaceImages, 'Necklace'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+        createMerchantItem(createRandomItem('Rings', arrayRingImages, 'Rings'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+        createMerchantItem(createRandomItem('Belt', arrayBeltImages, 'Belt'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+        createMerchantItem(createRandomItem('Arms', arrayArmImages, 'Arms'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
     }
 }
 

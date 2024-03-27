@@ -1,13 +1,12 @@
-//creating legs
-function createRandomLegs(nameOf, imgArray){
+function createRandomItem(nameOf, imgArray, type_of){
     let x = Math.floor(Math.random() * 2)
     console.log(x);
     let price = Math.floor(Math.random() * currentDifficulty) + 150;
     let defense = Math.floor(Math.random() * currentDifficulty) + 15;
     let imgIndex = Math.floor(Math.random() * imgArray.length)
-    let newHats = new Item(nameOf, 'Boots', price, null, null, false, imgArray[`${imgIndex}`], defense)
+    let newItem = new Item(nameOf, type_of, price, null, null, false, imgArray[`${imgIndex}`], defense)
     
-   
-console.log(newHats);
-    return newHats;
+    // console.log(imgIndex);
+console.log(newItem);
+    return newItem;
 }
