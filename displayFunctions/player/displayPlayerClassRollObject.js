@@ -1,6 +1,7 @@
 const playerClassRollObject = document.querySelector('.div-character-dice-roll-container');
 function displayPlayerClassRollObject(playerClassDiceRollObject, parentDiv){
-const html = ` 
+    parentDiv.textContent = '';
+    const html = ` 
 <div class="div-player-class">
 <h1> Constitution: ${playerClassDiceRollObject.constitution}</h1>
 <h1>Strength: ${playerClassDiceRollObject.strength}</h1>

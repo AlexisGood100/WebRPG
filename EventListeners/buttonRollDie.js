@@ -18,6 +18,7 @@ const buttonRoll = document.querySelector('.roll-die');
 buttonRoll.addEventListener('click', () => {
     rollDie(divPlayerStatistics)
     displayPlayerClassRollObject(playerClassDiceRollObject, playerClassRollObject)
+    
 })
 const buttonRollAccept = document.querySelector('.roll-die-accept');
 buttonRollAccept.addEventListener('click', () => {
