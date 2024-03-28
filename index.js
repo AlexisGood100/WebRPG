@@ -258,9 +258,9 @@ buttonAvailableFamiliars.addEventListener('click', ()=>{
 let currentDifficulty = .5;
 
 for(let i = 0; i < 20; i++){
-    createFamiliarDiv(createRandomFamiliar(arrayFamiliarImages, currentDifficulty), arrayPlayerFamiliars, DivFamiliarContainer, DivOwnedFamiliarContainer)
+    createFamiliarDiv(createRandomFamiliar(arrayFamiliarImages, currentDifficulty), arrayPlayerFamiliars, DivFamiliarContainer, DivOwnedFamiliarContainer, `./images/familiars/familiar${i}.jpg`)
 }
-//Left off here after randomally generating the familiars.
+//Left off here after randomally generating the familiars    //up to 10 of 21
 //End of Familiars
 
 

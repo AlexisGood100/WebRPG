@@ -1,9 +1,9 @@
-function createFamiliarDiv(familiar, arrayOwnedFamiliars, parentHTML, childHTML){
+function createFamiliarDiv(familiar, arrayOwnedFamiliars, parentHTML, childHTML, imgPath){
 let familiarDiv = document.createElement('div');
 familiarDiv.classList.add('div-familiar-container-1')
 let familiarDivTitle = document.createElement('h1');
 let familiarDivImg = document.createElement('div');
-familiarDivImg.style.backgroundImage = `url(${'./images/playerClass/assassinProfile.jpeg'})`;
+familiarDivImg.style.backgroundImage = `url(${imgPath})`;
 familiarDivImg.classList.add('div-familiar-image')
 
 let familiarDivSTR = document.createElement('p');
