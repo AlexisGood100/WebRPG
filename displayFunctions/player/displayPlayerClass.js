@@ -1,4 +1,4 @@
-function displayPlayerClass(player, parentDiv) {
+function displayPlayerClass(player, parentDiv, wizard) {
     parentDiv.innerHTML = "";
 
     const tooltipContent = `
@@ -21,7 +21,7 @@ function displayPlayerClass(player, parentDiv) {
     const html = `
         <div class="player-info-div tooltip">
             <h1>Player Statistics</h1>
-            <div class="div-player-background-img ${wizard.imgPath}"></div>
+            <div class="div-container-for-stats">
             <h1>Class: ${player.class}</h1>
             <h1>Level: ${player.level}</h1>
             <h1>Health: ${player.health}</h1>
@@ -35,6 +35,7 @@ function displayPlayerClass(player, parentDiv) {
             <h1>Charisma: ${player.charisma}</h1>
             <h1>Willpower: ${player.willpower}</h1>
             <h1>Intelligence: ${player.intelligence}</h1>
+            </div>
             ${tooltipContent}
         </div>
     `;

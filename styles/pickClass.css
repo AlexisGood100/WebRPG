@@ -62,3 +62,6 @@
     border:1px solid white;
 }
 
+.wizard-img{
+    background-image: url('/images/playerClass/wizardProfile.jpg');
+}

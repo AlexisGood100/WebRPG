@@ -11,7 +11,7 @@
 
 .div-player-statistics {
     margin: 1rem;
-    padding: 1.5rem; /* Increased padding for a more futuristic feel */
+    padding: 1rem; /* Increased padding for a more futuristic feel */
     text-align: center;
     font-size: 16px; /* Adjusted font size for better readability */
     color: #61dafb; /* Futuristic blue text color */
@@ -30,3 +30,7 @@
 }
 
 
+.div-player-background-img{
+    width:301px;
+    height:301px;
+}

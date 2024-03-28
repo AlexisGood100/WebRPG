@@ -1,6 +1,7 @@
 //Establishing the player classes that will end up being the wizard object.
 const divPlayerClassChoices = document.querySelectorAll('.div-player-choice');
 
+// allStartClassChoiceImages[0].style.backgroundImage = `url(${'./images/playerClass/priestProfile.jpg'})`
 function bundleClassChoiceBases(){ //all the events use these lines regardless so I just abstracted them to this function.
     activatePlayerStatistics(wizard);
     rollDie(divPlayerStatistics)
@@ -9,14 +10,18 @@ function bundleClassChoiceBases(){ //all the events use these lines regardless s
     document.querySelector('.div-choose-class').remove();
     document.querySelector('.roll-die-container').classList.remove('hide');
     setBattleButtons()
+    
 }
+
 
 
 divPlayerClassChoices[0].addEventListener('click', () => {
     wizard = arrayPlayerChoices[0];
+    let imgForClass = document.querySelector('.div-player-background-img')
+    console.log(imgForClass)
     wizard.class = "Priest";
-    divPlayerStatistics.style.backgroundImage = `url(${'./images/playerClass/priestProfile.jpg'})`
     bundleClassChoiceBases()
+    imgForClass.style.backgroundImage = `url(${'./images/playerClass/priestProfile.jpg'})`
 });
 
 divPlayerClassChoices[1].addEventListener('click', () => {

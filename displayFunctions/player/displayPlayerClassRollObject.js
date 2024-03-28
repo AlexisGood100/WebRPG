@@ -13,5 +13,4 @@ function displayPlayerClassRollObject(playerClassDiceRollObject, parentDiv){
 </div>
 `
 parentDiv.insertAdjacentHTML('afterbegin', html);
-
 }
