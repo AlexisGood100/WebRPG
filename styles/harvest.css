@@ -1,33 +1,3 @@
-.img-fire-harvest {
-    background-image: url('/images/elements/3D_Animation_Style_Fire_3.jpg');
-    background-position: center;
-}
-
-.img-air-harvest {
-    background-image: url('/images/elements/Leonardo_Diffusion_XL_Air_Elemental_0.jpg');
-    background-position: center;
-}
-
-.img-water-harvest {
-    background-image: url('/images/elements/3D_Animation_Style_water_1.jpg');
-    background-position: center;
-}
-
-.img-earth-harvest {
-    background-image: url('/images/elements/3D_Animation_Style_Earth_0.jpg');
-    background-position: center;
-}
-
-.img-light-harvest {
-    background-image: url('/images/elements/Leonardo_Diffusion_XL_Sun_2.jpg');
-    background-position: center;
-}
-
-.img-dark-harvest {
-    background-image: url('/images/elements/Leonardo_Diffusion_XL_Shadows_3.jpg');
-    background-position: center;
-}
-
 /* Default hidden state */
 .div-harvesting-container {
     opacity: 0;
@@ -46,6 +16,7 @@
 /* Styles for the harvesting title */
 .div-harvesting-container h1 {
     color: #61dafb; /* Futuristic blue text color */
+    margin-top:2%;
 }
 
 /* Styles for the population count */
@@ -79,8 +50,8 @@
 
 /* Styles for the images associated with each element */
 .div-harvesting-container .img-for-harvest {
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
     margin: 10px auto;
     background-size: cover;
     border: 1px solid #61dafb; /* Futuristic blue border */
@@ -106,7 +77,21 @@
 }
 
 /* Hover effect for the harvest button */
-.div-harvesting-container .button-harvest-mana:hover {
+.div-harvesting-container  {
     background-color: #282c34; /* Dark bluish-gray background color */
     color: #61dafb; /* Futuristic blue text color */
+}
+.button-harvest-mana:hover{
+    transform: scale(0.98);
+    transition: 1.2;
+    background-color: aqua;
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+.img-for-harvest:hover{
+transition: 2.5s;
+rotate: 360deg;
+transform: scale(1.25);
+border:1px solid gold;
+box-shadow: 2px 2px 2px 4px solid black;
 }

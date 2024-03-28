@@ -5,6 +5,17 @@ const updatePopulationHarvesting = () => {
 const allHarvestingAreaButtons = document.querySelectorAll('.button-harvest-mana'); //selecting all of the map harvesting buttons
 const allPlayerEssence = document.querySelectorAll('.h1-total-essence'); // Selecting all of the essence h1's
 
+//start of giving element image paths
+const allHarvestImages = document.querySelectorAll('.img-for-harvest');
+const elementImgPaths = ['./images/elements/fireElement.jpg', './images/elements/airElement.jpg','./images/elements/waterElement.jpg',
+'./images/elements/earthElement.jpg',
+'./images/elements/lightElement.jpg','./images/elements/darkElement.jpg'
+]
+
+allHarvestImages.forEach((element, i)=>{
+    element.style.backgroundImage = `url(${elementImgPaths[i]})`
+})
+//end of giving element image paths
 
 allHarvestingAreaButtons[0].addEventListener('click', () => { // Event listener for harvesting button
     if (population >= 2) {
