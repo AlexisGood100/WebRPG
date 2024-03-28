@@ -78,7 +78,10 @@ createDifferentClasses('Wizard', arrayPlayerChoices, 'wizardProfileIMG');
 createDifferentClasses('Assassin', arrayPlayerChoices, 'assassinProfileIMG');
 
 const allStartClassChoiceImages = document.querySelectorAll('.div-class-image');
+allStartClassChoiceImages[0].style.backgroundImage = `url(${'./images/playerClass/priestProfile.jpg'})`
+allStartClassChoiceImages[1].style.backgroundImage = `url(${'./images/playerClass/fighterProfile.jpg'})`
 allStartClassChoiceImages[2].style.backgroundImage = `url(${'./images/playerClass/wizardProfile.jpg'})`
+allStartClassChoiceImages[3].style.backgroundImage = `url(${'./images/playerClass/assassinProfile.jpeg'})`
 
 
 

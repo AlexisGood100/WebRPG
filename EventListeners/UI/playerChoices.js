@@ -2,7 +2,6 @@
 const divPlayerClassChoices = document.querySelectorAll('.div-player-choice');
 
 function bundleClassChoiceBases(){ //all the events use these lines regardless so I just abstracted them to this function.
-    wizard.imgPath = `${wizard.imgPath}1`
     activatePlayerStatistics(wizard);
     rollDie(divPlayerStatistics)
     displayPlayerClassRollObject(playerClassDiceRollObject, playerClassRollObject)
@@ -16,24 +15,28 @@ function bundleClassChoiceBases(){ //all the events use these lines regardless s
 divPlayerClassChoices[0].addEventListener('click', () => {
     wizard = arrayPlayerChoices[0];
     wizard.class = "Priest";
+    divPlayerStatistics.style.backgroundImage = `url(${'./images/playerClass/priestProfile.jpg'})`
     bundleClassChoiceBases()
 });
 
 divPlayerClassChoices[1].addEventListener('click', () => {
     wizard = arrayPlayerChoices[1];
     wizard.class = "Fighter";
+    divPlayerStatistics.style.backgroundImage = `url(${'./images/playerClass/fighterProfile.jpg'})`
     bundleClassChoiceBases()
 });
 
 divPlayerClassChoices[2].addEventListener('click', () => {
     wizard = arrayPlayerChoices[2];
     wizard.class = "Wizard";
+    divPlayerStatistics.style.backgroundImage = `url(${'./images/playerClass/wizardProfile.jpg'})`
     bundleClassChoiceBases()
 });
 
 divPlayerClassChoices[3].addEventListener('click', () => {
     wizard = arrayPlayerChoices[3];  
     wizard.class = "Assassin";
+    divPlayerStatistics.style.backgroundImage = `url(${'./images/playerClass/assassinProfile.jpg'})`
     bundleClassChoiceBases()
 });
 
