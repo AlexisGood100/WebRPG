@@ -408,8 +408,6 @@ buttonUnequip.forEach((button) => {//Fixing equip button display
 });
 //End of game functions that need to be called.
 
-
-
 // Resource Farm Start
 let population = 0;
 const h1Population = document.querySelector('.h1-population');
@@ -421,16 +419,7 @@ const tdBuildHousePlayerHave = document.querySelectorAll('.td-player-resources')
 
 const resourceFarm_ = new ResourceFarm();
 
-
 updateBuildingResourcePlayerTable(tdBuildHousePlayerHave, tdBuildHouseRequirementsAllSmall, tdBuildHouseRequirementsAllMedium, tdBuildHouseRequirementsAllLarge, resourceFarm_); // calling the function to display the map
-
-//Start of the harvesting area
-
-
-
-//function for creating house display
-
-//end of function for creating house display
 
 
 
@@ -438,11 +427,6 @@ const essenceCountAll = document.querySelectorAll('#span-essence-count');
 const essenceEssenceCountAll = document.querySelectorAll('.h1-total-essence')
 updateEssence(wizard, essenceCountAll)
 updateEssenceEssencePage(wizard, essenceEssenceCountAll)
-//End of the harvesting area
-
-
-// Start of the unlockable rewards that come from winning battles.
-
 
 function createMerchantItemsLoop(){ // Creating the first set of merchant items and displaying them. (random items)
     for(let i = 0; i <= 3; i++){

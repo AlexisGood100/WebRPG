@@ -11,6 +11,8 @@
 .div-battle-container {
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+    margin-top:10%;
 }
 
 .div-battle-container h1{
@@ -24,8 +26,9 @@
 
 .div-container-player-side {
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 2%;
     text-align: center;
+    margin-left:15%;
     color: #00ff00; /* Futuristic green text color */
 }
 
@@ -36,7 +39,6 @@
 
 .div-container-enemy-side {
     margin: 0 auto;
-    margin-top: 10%;
     text-align: center;
     color: #ff0000; /* Futuristic red text color */
 }
@@ -67,19 +69,25 @@
 }
 
 
-.div-player-background-img {
+.div-player-background-img{
     margin: 0 auto;
-    width: 400px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     border: white 2px solid;
     background-position: center;
 }
 
 .div-enemy-background-img {
     margin: 0 auto;
-    width: 400px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     border: gold 2px solid;
     background-position: center;
 }
 
+
+.div-container-player-side-img{
+    width:500px;
+    height:500px;
+    border: gold 2px solid;
+}
