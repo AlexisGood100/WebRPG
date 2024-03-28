@@ -15,7 +15,7 @@ function createRandomEnemies(reward, difficulty, arrayMonsters, mapLevel) {
     willpower += (Math.floor(Math.random() * 22) * difficulty);
     intelligence += (Math.floor(Math.random() * 22) * difficulty);
      defense += (Math.floor(Math.random() * 22) * difficulty);
-    let imgIndex = Math.floor(Math.random() * 20) + 5;
+    let imgIndex = Math.floor(Math.random() * 10) + 5;
     let randomMonster = new PlayerClass(constitution, dexterity, strength, charisma, willpower, intelligence, reward, allClassListForMonsterImages[imgIndex]);
     randomMonster.generateAttackPower();
     randomMonster.generateHealth();

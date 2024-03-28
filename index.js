@@ -60,9 +60,6 @@ let arrayArmImages = ['/images/arms/newArms1.jpg', '/images/arms/newArms2.jpg', 
 const allClassListForMonsterImages = ['enemy1', 'enemy2', 'enemy3', 'enemy4', 'enemy5', 'enemy6', 'enemy7', 'enemy8', 'enemy9', 'enemy10', 'enemy11', 'enemy12', 'enemy13', 'enemy14', 'enemy15', 'enemy16', 'enemy17', 'enemy18', 'enemy19', 'enemy20', 'enemy21', 'enemy22', 'enemy23', 'enemy24', 'enemy25'];
 //End of global enemy images array
 
-//Start of the familiar image arrays
-let arrayFamiliarImages = ['familiar1', 'familiar2', 'familiar3', 'familiar4', 'familiar5', 'familiar6', 'familiar7', 'familiar8', 'familiar9', 'familiar10', 'familiar11', 'familiar12', 'familiar13', 'familiar14', 'familiar15', 'familiar16', 'familiar17', 'familiar18', 'familiar19', 'familiar20', 'familiar21',];
-// End of the familiar image arrays
 
 // end of global arrays--------------------
 
@@ -258,7 +255,7 @@ buttonAvailableFamiliars.addEventListener('click', () => {
 let currentDifficulty = .5;
 
 for (let i = 0; i < 20; i++) {
-    createFamiliarDiv(createRandomFamiliar(arrayFamiliarImages, currentDifficulty), arrayPlayerFamiliars, DivFamiliarContainer, DivOwnedFamiliarContainer, `./images/familiars/familiar${i}.jpg`)
+    createFamiliarDiv(createRandomFamiliar(currentDifficulty), arrayPlayerFamiliars, DivFamiliarContainer, DivOwnedFamiliarContainer, `./images/familiars/familiar${i}.jpg`)
 }
 //Left off here after randomally generating the familiars    //up to 10 of 21
 //End of Familiars
