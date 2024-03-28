@@ -70,19 +70,9 @@ const map_level_html = document.querySelector('.h1-map-level')
 map_level_html.innerText = 'Map Level: 1';
 //Creating the four classes.
 createDifferentClasses('Priest', arrayPlayerChoices, 'priestProfileIMG');
-
 createDifferentClasses('Fighter', arrayPlayerChoices, 'fighterProfileIMG');
-
 createDifferentClasses('Wizard', arrayPlayerChoices, 'wizardProfileIMG');
-
 createDifferentClasses('Assassin', arrayPlayerChoices, 'assassinProfileIMG');
-
-const allStartClassChoiceImages = document.querySelectorAll('.div-class-image');
-allStartClassChoiceImages[0].style.backgroundImage = `url(${'./images/playerClass/priestProfile.jpg'})`
-allStartClassChoiceImages[1].style.backgroundImage = `url(${'./images/playerClass/fighterProfile.jpg'})`
-allStartClassChoiceImages[2].style.backgroundImage = `url(${'./images/playerClass/wizardProfile.jpg'})`
-allStartClassChoiceImages[3].style.backgroundImage = `url(${'./images/playerClass/assassinProfile.jpeg'})`
-
 
 
 wizard = arrayPlayerChoices[0];
