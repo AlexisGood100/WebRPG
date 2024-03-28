@@ -15,14 +15,11 @@ function createRandomEnemies(reward, difficulty, arrayMonsters, mapLevel) {
     willpower += (Math.floor(Math.random() * 22) * difficulty);
     intelligence += (Math.floor(Math.random() * 22) * difficulty);
      defense += (Math.floor(Math.random() * 22) * difficulty);
-    let imgIndex = Math.floor(Math.random() * 10) + 5;
-    let randomMonster = new PlayerClass(constitution, dexterity, strength, charisma, willpower, intelligence, reward, allClassListForMonsterImages[imgIndex]);
+    let randomMonster = new PlayerClass(constitution, dexterity, strength, charisma, willpower, intelligence, reward);
     randomMonster.generateAttackPower();
     randomMonster.generateHealth();
     randomMonster.generateMagicPower();
     randomMonster.defense = defense;
-    console.log(randomMonster);
-    console.log(constitution, dexterity, strength, charisma, willpower, intelligence, reward);
     arrayMonsters.push(randomMonster);
     return randomMonster;
      } else {
@@ -33,14 +30,11 @@ function createRandomEnemies(reward, difficulty, arrayMonsters, mapLevel) {
         willpower += (Math.floor(Math.random() * 17) * difficulty);
         intelligence += (Math.floor(Math.random() * 17) * difficulty);
          defense += (Math.floor(Math.random() * 17) * difficulty)
-         let imgIndex = Math.floor(Math.random() * 20) + 5;
-         let randomMonster = new PlayerClass(constitution, dexterity, strength, charisma, willpower, intelligence, reward, allClassListForMonsterImages[imgIndex]);
+         let randomMonster = new PlayerClass(constitution, dexterity, strength, charisma, willpower, intelligence, reward);
          randomMonster.generateAttackPower();
          randomMonster.generateHealth();
          randomMonster.generateMagicPower();
          randomMonster.defense = defense;
-         console.log(randomMonster);
-         console.log(constitution, dexterity, strength, charisma, willpower, intelligence, reward);
          arrayMonsters.push(randomMonster);
          return randomMonster;
         }

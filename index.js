@@ -13,19 +13,15 @@ const DivOwnedFamiliarContainer = document.querySelector('.div-familiar-containe
 //Creating the wizard and setting up the multiplier for the spell powers and durations
 let wizard = new PlayerClass(10, 10, 10, 10, 10, 10);
 wizard.gold = 100;
+// displayPlayerClass(wizard, )
 let currentPlayer = 0;
 // player span for gold, health, and mana
 let spanPlayerGold = document.querySelector('.span-player-gold');
 let spanPlayerHealth = document.querySelector('.span-player-health');
 let spanPlayerMana = document.querySelector('.span-player-mana');
-document.querySelector('body').classList.add('over-flow');
 
 
-
-
-// global arrays----------------------
-
-//Setting up the familiar.
+//Initializing starting familiar
 const randomNumberMaker = (bounds) => {
     return Math.floor(Math.random() * bounds);
 }
@@ -34,13 +30,16 @@ const familiar3 = new Familiar('Friendy', 'Fire', 'familiar1', randomNumberMaker
 
 let currentEnemy = familiar3;
 let currentFamiliar = familiar3;
+
 currentFamiliar.generateAttackPower();
 currentFamiliar.generateHealth();
 currentFamiliar.generateAttackPower();
 currentFamiliar.generateMana();
+// End of initializing starting familiar
+
+
 //Player Choice array
 let arrayPlayerChoices = [];
-
 //End of player choice array
 
 //Start of global merchant images
@@ -53,29 +52,25 @@ let arrayNecklaceImages = ['/images/necklaces/newNecklace1.jpg', '/images/neckla
 let arrayRingImages = ['/images/rings/newRing1.jpg', '/images/rings/newRing2.jpg', '/images/rings/newRing3.jpg', '/images/rings/newRing4.jpg', '/images/rings/newRing5.jpg', '/images/rings/newRing6.jpg', '/images/rings/newRing7.jpg', '/images/rings/newRing8.jpg',]
 let arrayBeltImages = ['/images/belts/newBelt1.jpg', '/images/belts/newBelt2.jpg', '/images/belts/newBelt3.jpg', '/images/belts/newBelt4.jpg',]
 let arrayArmImages = ['/images/arms/newArms1.jpg', '/images/arms/newArms2.jpg', '/images/arms/newArms3.jpg', '/images/arms/newArms4.jpg']
-
 // end of global merchant images
 
-// start of global enemy images array
-const allClassListForMonsterImages = ['enemy1', 'enemy2', 'enemy3', 'enemy4', 'enemy5', 'enemy6', 'enemy7', 'enemy8', 'enemy9', 'enemy10', 'enemy11', 'enemy12', 'enemy13', 'enemy14', 'enemy15', 'enemy16', 'enemy17', 'enemy18', 'enemy19', 'enemy20', 'enemy21', 'enemy22', 'enemy23', 'enemy24', 'enemy25'];
-//End of global enemy images array
 
-
-// end of global arrays--------------------
 
 const map_level_html = document.querySelector('.h1-map-level')
 map_level_html.innerText = 'Map Level: 1';
-//Creating the four classes.
+
+//Creating the playable classes of the game.
 createDifferentClasses('Priest', arrayPlayerChoices, 'priestProfileIMG');
 createDifferentClasses('Fighter', arrayPlayerChoices, 'fighterProfileIMG');
 createDifferentClasses('Wizard', arrayPlayerChoices, 'wizardProfileIMG');
 createDifferentClasses('Assassin', arrayPlayerChoices, 'assassinProfileIMG');
+// End of create the playable classes of the game.
 
 
-wizard = arrayPlayerChoices[0];
-displayPlayerClass(wizard, divPlayerStatistics);
+
 
 //Initial Display
+wizard = arrayPlayerChoices[0];
 activatePlayerStatistics(wizard);
 wizard.generateAttackPower();
 displayPlayerClass(wizard, divPlayerStatistics);
@@ -254,6 +249,7 @@ buttonAvailableFamiliars.addEventListener('click', () => {
 
 let currentDifficulty = .5;
 
+// CREATING RANDOM FAMILIARS
 for (let i = 0; i < 20; i++) {
     createFamiliarDiv(createRandomFamiliar(currentDifficulty), arrayPlayerFamiliars, DivFamiliarContainer, DivOwnedFamiliarContainer, `./images/familiars/familiar${i}.jpg`)
 }
@@ -288,7 +284,7 @@ function checkForEndOfBattle() {
         document.querySelectorAll('.div-item-container .div-merchant-item').forEach((div) => {
             div.remove();
         })
-        unlockNewFamiliars();
+    //    This is where the familiar unlock used to be. // Need to recreate function.
         createMerchantItemsLoop();
         updateBuildingResourcePlayerTable(tdBuildHousePlayerHave, tdBuildHouseRequirementsAllSmall, tdBuildHouseRequirementsAllMedium, tdBuildHouseRequirementsAllLarge, resourceFarm_); // calling the function to display the map
     }
@@ -316,6 +312,8 @@ function checkForEndOfBattle() {
 function initiateBattle() {
     document.querySelector('.battle-overlay').classList.remove('hide');
     displayEnemyClass(currentEnemy, document.querySelector('.div-container-enemy-side-stats'));
+    document.querySelector('.div-container-enemy-side-img').style.backgroundImage = `url('./images/enemies/enemy${Math.floor(Math.random() * 16)}.jpg')`
+    console.log(document.querySelector('.div-container-enemy-side-img'))
     if (usingAlt === true) {
         displayFamiliarClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
         displayFamiliarButtonSet(currentFamiliar, buttonPlayerBattleControls)
@@ -369,6 +367,7 @@ function display_end_of_battle_rewards_p_change(node_list, reward0, reward1, rew
 let reward_level = 1
 allMapSlots.forEach((mapSlot) => {   //Putting the map slots on the map and initiating the battle
     arrayTestMonsters = []
+
     mapSlot.addEventListener('click', () => {
         reward_level += 1
         let newMonster = createRandomEnemies(() => {

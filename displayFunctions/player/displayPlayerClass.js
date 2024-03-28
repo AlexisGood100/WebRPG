@@ -1,4 +1,4 @@
-function displayPlayerClass(player, parentDiv, wizard) {
+function displayPlayerClass(player, parentDiv) {
     parentDiv.innerHTML = "";
 
     const tooltipContent = `

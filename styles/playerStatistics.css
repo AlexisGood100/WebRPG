@@ -19,9 +19,12 @@
     border: 2px solid #ff00ff; /* Futuristic purple border */
     border-radius: 8px; /* Slightly rounded corners for a sleek look */
     transition: all 0.3s ease; /* Smooth transition effect */
-
     /* Additional futuristic hover effect */
     transform: scale(1);
+}
+
+.div-player-statistics h1{
+    font-size:16px;
 }
 
 .div-player-statistics:hover {
@@ -31,5 +34,8 @@
     transition: 2s;
 }
 
+.div-container-for-stats{
+    margin-left:75%;
+}
 
 
