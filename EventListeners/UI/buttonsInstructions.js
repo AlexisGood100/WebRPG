@@ -26,7 +26,6 @@ buttonInstructionsAll[7].addEventListener('click', ()=>{
     textboxInstructions.innerText = allOptionsText[7];
 })
 
-let allOptionsText = [];
 let instructionsForMerchant = 'Purchase an item and it will go to your inventory.';
 let instructionsForBuilding = 'Build Houses to get population.';
 let instructionsForMap = 'Explore Map by clicking on individual levels. Battle and earn rewards.';
@@ -35,12 +34,6 @@ let instructionsForCollecting = 'Collect Various Farm Items';
 let instructionsForEquipArea = 'Unequip Items.';
 let instructionsForInventory = 'Equip or Sell Item.';
 let instructionsForHarvest = 'Harvest Mana to buy Familiars.';
-
-allOptionsText.push(instructionsForMerchant);
-allOptionsText.push(instructionsForInventory);
-allOptionsText.push(instructionsForEquipArea); 
-allOptionsText.push(instructionsForFamiliars);
-allOptionsText.push(instructionsForCollecting); 
-allOptionsText.push(instructionsForMap);
-allOptionsText.push(instructionsForBuilding);
-allOptionsText.push(instructionsForHarvest);
+let allOptionsText = [instructionsForMerchant, instructionsForBuilding, instructionsForMap, instructionsForFamiliars,
+instructionsForCollecting, instructionsForEquipArea, instructionsForInventory, instructionsForHarvest
+]; 

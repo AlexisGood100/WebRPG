@@ -36,7 +36,7 @@ divPlayerClassChoices[2].addEventListener('click', () => {
 divPlayerClassChoices[3].addEventListener('click', () => {
     wizard = arrayPlayerChoices[3];  
     wizard.class = "Assassin";
-    divPlayerStatistics.style.backgroundImage = `url(${'./images/playerClass/assassinProfile.jpg'})`
+    divPlayerStatistics.style.backgroundImage = `url(${'./images/playerClass/assassinProfile.jpeg'})`
     bundleClassChoiceBases()
 });
 
