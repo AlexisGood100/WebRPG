@@ -12,9 +12,6 @@
     transition: background-color 0.3s ease; /* Smooth transition effect for hover */
 }
 
-.div-menu:hover {
-    background-color: #282c34; /* Slightly darker background on hover */
-}
 
 .div-menu h1 {
     margin: 1rem;
@@ -24,5 +21,9 @@
 
 .div-menu h1:hover {
     color: #ff00ff; /* Futuristic purple text color on hover */
+    transform: scale(1.75);
+    transition: 2s;
+    z-index:10;
+
 }
 

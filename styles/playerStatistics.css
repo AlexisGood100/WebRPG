@@ -27,6 +27,8 @@
 .div-player-statistics:hover {
     border: 2px solid #ff00ff; /* Futuristic purple border on hover */
     transform: scale(1.05); /* Slightly scale up on hover */
+    background-color: #4a4f5a;
+    transition: 2s;
 }
 
 

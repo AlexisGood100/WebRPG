@@ -7,6 +7,12 @@ nodeList[2].innerText = currentFamiliar.specialAbility1Des
 nodeList[3].innerText = currentFamiliar.specialAbility2Des
 nodeList[4].innerText = currentFamiliar.specialAbility3Des
 }
+
+// function doDamageBasic(wizard, currentEnemy){
+// currentEnemy-=
+// }
+
+
 buttonPlayerBattleControls[0].addEventListener('click', ()=>{
     if(usingAlt === false){
         currentEnemy.health -= parseFloat(wizard.attackPower);

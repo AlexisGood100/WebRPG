@@ -77,6 +77,16 @@
     background-position: center;
 }
 
+.div-player-image{
+    border:2px solid green;
+}
+
+.div-player-image:hover{
+    transform: scale(1.25) rotate(5deg);
+    z-index: 10;
+    transition: 1.5s;
+}
+
 .div-enemy-background-img {
     margin: 0 auto;
     width: 500px;
