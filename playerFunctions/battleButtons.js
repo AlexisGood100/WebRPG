@@ -28,7 +28,7 @@ next()
 const setStatusHit = (element) =>{
     element === document.querySelector('div-player-background-img') ?
     document.querySelector('.div-player-background-img').classList.add('struck')
-    : document.querySelector('.div-enemy-background-img')
+    : document.querySelector('.div-enemy-background-img').classList.add('struck')
 } 
 
 const removeStatusHit = (element) =>{
@@ -46,8 +46,8 @@ const displayAllClassesPlayerAndEnemy = (wizard, currentEnemy) => {
 buttonPlayerBattleControls[0].addEventListener('click', ()=>{
     if(usingAlt === false){
         doDamageBasic(wizard, currentEnemy,1)
-        setStatusHit(displayEnemyClass(currentEnemy, document.querySelector('.div-enemy-background-img')))
-        removeStatusHit(displayEnemyClass(currentEnemy, document.querySelector('.div-enemy-background-img')))
+        setStatusHit(document.querySelector('.div-enemy-background-img'))
+        removeStatusHit(document.querySelector('.div-enemy-background-img'))
         
         if(currentEnemy.health <= 0){
             checkForEndOfBattle();
@@ -95,10 +95,8 @@ buttonPlayerBattleControls[2].addEventListener('click', ()=>{
         if(wizard.class === 'Fighter'){
             currentEnemy.health -= (wizard.attackPower * 2);
               wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
-
-              setStatusHit(displayEnemyClass(currentEnemy, document.querySelector('.div-enemy-background-img')))
-        removeStatusHit(displayEnemyClass(currentEnemy, document.querySelector('.div-enemy-background-img')))
-        
+              setStatusHit(document.querySelector('.div-enemy-background-img'))
+              removeStatusHit(document.querySelector('.div-enemy-background-img'))
             if(currentEnemy.health <= 0){
                 checkForEndOfBattle();
                     mapLevel += 1;
@@ -108,6 +106,8 @@ buttonPlayerBattleControls[2].addEventListener('click', ()=>{
         if(wizard.class === 'Priest'){
             currentEnemy.health -= (wizard.magicPower * 3);
               wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
+              setStatusHit(document.querySelector('.div-enemy-background-img'))
+              removeStatusHit(document.querySelector('.div-enemy-background-img'))
             if(currentEnemy.health <= 0){
                 checkForEndOfBattle();
                     mapLevel += 1;
@@ -116,7 +116,9 @@ buttonPlayerBattleControls[2].addEventListener('click', ()=>{
         }
         if(wizard.class === 'Assassin'){
             currentEnemy.health -= (wizard.attackPower * 3);
-              wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
+              wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3)); 
+              setStatusHit(document.querySelector('.div-enemy-background-img'))
+              removeStatusHit(document.querySelector('.div-enemy-background-img'))
             if(currentEnemy.health <= 0){
                 checkForEndOfBattle();
                     mapLevel += 1;
@@ -126,6 +128,8 @@ buttonPlayerBattleControls[2].addEventListener('click', ()=>{
         if(wizard.class === 'Wizard'){
             currentEnemy.health -= (wizard.magicPower * 3);
               wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
+              setStatusHit(document.querySelector('.div-enemy-background-img'))
+              removeStatusHit(document.querySelector('.div-enemy-background-img'))
             if(currentEnemy.health <= 0){
                 checkForEndOfBattle();
                     mapLevel += 1;
@@ -296,6 +300,8 @@ buttonPlayerBattleControls[4].addEventListener('click', ()=>{
     if(usingAlt === false){
         if(wizard.class === 'Fighter'){
             currentEnemy.health -= (wizard.magicPower * 2);
+            setStatusHit(document.querySelector('.div-enemy-background-img'))
+              removeStatusHit(document.querySelector('.div-enemy-background-img'))
              wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
             checkForEndOfBattle();
             mapLevel += 1;
@@ -304,6 +310,8 @@ buttonPlayerBattleControls[4].addEventListener('click', ()=>{
         }
         if(wizard.class === 'Priest'){
             currentEnemy.health -=(wizard.magicPower * 3);
+            setStatusHit(document.querySelector('.div-enemy-background-img'))
+              removeStatusHit(document.querySelector('.div-enemy-background-img'))
                 wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
             checkForEndOfBattle();
              mapLevel += 1;
@@ -311,6 +319,8 @@ buttonPlayerBattleControls[4].addEventListener('click', ()=>{
         }
         if(wizard.class === 'Assassin'){
             currentEnemy.health -=(wizard.magicPower * 3);
+            setStatusHit(document.querySelector('.div-enemy-background-img'))
+              removeStatusHit(document.querySelector('.div-enemy-background-img'))
                 wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
             checkForEndOfBattle();
              mapLevel += 1;
@@ -318,6 +328,8 @@ buttonPlayerBattleControls[4].addEventListener('click', ()=>{
         }
         if(wizard.class === 'Wizard'){
             currentEnemy.health -=(wizard.magicPower * 3);
+            setStatusHit(document.querySelector('.div-enemy-background-img'))
+              removeStatusHit(document.querySelector('.div-enemy-background-img'))
                 wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
             checkForEndOfBattle();
              mapLevel += 1;
@@ -389,6 +401,7 @@ buttonPlayerBattleControls[5].addEventListener('click', ()=>{
 })
 
 buttonPlayerBattleControls[6].addEventListener('click', ()=>{
+    
     if(usingAlt === false){
         if(wizard.manaPotions >= 1){
             wizard.manaPotions -= 1;

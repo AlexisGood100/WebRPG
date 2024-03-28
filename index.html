@@ -660,56 +660,75 @@ Fire
 </div>
     </div>
 </div>
-    <!-- End of the harvesting section -->
-<script src="/displayFunctions/Menu/hideMenuEquipSlots.js"></script>
-<script src="/displayFunctions/Menu/findElementContainerByIndex.js"></script>
+    <!-- Player functions / -->
     <script src="/playerFunctions/createRandomEnemies.js"></script>
-    <script src="/FamiliarFunctions/createRandomFamiliar.js"></script>
-   <!-- Merchant -->
+    <script src="/playerFunctions/battleButtons.js"></script>
+    <script src="/playerFunctions/createDifferentClasses.js"></script>
+    <script src="/playerFunctions/rollDie.js"></script>
+    <script src="/playerFunctions/activatePlayerStatistics.js"></script>
+    <script src="/playerFunctions/manipulateHealth.js"></script>
+    <!-- End of player functions  -->
+    
+    <!-- Merchant -->
     <script src="/merchantFunctions/createRandom/createRandomItem.js"></script>
+    <script src="/merchantFunctions/createMerchantItem.js"></script>
+    <script src="/merchantFunctions/createMerchantDisplay.js"></script>
     <!-- End of Merchant -->
-
+    
     <!-- Event listeners -->
     <script src="EventListeners/UI/keydownInstructions.js"></script>
     <script src="EventListeners/UI/buttonsInstructions.js"></script>
     <script src="/EventListeners/UI/buttonBuildHouse.js"></script>
-    <!-- End of event listeners -->
-    <!-- Harvesting -->
-<script src="/EventListeners/UI/harvesting/harvest_pop_funcs.js"></script>
-    <!-- End of Harvesting -->
-    <script src="/FamiliarFunctions/unlockNewFamiliars.js"></script>
-    <script src="/classes/House.js"></script>
-    <script src="/displayFunctions/displayResourceFarm.js"></script>
-    <script src="/classes/ResourceFarm.js"></script>
-    <script src="updateEssenceCount.js"></script>
-    <script src="/displayFunctions/familiar/displayFamiliarClass.js"></script>
-    <script src="/playerFunctions/battleButtons.js"></script>
-    <script src="/displayFunctions/setBattleButtons.js"></script>
     <script src="/EventListeners/UI/playerChoices.js"></script>
     <script src="/EventListeners/buttonRollDie.js"></script>
     <script src="/EventListeners/UI/buttonsEquipItems.js"></script>
     <script src="/EventListeners/UI/buttonSellFarmItems.js"></script>
     <script src="/EventListeners/UI/h1MenuItemsAll.js"></script>
-    <script src="/classes/Farm.js"></script>
+    <script src="/EventListeners/UI/harvesting/harvest_pop_funcs.js"></script>
+    <!-- End of event listeners -->
+    
+    
+    <!-- Start of famililar -->
+    <script src="/FamiliarFunctions/createRandomFamiliar.js"></script>
+    <script src="/FamiliarFunctions/unlockNewFamiliars.js"></script>
+    <!-- End of familiar -->
+
+    <!-- Start of essence -->
+    <script src="updateEssenceCount.js"></script>
+    <!-- End of essence -->
+
+    <script src="/displayFunctions/setBattleButtons.js"></script>
+    <script src="/displayFunctions/familiar/displayFamiliarClass.js"></script>
+    <script src="/displayFunctions/displayResourceFarm.js"></script>
     <script src="/displayFunctions/familiar/createFamiliars.js"></script>
     <script src="/displayFunctions/familiar/displayPlayerFamiliars.js"></script>
-    <script src="/utilityFunctions/giveIdtoList.js"></script>
-    <script src="/merchantFunctions/createMerchantDisplay.js"></script>
-    <script src="/merchantFunctions/createMerchantItem.js"></script>
-    <script src="/playerFunctions/createDifferentClasses.js"></script>
-    <script src="/playerFunctions/rollDie.js"></script>
-    <script src="/utilityFunctions/disableButtons.js"></script>
-    <script src="displayFunctions/createItemDisplay.js"></script>
-    <script src="classes/Item.js"></script>
-    <script src="classes/Scene.js"></script>
-    <script src="displayFunctions/player/displayPlayerClassRollObject.js"></script>
-    <script src="/playerFunctions/activatePlayerStatistics.js"></script>
-    <script src="displayFunctions/player/displayPlayerClass.js"></script>
+    <script src="/displayFunctions/Menu/hideMenuEquipSlots.js"></script>
+<script src="/displayFunctions/Menu/findElementContainerByIndex.js"></script>
+<script src="displayFunctions/createItemDisplay.js"></script>
     <script src="/displayFunctions/displayEnemyClass.js"></script>
-    <script src="/playerFunctions/manipulateHealth.js"></script>
+    <script src="displayFunctions/player/displayPlayerClassRollObject.js"></script>
+    <script src="displayFunctions/player/displayPlayerClass.js"></script>
+    <!-- End of Display functions / -->
+
+    <!-- Classes -->
+    <script src="/classes/House.js"></script>
+    <script src="/classes/ResourceFarm.js"></script>
     <script src="classes/PlayerClass.js"></script>
     <script src="classes/Familiar.js"></script>
+    <script src="/classes/Farm.js"></script>
+    <script src="classes/Item.js"></script>
+    <script src="classes/Scene.js"></script>
+    <!-- End of classes -->
+
+    <!-- Utility Functions -->
+    <script src="/utilityFunctions/giveIdtoList.js"></script>
+    <script src="/utilityFunctions/disableButtons.js"></script>
+
+    <!-- End of utility functions -->
+
+<!-- Main Script -->
     <script src="index.js"></script>
+    <!-- End of main script -->
     
 </body>
 
