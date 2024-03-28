@@ -19,6 +19,25 @@ let skillDamage = arr[index]
 currentEnemy.health -= skillDamage;
 }
 
+const setDelay = (time, next) =>{
+    setTimeout(()=>{
+next()
+    }, time * 1000) //conversion straight to seconds in parameters
+}
+
+const setStatusHit = (element) =>{
+    element === document.querySelector('div-player-background-img') ?
+    document.querySelector('.div-player-background-img').classList.add('struck')
+    : document.querySelector('.div-enemy-background-img')
+} 
+
+const removeStatusHit = (element) =>{
+    setDelay(1200, ()=>{
+        element.class.remove('struck');
+    })
+}
+
+
 const displayAllClassesPlayerAndEnemy = (wizard, currentEnemy) => {
     displayPlayerClass(wizard, document.querySelector('.div-container-player-side-stats'));
     displayEnemyClass(currentEnemy, document.querySelector('.div-container-enemy-side-stats'));
@@ -27,35 +46,47 @@ const displayAllClassesPlayerAndEnemy = (wizard, currentEnemy) => {
 buttonPlayerBattleControls[0].addEventListener('click', ()=>{
     if(usingAlt === false){
         doDamageBasic(wizard, currentEnemy,1)
-        wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
-        displayAllClassesPlayerAndEnemy(wizard, currentEnemy)
+        setStatusHit(displayEnemyClass(currentEnemy, document.querySelector('.div-enemy-background-img')))
+        removeStatusHit(displayEnemyClass(currentEnemy, document.querySelector('.div-enemy-background-img')))
+        
         if(currentEnemy.health <= 0){
             checkForEndOfBattle();
                 mapLevel += 1;
                 mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
         }
+        setDelay(1.5, ()=>{
+            displayAllClassesPlayerAndEnemy(wizard, currentEnemy)
+        })
     } else {
-        currentEnemy.health -= parseFloat(currentFamiliar.attackPower);
-       currentFamiliar.health -= parseFloat(currentEnemy.attackPower);
+        doDamageBasic(wizard, currentEnemy,2)
         if(currentEnemy.health <= 0){
             checkForEndOfBattle();
                 mapLevel += 1;
                 mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
         }
-        displayEnemyClass(currentEnemy, document.querySelector('.div-container-enemy-side-stats'));
-        displayFamiliarClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
+        setDelay(1.5, ()=>{
+            displayEnemyClass(currentEnemy, document.querySelector('.div-container-enemy-side-stats'));
+            displayFamiliarClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
+        })
         checkForEndOfBattle();
     }
 })
 
-buttonPlayerBattleControls[1].addEventListener('click', ()=>{
+buttonPlayerBattleControls[1].addEventListener('click', ()=>{ //defense
+    // usingAlt === 
     if(usingAlt === false){
 
         wizard.defense += 10;
         displayPlayerClass(wizard, document.querySelector('.div-container-player-side-stats'));
+        setTimeout(()=>{
+            wizard.defense += 10;
+            displayPlayerClass(wizard, document.querySelector('.div-container-player-side-stats'));
+        }, 5000)
     } else {
-        currentFamiliar.defense += 10;
-        displayFamiliarClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
+        setTimeout(()=>{
+            currentFamiliar.defense += 10;
+            displayFamiliarClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
+        })
     }
 })
 
@@ -64,6 +95,10 @@ buttonPlayerBattleControls[2].addEventListener('click', ()=>{
         if(wizard.class === 'Fighter'){
             currentEnemy.health -= (wizard.attackPower * 2);
               wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
+
+              setStatusHit(displayEnemyClass(currentEnemy, document.querySelector('.div-enemy-background-img')))
+        removeStatusHit(displayEnemyClass(currentEnemy, document.querySelector('.div-enemy-background-img')))
+        
             if(currentEnemy.health <= 0){
                 checkForEndOfBattle();
                     mapLevel += 1;
@@ -97,7 +132,7 @@ buttonPlayerBattleControls[2].addEventListener('click', ()=>{
                     mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
             }
         }
-        displayAllClassesPlayerAndEnemy(wizard, currentEnemy)
+    displayAllClassesPlayerAndEnemy(wizard, currentEnemy)
     } else {
         if(currentFamiliar.fight_type === 'Fire'){
             currentEnemy.health -= (currentFamiliar.attackPower * 2);
