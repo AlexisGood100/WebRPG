@@ -3,7 +3,7 @@ const menuContainer = document.querySelector('.div-menu')
 const h1MenuItemsAll = document.querySelectorAll(".h1-menu-item");
 // Left off fixing the display
 
-let allContainers = [document.querySelector('.div-player-statistics'), document.querySelector('.div-merchant'), document.querySelector('.div-player-equip-area'), document.querySelector('.div-inventory-container-container'),
+let allContainers = [document.querySelector('.container-for-stats-and-images'), document.querySelector('.div-merchant'), document.querySelector('.div-player-equip-area'), document.querySelector('.div-inventory-container-container'),
 document.querySelector('.div-familiar-container'), document.querySelector('.div-farming-container'), document.querySelector('.div-map-container')
     , document.querySelector('.div-all-building-container'), document.querySelector('.div-harvesting-container')
 ]
