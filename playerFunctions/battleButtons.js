@@ -8,17 +8,27 @@ nodeList[3].innerText = currentFamiliar.specialAbility2Des
 nodeList[4].innerText = currentFamiliar.specialAbility3Des
 }
 
-// function doDamageBasic(wizard, currentEnemy){
-// currentEnemy-=
-// }
+const doDamageBasic = (wizard, currentEnemy, indicator) =>{
+indicator === 1 ? currentEnemy.health -= wizard.attackPower
+: wizard.health -= currentEnemy.attackPower
+    
+}
 
+const doSkillDamage = (currentEnemy, arr, index) =>{
+let skillDamage = arr[index]
+currentEnemy.health -= skillDamage;
+}
+
+const displayAllClassesPlayerAndEnemy = (wizard, currentEnemy) => {
+    displayPlayerClass(wizard, document.querySelector('.div-container-player-side-stats'));
+    displayEnemyClass(currentEnemy, document.querySelector('.div-container-enemy-side-stats'));
+}
 
 buttonPlayerBattleControls[0].addEventListener('click', ()=>{
     if(usingAlt === false){
-        currentEnemy.health -= parseFloat(wizard.attackPower);
+        doDamageBasic(wizard, currentEnemy,1)
         wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
-        displayEnemyClass(currentEnemy, document.querySelector('.div-container-enemy-side-stats'));
-        displayPlayerClass(wizard, document.querySelector('.div-container-player-side-stats'));
+        displayAllClassesPlayerAndEnemy(wizard, currentEnemy)
         if(currentEnemy.health <= 0){
             checkForEndOfBattle();
                 mapLevel += 1;
@@ -87,8 +97,7 @@ buttonPlayerBattleControls[2].addEventListener('click', ()=>{
                     mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
             }
         }
-        displayPlayerClass(wizard, document.querySelector('.div-container-player-side-stats'));
-        displayEnemyClass(currentEnemy, document.querySelector('.div-container-enemy-side-stats'));
+        displayAllClassesPlayerAndEnemy(wizard, currentEnemy)
     } else {
         if(currentFamiliar.fight_type === 'Fire'){
             currentEnemy.health -= (currentFamiliar.attackPower * 2);
