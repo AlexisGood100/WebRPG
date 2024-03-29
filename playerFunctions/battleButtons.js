@@ -2,6 +2,10 @@ const buttonPlayerBattleControls = document.querySelectorAll('.button-player-con
 const mapLevelHTML = document.querySelector('.h1-map-level');
 //basic attack
 
+function makeMoveHavePower(multiplier){
+    return wizard.attackPower * multiplier
+}
+
 function displayFamiliarButtonSet(currentFamiliar, nodeList){
 nodeList[2].innerText = currentFamiliar.specialAbility1Des
 nodeList[3].innerText = currentFamiliar.specialAbility2Des
@@ -104,7 +108,7 @@ buttonPlayerBattleControls[2].addEventListener('click', ()=>{
             }
         }
         if(wizard.class === 'Priest'){
-            currentEnemy.health -= (wizard.magicPower * 3);
+            currentEnemy.health -= makeMoveHavePower(2.6);
               wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
               setStatusHit(document.querySelector('.div-enemy-background-img'))
               removeStatusHit(document.querySelector('.div-enemy-background-img'))
@@ -206,7 +210,7 @@ buttonPlayerBattleControls[3].addEventListener('click', ()=>{
         }
         }
         if(wizard.class === 'Priest'){
-            currentEnemy.health -=(wizard.magicPower * 3);
+            currentEnemy.health -=(wizard.magicPower * 3.6);
                wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
                 if(currentEnemy.health <= 0){
             checkForEndOfBattle();
@@ -309,7 +313,7 @@ buttonPlayerBattleControls[4].addEventListener('click', ()=>{
 
         }
         if(wizard.class === 'Priest'){
-            currentEnemy.health -=(wizard.magicPower * 3);
+            currentEnemy.health -=(wizard.magicPower * 5.6);
             setStatusHit(document.querySelector('.div-enemy-background-img'))
               removeStatusHit(document.querySelector('.div-enemy-background-img'))
                 wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));

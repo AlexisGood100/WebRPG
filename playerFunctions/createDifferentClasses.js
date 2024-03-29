@@ -5,4 +5,4 @@ function createDifferentClasses(nameOf, arrayPlayerChoices, imgPath){
     newCharacter.imgPath = imgPath;
     arrayPlayerChoices.push(newCharacter);
     console.log(nameOf + ' has been created.');
-    }
+}

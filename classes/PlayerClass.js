@@ -28,6 +28,7 @@ class PlayerClass {
         this.darkEssence = 2;
         this.healthPotions = 0;
         this.manaPotions = 0;
+        
         this.armorset = {
 
             head: {
