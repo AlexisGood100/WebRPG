@@ -82,3 +82,4 @@ h1MenuItemsAll[8].addEventListener('click', () => {
     hideMenuEquipSlots(document.querySelectorAll('.div-equip-slot'))
 
 })
+

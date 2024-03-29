@@ -81,3 +81,11 @@ let new_house = new House()
         alert('Insufficient Resources');
     }
 })
+
+
+//
+
+const tdBuildHouseRequirementsAllSmall = document.querySelectorAll('.td-requirement-build-house-small');
+const tdBuildHouseRequirementsAllMedium = document.querySelectorAll('.td-requirement-build-house-medium');
+const tdBuildHouseRequirementsAllLarge = document.querySelectorAll('.td-requirement-build-house-large');
+const tdBuildHousePlayerHave = document.querySelectorAll('.td-player-resources');
