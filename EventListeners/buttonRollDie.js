@@ -13,6 +13,9 @@ function generateRandomNumberOf() {
     return x;
 }
 
+const imageForDice = document.querySelector('.div-image-dice');
+imageForDice.style.backgroundImage = `url(${'./images/dice.jpg'})`
+
 
 const buttonRoll = document.querySelector('.roll-die');
 buttonRoll.addEventListener('click', () => {
