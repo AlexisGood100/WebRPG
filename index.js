@@ -28,11 +28,8 @@ currentFamiliar.generateAttackPower();
 currentFamiliar.generateMana();
 // End of initializing starting familiar
 let arrayPlayerChoices = [];
+let arrayPlayerFamiliars = [];
 //End of player choice array
-
-const map_level_html = document.querySelector('.h1-map-level')
-map_level_html.innerText = 'Map Level: 1';
-
 //Creating the playable classes of the game.
 createDifferentClasses('Priest', arrayPlayerChoices, 'priestProfileIMG');
 createDifferentClasses('Fighter', arrayPlayerChoices, 'fighterProfileIMG');
@@ -49,7 +46,6 @@ displayPlayerClass(wizard, divPlayerStatistics);
 //End of Display
 
 
-let arrayPlayerFamiliars = [];
 
 let currentDifficulty = .5;
 
@@ -174,16 +170,8 @@ function checkForEndOfBattle() {
 
 //Map
 
-function fillMap(map) {
-    for (let i = 0; i < 15; i++) {
-        let mapSquare = document.createElement('div');
-        mapSquare.classList.add('map-square');
-        mapSquare.style.backgroundImage = `url('/images/map/map${i + 1}.jpg')`;
-        map.appendChild(mapSquare);
-    }
-}
 
-fillMap(document.querySelector('.div-map-piece-container'));
+
 
 let allMapSlots = document.querySelectorAll('.map-square');
 
