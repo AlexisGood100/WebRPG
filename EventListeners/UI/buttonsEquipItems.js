@@ -39,26 +39,9 @@ buttonUnequip[1].addEventListener('click', () => {
         displayPlayerClass(wizard, divPlayerStatistics);
     }
 });
-//arms Unequip
-buttonUnequip[2].addEventListener('click', () => {
-    let armsDiv = document.querySelectorAll('.div-equip-slot')[2];
-    console.log(armsDiv)
-    if (wizard.armorset.arms.on === false) {
-        return;
-    } else {
-        let newItem = new Item(wizard.armorset.arms.name, wizard.armorset.arms.type, 10, () => {
-           
-        }, wizard.armorset.arms.description, false, wizard.armorset.arms.imgPath, wizard.armorset.arms.defense);
-        
-        wizard.defense -= parseFloat(wizard.armorset.arms.defense);
-        armsDiv.style.backgroundImage = `url(${null})`;
-        createItemDisplay(divPlayerInventory, newItem, wizard)
-        wizard.armorset.arms.on = false;
-        displayPlayerClass(wizard, divPlayerStatistics);
-    }
-});
+
 //Hands
-buttonUnequip[3].addEventListener('click', () => {
+buttonUnequip[2].addEventListener('click', () => {
     let = handsDiv = document.querySelectorAll('.div-equip-slot')[3];
     console.log(handsDiv)
     if (wizard.armorset.hands.on === false) {
@@ -75,26 +58,8 @@ buttonUnequip[3].addEventListener('click', () => {
         displayPlayerClass(wizard, divPlayerStatistics);
     }
 });
-// Legs
-buttonUnequip[4].addEventListener('click', () => {
-    let legsDiv = document.querySelectorAll('.div-equip-slot')[4];
-    console.log(legsDiv)
-    if (wizard.armorset.legs.on === false) {
-        return;
-    } else {
-        let newItem = new Item(wizard.armorset.legs.name, wizard.armorset.legs.type, 10, () => {
-            
-        }, wizard.armorset.legs.description, false, wizard.armorset.legs.imgPath, wizard.armorset.legs.defense);
-        
-        wizard.defense -= parseFloat(wizard.armorset.legs.defense);
-        legsDiv.style.backgroundImage = `url(${null})`;
-        createItemDisplay(divPlayerInventory, newItem, wizard)
-        wizard.armorset.legs.on = false;
-        displayPlayerClass(wizard, divPlayerStatistics);
-    }
-});
 // Feet
-buttonUnequip[5].addEventListener('click', () => {
+buttonUnequip[3].addEventListener('click', () => {
     let feetDiv = document.querySelectorAll('.div-equip-slot')[5];
     console.log(feetDiv)
     if (wizard.armorset.feet.on === false) {
@@ -112,7 +77,7 @@ buttonUnequip[5].addEventListener('click', () => {
     }
 });
 
-buttonUnequip[6].addEventListener('click', () => {
+buttonUnequip[4].addEventListener('click', () => {
     let weaponRightDiv = document.querySelectorAll('.div-equip-slot')[6];
     console.log(weaponRightDiv)
     if (wizard.weaponset.rightHand.on === false) {
@@ -133,7 +98,7 @@ buttonUnequip[6].addEventListener('click', () => {
 
 });
 
-buttonUnequip[7].addEventListener('click', () => {
+buttonUnequip[5].addEventListener('click', () => {
     let weaponleftDiv = document.querySelectorAll('.div-equip-slot')[7];
     console.log(weaponleftDiv)
     if (wizard.weaponset.leftHand.on === false) {
@@ -154,7 +119,7 @@ buttonUnequip[7].addEventListener('click', () => {
 
 });
 
-buttonUnequip[8].addEventListener('click', () => {
+buttonUnequip[6].addEventListener('click', () => {
     let ringRightDiv = document.querySelectorAll('.div-equip-slot')[8];
     console.log(ringRightDiv)
     if (wizard.armorset.ringRight.on === false) {
@@ -172,7 +137,7 @@ buttonUnequip[8].addEventListener('click', () => {
     }
 });
 
-buttonUnequip[9].addEventListener('click', () => {
+buttonUnequip[7].addEventListener('click', () => {
     let ringLeftDiv = document.querySelectorAll('.div-equip-slot')[9];
     console.log(ringLeftDiv)
     if (wizard.armorset.ringLeft.on === false) {
@@ -190,7 +155,7 @@ buttonUnequip[9].addEventListener('click', () => {
     }
 });
 
-buttonUnequip[10].addEventListener('click', () => {
+buttonUnequip[8].addEventListener('click', () => {
     let beltDiv = document.querySelectorAll('.div-equip-slot')[10];
     console.log(beltDiv)
     if (wizard.armorset.belt.on === false) {
@@ -207,7 +172,7 @@ buttonUnequip[10].addEventListener('click', () => {
     }
 });
 
-buttonUnequip[11].addEventListener('click', () => {
+buttonUnequip[9].addEventListener('click', () => {
     let necklaceDiv = document.querySelectorAll('.div-equip-slot')[11];
     console.log(necklaceDiv)
     if (wizard.armorset.necklace.on === false) {

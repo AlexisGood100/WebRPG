@@ -42,20 +42,6 @@ currentFamiliar.generateMana();
 let arrayPlayerChoices = [];
 //End of player choice array
 
-//Start of global merchant images
-let arrayWeaponImages = ['/images/weapons/weapon1.jpg', '/images/weapons/weapon2.jpg', '/images/weapons/weapon3.jpg', '/images/weapons/weapon4.jpg'];
-let arrayBootImages = ['/images/boots/newBoots1.jpg', '/images/boots/newBoots2.jpg', '/images/boots/newBoots3.jpg', '/images/boots/newBoots4.jpg', '/images/boots/newBoots5.jpg', '/images/boots/newBoots6.jpg']
-let arrayChestPlateImages = ['/images/chestPlate/newBreastPlate1.jpg', '/images/chestPlate/newBreastPlate2.jpg', '/images/chestPlate/newBreastPlate3.jpg', '/images/chestPlate/newBreastPlate4.jpg',]
-let arrayHatsImages = ['/images/hats/newHat1.jpg', '/images/hats/newHat2.jpg', '/images/hats/newHat3.jpg',];
-let arrayLegsImages = ['/images/legs/newLegs1.jpg', '/images/legs/newLegs2.jpg',];
-let arrayNecklaceImages = ['/images/necklaces/newNecklace1.jpg', '/images/necklaces/newNecklace2.jpg', '/images/necklaces/newNecklace3.jpg', '/images/necklaces/newNecklace4.jpg', '/images/necklaces/newNecklace5.jpg', '/images/necklaces/newNecklace6.jpg',]
-let arrayRingImages = ['/images/rings/newRing1.jpg', '/images/rings/newRing2.jpg', '/images/rings/newRing3.jpg', '/images/rings/newRing4.jpg', '/images/rings/newRing5.jpg', '/images/rings/newRing6.jpg', '/images/rings/newRing7.jpg', '/images/rings/newRing8.jpg',]
-let arrayBeltImages = ['/images/belts/newBelt1.jpg', '/images/belts/newBelt2.jpg', '/images/belts/newBelt3.jpg', '/images/belts/newBelt4.jpg',]
-let arrayArmImages = ['/images/arms/newArms1.jpg', '/images/arms/newArms2.jpg', '/images/arms/newArms3.jpg', '/images/arms/newArms4.jpg']
-// end of global merchant images
-
-
-
 const map_level_html = document.querySelector('.h1-map-level')
 map_level_html.innerText = 'Map Level: 1';
 
@@ -67,8 +53,6 @@ createDifferentClasses('Assassin', arrayPlayerChoices, 'assassinProfileIMG');
 // End of create the playable classes of the game.
 
 
-
-
 //Initial Display
 wizard = arrayPlayerChoices[0];
 activatePlayerStatistics(wizard);
@@ -78,91 +62,6 @@ displayPlayerClass(wizard, divPlayerStatistics);
 
 
 
-//Start of the Merchant Code -- also need to build player inventory.
-let newItemHealthPotion = new Item('Potion of Healing', 'Healing Potion', 100, () => {
-    if (wizard.health < wizard.healthCalculationCopy) {
-        wizard.generateHealth();
-    }
-}, 'Heals player to full health', true);
-
-let newItemManaPotion = new Item('Potion of Mana', 'Mana Potion', 100, () => {
-    if (wizard.health < wizard.healthCalculationCopy) {
-        wizard.generateMagicPower();
-        console.log('yay')
-    }
-}, 'Heals player to full health', true);
-
-
-let newItemHead = new Item('Starter Helmet', 'Head', randomNumberMaker(225), () => {
-    player.helmet
-}, 'Starter Helmet', false, 'images/armor/starterHat.jpg', randomNumberMaker(5));
-
-let newItemChest = new Item('Starter Chest', 'Chest', randomNumberMaker(225), () => {
-    player.helmet
-}, 'Starter Chest', false, 'images/armor/chestplateStarter.jpg', randomNumberMaker(5));
-
-let newItemLegs = new Item('Starter Legs', 'Legs', randomNumberMaker(225), () => {
-    player.helmet
-}, 'Starter Legs', false, 'images/armor/legsStarter.jpg', randomNumberMaker(5));
-
-let newItemArms = new Item('Starter Arms', 'Arms', randomNumberMaker(225), () => {
-    player.helmet
-}, 'Starter Arms', false, 'images/armor/starterArmor2.jpg', randomNumberMaker(5));
-
-let newItemWeaponR = new Item('Starter Weapon-R', 'Weapon-R', randomNumberMaker(225), () => {
-    player.helmet
-}, 'Starter Weapon-R', false, 'images/weapons/weapon1.jpg', randomNumberMaker(5));
-
-let newItemWeaponL = new Item('Starter Weapon-L', 'Weapon-L', randomNumberMaker(225), () => {
-    player.helmet
-}, 'Starter Weapon-L', false, 'images/weapons/weapon2.jpg', randomNumberMaker(5));
-
-let newItemRingR = new Item('Starter Ring-R', 'Ring-R', randomNumberMaker(225), () => {
-    player.helmet
-}, 'Starter Ring-R', false, 'images/rings/rightRing1.jpg', randomNumberMaker(5));
-
-let newItemRingL = new Item('Starter Ring-L', 'Ring-L', randomNumberMaker(225), () => {
-    player.helmet
-}, 'Starter Ring-L', false, 'images/rings/leftRing1.jpg', randomNumberMaker(5));
-
-let newItemBelt = new Item('Starter Belt', 'Belt', randomNumberMaker(225), () => {
-    player.helmet
-}, 'Starter Belt', false, 'images/belts/belt1.jpg', randomNumberMaker(5));
-
-let newItemNecklace = new Item('Starter Necklace', 'Necklace', randomNumberMaker(225), () => {
-    player.helmet
-}, 'Starter Necklace', false, 'images/necklaces/necklace1.jpg', randomNumberMaker(5));
-
-let newItemHands = new Item('Starter Hands', 'Hands', randomNumberMaker(225), () => {
-    player.helmet
-}, 'Starter Hands', false, 'images/armor/gloves1.jpg', randomNumberMaker(5));
-
-let newItemFeet = new Item('Starter Feet', 'Feet', randomNumberMaker(225), () => {
-    player.helmet
-}, 'Starter Feet', false, 'images/armor/bootsStarter.jpg', randomNumberMaker(5));
-
-
-
-const divPlayerInventory = document.querySelector('.div-inventory-container'); // selecting the player inventory div
-const divMerchantInventory = document.querySelector('.div-item-container'); // selecting the merchant inventory div
-
-let arrayPlayerInventory = []; // array that holds the player inventory
-let arrayMerchantInventory = []; // array that holds the merchant inventory
-
-//Creating the items to push into the merchant array
-createMerchantItem(newItemHead, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemWeaponL, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemArms, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemWeaponR, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemChest, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemBelt, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemNecklace, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemRingR, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemRingL, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemLegs, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemHands, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemFeet, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-//End of Merchant Code.
 
 
 //Code for scenes-----------------
@@ -257,6 +156,83 @@ for (let i = 0; i < 20; i++) {
 //End of Familiars
 
 
+//Start of the Merchant Code -- also need to build player inventory.
+
+
+let newItemHealthPotion = new Item('Potion of Healing', 'Healing Potion', 100, () => {
+    if (wizard.health < wizard.healthCalculationCopy) {
+        wizard.generateHealth();
+    }
+}, 'Heals player to full health', true);
+
+let newItemManaPotion = new Item('Potion of Mana', 'Mana Potion', 100, () => {
+    if (wizard.health < wizard.healthCalculationCopy) {
+        wizard.generateMagicPower();
+        console.log('yay')
+    }
+}, 'Heals player to full health', true);
+
+
+let newItemHead = new Item('Starter Helmet', 'Head', randomNumberMaker(225), () => {
+    player.helmet
+}, 'Starter Helmet', false, 'images/hats/newHat2.jpg', randomNumberMaker(5));
+
+let newItemChest = new Item('Starter Chest', 'Chest', randomNumberMaker(225), () => {
+    player.helmet
+}, 'Starter Chest', false, 'images/armor/breastPlate/breastPlate.jpg', randomNumberMaker(5));
+
+let newItemWeaponR = new Item('Starter Weapon-R', 'Weapon-R', randomNumberMaker(225), () => {
+    player.helmet
+}, 'Starter Weapon-R', false, 'images/weapons/weapon1.jpg', randomNumberMaker(5));
+
+let newItemWeaponL = new Item('Starter Weapon-L', 'Weapon-L', randomNumberMaker(225), () => {
+    player.helmet
+}, 'Starter Weapon-L', false, 'images/weapons/weapon2.jpg', randomNumberMaker(5));
+
+let newItemRingR = new Item('Starter Ring-R', 'Ring-R', randomNumberMaker(225), () => {
+    player.helmet
+}, 'Starter Ring-R', false, 'images/rings/rightRing1.jpg', randomNumberMaker(5));
+
+let newItemRingL = new Item('Starter Ring-L', 'Ring-L', randomNumberMaker(225), () => {
+    player.helmet
+}, 'Starter Ring-L', false, 'images/rings/leftRing1.jpg', randomNumberMaker(5));
+
+let newItemBelt = new Item('Starter Belt', 'Belt', randomNumberMaker(225), () => {
+    player.helmet
+}, 'Starter Belt', false, 'images/belts/belt1.jpg', randomNumberMaker(5));
+
+let newItemNecklace = new Item('Starter Necklace', 'Necklace', randomNumberMaker(225), () => {
+    player.helmet
+}, 'Starter Necklace', false, 'images/necklaces/necklace1.jpg', randomNumberMaker(5));
+
+let newItemHands = new Item('Starter Hands', 'Hands', randomNumberMaker(225), () => {
+    player.helmet
+}, 'Starter Hands', false, 'images/gloves/gloves1.jpg', randomNumberMaker(5));
+
+let newItemFeet = new Item('Starter Feet', 'Feet', randomNumberMaker(225), () => {
+    player.helmet
+}, 'Starter Feet', false, 'images/boots/boots.jpg', randomNumberMaker(5));
+
+
+
+const divPlayerInventory = document.querySelector('.div-inventory-container'); // selecting the player inventory div
+const divMerchantInventory = document.querySelector('.div-item-container'); // selecting the merchant inventory div
+
+let arrayPlayerInventory = []; // array that holds the player inventory
+let arrayMerchantInventory = []; // array that holds the merchant inventory
+
+//Creating the items to push into the merchant array
+createMerchantItem(newItemHead, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+createMerchantItem(newItemWeaponL, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+createMerchantItem(newItemWeaponR, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+createMerchantItem(newItemChest, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+createMerchantItem(newItemBelt, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+createMerchantItem(newItemNecklace, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+createMerchantItem(newItemRingR, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+createMerchantItem(newItemRingL, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+createMerchantItem(newItemHands, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+createMerchantItem(newItemFeet, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+//End of Merchant Code.
 
 //Starting the battle section.
 
@@ -416,25 +392,9 @@ const resourceFarm_ = new ResourceFarm();
 
 updateBuildingResourcePlayerTable(tdBuildHousePlayerHave, tdBuildHouseRequirementsAllSmall, tdBuildHouseRequirementsAllMedium, tdBuildHouseRequirementsAllLarge, resourceFarm_); // calling the function to display the map
 
-
-
 const essenceCountAll = document.querySelectorAll('#span-essence-count');
 const essenceEssenceCountAll = document.querySelectorAll('.h1-total-essence')
 updateEssence(wizard, essenceCountAll)
 updateEssenceEssencePage(wizard, essenceEssenceCountAll)
 
-function createMerchantItemsLoop() { // Creating the first set of merchant items and displaying them. (random items)
-    for (let i = 0; i <= 3; i++) {
-        createMerchantItem(createRandomItem('Boots', arrayBootImages, 'Boots'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        // createMerchantItem(createRandomItem('Hands', arrayHa), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomItem('Head', arrayHatsImages, 'Head'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomItem('Weapon', arrayWeaponImages, 'Weapon'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomItem('Legs', arrayLegsImages, 'Legs'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomItem('Chest', arrayChestPlateImages, 'Chest'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomItem('Necklace', arrayNecklaceImages, 'Necklace'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomItem('Rings', arrayRingImages, 'Rings'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomItem('Belt', arrayBeltImages, 'Belt'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-        createMerchantItem(createRandomItem('Arms', arrayArmImages, 'Arms'), divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-    }
-}
 
