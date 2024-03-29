@@ -60,13 +60,6 @@ else if (familiar.type == 'Dark'){
     familiarPrice.innerText = `Cost: ${familiar.cost} Dark Essence.`;
 } 
 
-// if(familiar.type = 'Water')
-// {
-// familiarPrice.innerText = `Cost: ${familiar.cost} Water Essence.`;
-// }
-
-// familiarPrice.innerText = `Cost: ${familiar.cost}`;
-
 
 let familiarBuyButton = document.createElement('button');
 familiarBuyButton.innerText = 'Buy';

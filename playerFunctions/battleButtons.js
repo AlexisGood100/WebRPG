@@ -12,16 +12,14 @@ nodeList[3].innerText = currentFamiliar.specialAbility2Des
 nodeList[4].innerText = currentFamiliar.specialAbility3Des
 }
 
+
+
 const doDamageBasic = (wizard, currentEnemy, indicator) =>{
 indicator === 1 ? currentEnemy.health -= wizard.attackPower
 : wizard.health -= currentEnemy.attackPower
     
 }
 
-const doSkillDamage = (currentEnemy, arr, index) =>{
-let skillDamage = arr[index]
-currentEnemy.health -= skillDamage;
-}
 
 const setDelay = (time, next) =>{
     setTimeout(()=>{
@@ -70,26 +68,24 @@ buttonPlayerBattleControls[0].addEventListener('click', ()=>{
         }
         setDelay(1.5, ()=>{
             displayEnemyClass(currentEnemy, document.querySelector('.div-container-enemy-side-stats'));
-            displayFamiliarClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
+            displayPlayerClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
         })
         checkForEndOfBattle();
     }
 })
 
 buttonPlayerBattleControls[1].addEventListener('click', ()=>{ //defense
-    // usingAlt === 
     if(usingAlt === false){
-
         wizard.defense += 10;
         displayPlayerClass(wizard, document.querySelector('.div-container-player-side-stats'));
         setTimeout(()=>{
-            wizard.defense += 10;
+            wizard.defense -= 10;
             displayPlayerClass(wizard, document.querySelector('.div-container-player-side-stats'));
         }, 5000)
     } else {
         setTimeout(()=>{
             currentFamiliar.defense += 10;
-            displayFamiliarClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
+            displayPlayerClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
         })
     }
 })
@@ -97,145 +93,60 @@ buttonPlayerBattleControls[1].addEventListener('click', ()=>{ //defense
 buttonPlayerBattleControls[2].addEventListener('click', ()=>{
     if(usingAlt === false){
         if(wizard.class === 'Fighter'){
-            currentEnemy.health -= (wizard.attackPower * 2);
-              wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
-              setStatusHit(document.querySelector('.div-enemy-background-img'))
-              removeStatusHit(document.querySelector('.div-enemy-background-img'))
-            if(currentEnemy.health <= 0){
-                checkForEndOfBattle();
-                    mapLevel += 1;
-                    mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
-            }
-        }
+            currentEnemy.health -= makeMoveHavePower(2.5);
         if(wizard.class === 'Priest'){
-            currentEnemy.health -= makeMoveHavePower(2.6);
-              wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
-              setStatusHit(document.querySelector('.div-enemy-background-img'))
-              removeStatusHit(document.querySelector('.div-enemy-background-img'))
-            if(currentEnemy.health <= 0){
-                checkForEndOfBattle();
-                    mapLevel += 1;
-                    mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
-            }
+            currentEnemy.health -= makeMoveHavePower(1.6);
         }
         if(wizard.class === 'Assassin'){
-            currentEnemy.health -= (wizard.attackPower * 3);
-              wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3)); 
-              setStatusHit(document.querySelector('.div-enemy-background-img'))
-              removeStatusHit(document.querySelector('.div-enemy-background-img'))
-            if(currentEnemy.health <= 0){
-                checkForEndOfBattle();
-                    mapLevel += 1;
-                    mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
-            }
+            currentEnemy.health -= makeMoveHavePower(2.6);
+             
         }
         if(wizard.class === 'Wizard'){
-            currentEnemy.health -= (wizard.magicPower * 3);
-              wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
-              setStatusHit(document.querySelector('.div-enemy-background-img'))
-              removeStatusHit(document.querySelector('.div-enemy-background-img'))
-            if(currentEnemy.health <= 0){
+            currentEnemy.health -= makeMoveHavePower(2.6);
+        }
+            setStatusHit(document.querySelector('.div-enemy-background-img'))
+            removeStatusHit(document.querySelector('.div-enemy-background-img'))
+    }else if(currentEnemy.health <= 0){
                 checkForEndOfBattle();
-                    mapLevel += 1;
-                    mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
+                mapLevel += 1;
+                mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
             }
-        }
-    displayAllClassesPlayerAndEnemy(wizard, currentEnemy)
-    } else {
-        if(currentFamiliar.fight_type === 'Fire'){
+            displayAllClassesPlayerAndEnemy(wizard, currentEnemy)
+        } else {
             currentEnemy.health -= (currentFamiliar.attackPower * 2);
-            currentFamiliar.health -= parseFloat(currentEnemy.attackPower);
-                if(currentEnemy.health <= 0){
+            currentFamiliar.health -= parseFloat(currentEnemy.attackPower);   
+            displayPlayerClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
+            displayEnemyClass(currentEnemy, document.querySelector('.div-container-enemy-side-stats'));
+        }
+        if(currentEnemy.health <= 0){
             checkForEndOfBattle();
-                mapLevel += 1;
-                mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
-        }
-        }
-        if(currentFamiliar.fight_type === 'Water'){
-            currentEnemy.health -= (currentFamiliar.attackPower * 2);
-            currentFamiliar.health -= parseFloat(currentEnemy.attackPower);
-                if(currentEnemy.health <= 0){
-            checkForEndOfBattle();
-                mapLevel += 1;
-                mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
-        }
-        }
-        if(currentFamiliar.fight_type === 'Earth'){
-            currentEnemy.health -= (currentFamiliar.attackPower * 2);
-            currentFamiliar.health -= parseFloat(currentEnemy.attackPower);
-                if(currentEnemy.health <= 0){
-            checkForEndOfBattle();
-                mapLevel += 1;
-                mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
-        }
-        }
-        if(currentFamiliar.fight_type === 'Air'){
-            currentEnemy.health -= (currentFamiliar.attackPower * 2);
-            currentFamiliar.health -= parseFloat(currentEnemy.attackPower);
-                if(currentEnemy.health <= 0){
-            checkForEndOfBattle();
-                mapLevel += 1;
-                mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
-        }
-        } if(currentFamiliar.fight_type === 'Darkness'){
-            currentEnemy.health -= (currentFamiliar.attackPower * 2);
-                if(currentEnemy.health <= 0){
-            checkForEndOfBattle();
-                mapLevel += 1;
-                mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
-        }
-        }
-        if(currentFamiliar.fight_type === 'Light'){
-            currentEnemy.health -= (currentFamiliar.attackPower * 2);
-                if(currentEnemy.health <= 0){
-            checkForEndOfBattle();
-                mapLevel += 1;
-                mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
-        }
-        }
-        displayFamiliarClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
-        displayEnemyClass(currentEnemy, document.querySelector('.div-container-enemy-side-stats'));
+            mapLevel += 1;
+            mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
     }
 })
 
 buttonPlayerBattleControls[3].addEventListener('click', ()=>{
     if(usingAlt === false){
         if(wizard.class === 'Fighter'){
-            currentEnemy.health -= (wizard.attackPower * 2);
-               wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
-                if(currentEnemy.health <= 0){
-            checkForEndOfBattle();
-                mapLevel += 1;
-                mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
-        }
+            currentEnemy.health -= makeMoveHavePower(3.9);
+               
         }
         if(wizard.class === 'Priest'){
-            currentEnemy.health -=(wizard.magicPower * 3.6);
-               wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
-                if(currentEnemy.health <= 0){
-            checkForEndOfBattle();
-                mapLevel += 1;
-                mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
-        }
+            currentEnemy.health -= makeMoveHavePower(3.6);;
+              
+                
         }
         if(wizard.class === 'Assassin'){
-            currentEnemy.health -=(wizard.attackPower * 3);
-               wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
-                if(currentEnemy.health <= 0){
-            checkForEndOfBattle();
-                mapLevel += 1;
-                mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
-        }
+            currentEnemy.health -= makeMoveHavePower(3.6);
+            
+               
         }
         if(wizard.class === 'Wizard'){
-            currentEnemy.health -=(wizard.magicPower * 3);
-               wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
-                if(currentEnemy.health <= 0){
+            currentEnemy.health -= makeMoveHavePower(3.5);
+        }
             checkForEndOfBattle();
-                mapLevel += 1;
-                mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
-        }
-        }
+            mapLevel += 1;
+            mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
         if(currentEnemy.health > 0){
             displayEnemyClass(currentEnemy, document.querySelector('.div-container-enemy-side-stats'));
         } 
@@ -294,7 +205,7 @@ buttonPlayerBattleControls[3].addEventListener('click', ()=>{
                 mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
         }
         }
-        displayFamiliarClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
+        displayPlayerClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
         
     }
 })
@@ -303,7 +214,7 @@ buttonPlayerBattleControls[3].addEventListener('click', ()=>{
 buttonPlayerBattleControls[4].addEventListener('click', ()=>{
     if(usingAlt === false){
         if(wizard.class === 'Fighter'){
-            currentEnemy.health -= (wizard.magicPower * 2);
+            currentEnemy.health -= makeMoveHavePower(5.6);
             setStatusHit(document.querySelector('.div-enemy-background-img'))
               removeStatusHit(document.querySelector('.div-enemy-background-img'))
              wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
@@ -322,7 +233,7 @@ buttonPlayerBattleControls[4].addEventListener('click', ()=>{
                 mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
         }
         if(wizard.class === 'Assassin'){
-            currentEnemy.health -=(wizard.magicPower * 3);
+            currentEnemy.health -=(wizard.magicPower * 5.6);
             setStatusHit(document.querySelector('.div-enemy-background-img'))
               removeStatusHit(document.querySelector('.div-enemy-background-img'))
                 wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
@@ -331,7 +242,7 @@ buttonPlayerBattleControls[4].addEventListener('click', ()=>{
                 mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
         }
         if(wizard.class === 'Wizard'){
-            currentEnemy.health -=(wizard.magicPower * 3);
+            currentEnemy.health -=(wizard.magicPower * 5.5);
             setStatusHit(document.querySelector('.div-enemy-background-img'))
               removeStatusHit(document.querySelector('.div-enemy-background-img'))
                 wizard.health -= (parseFloat(currentEnemy.attackPower) - (wizard.defense/3));
@@ -382,7 +293,7 @@ buttonPlayerBattleControls[4].addEventListener('click', ()=>{
              mapLevel += 1;
                 mapLevelHTML.innerText = `Map Level: ${mapLevel}`;
         }
-        displayFamiliarClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
+        displayPlayerClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
         displayEnemyClass(currentEnemy, document.querySelector('.div-container-enemy-side-stats'));
         
     }
@@ -399,7 +310,7 @@ buttonPlayerBattleControls[5].addEventListener('click', ()=>{
         if(wizard.healthPotions >= 1){
             currentFamiliar.healthPotions -= 1;
             currentFamiliar.generateHealth();
-            displayFamiliarClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
+            displayPlayerClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
         }
     }
 })
@@ -415,15 +326,16 @@ buttonPlayerBattleControls[6].addEventListener('click', ()=>{
     } else {
         wizard.manaPotions -= 1;    
        currentFamiliar.generateMana();
-        displayFamiliarClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
+        displayPlayerClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
     }
 })
 
 //switching back and forth between familiars.
 buttonPlayerBattleControls[7].addEventListener('click', ()=>{
     if(usingAlt === false){
-        displayFamiliarClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
+        displayPlayerClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
         displayFamiliarButtonSet(currentFamiliar, buttonPlayerBattleControls)
+        // document.querySelector('.div-container-player-side-img')
         usingAlt = true;
     } else {
         displayPlayerClass(wizard, document.querySelector('.div-container-player-side-stats'));
