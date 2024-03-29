@@ -25,9 +25,9 @@ let spanPlayerMana = document.querySelector('.span-player-mana');
 const randomNumberMaker = (bounds) => {
     return Math.floor(Math.random() * bounds);
 }
+
+
 const familiar3 = new Familiar('Friendy', 'Fire', 'familiar1', randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), null, null, null, 'Smack', 'Crack', 'Popple', 5);
-
-
 let currentEnemy = familiar3;
 let currentFamiliar = familiar3;
 
@@ -43,7 +43,7 @@ let arrayPlayerChoices = [];
 //End of player choice array
 
 //Start of global merchant images
-let arrayWeaponImages = ['/images/weapons/starterAxe3.jpg', '/images/weapons/starterAxe2.jpg', '/images/weapons/newAxe1.jpg', '/images/weapons/newAxe2.jpg', '/images/weapons/newAxe3.jpg',];
+let arrayWeaponImages = ['/images/weapons/weapon1.jpg', '/images/weapons/weapon2.jpg', '/images/weapons/weapon3.jpg', '/images/weapons/weapon4.jpg'];
 let arrayBootImages = ['/images/boots/newBoots1.jpg', '/images/boots/newBoots2.jpg', '/images/boots/newBoots3.jpg', '/images/boots/newBoots4.jpg', '/images/boots/newBoots5.jpg', '/images/boots/newBoots6.jpg']
 let arrayChestPlateImages = ['/images/chestPlate/newBreastPlate1.jpg', '/images/chestPlate/newBreastPlate2.jpg', '/images/chestPlate/newBreastPlate3.jpg', '/images/chestPlate/newBreastPlate4.jpg',]
 let arrayHatsImages = ['/images/hats/newHat1.jpg', '/images/hats/newHat2.jpg', '/images/hats/newHat3.jpg',];
@@ -111,31 +111,31 @@ let newItemArms = new Item('Starter Arms', 'Arms', randomNumberMaker(225), () =>
 
 let newItemWeaponR = new Item('Starter Weapon-R', 'Weapon-R', randomNumberMaker(225), () => {
     player.helmet
-}, 'Starter Weapon-R', false, 'images/weapons/starterBattleAxe.jpg', randomNumberMaker(5));
+}, 'Starter Weapon-R', false, 'images/weapons/weapon1.jpg', randomNumberMaker(5));
 
 let newItemWeaponL = new Item('Starter Weapon-L', 'Weapon-L', randomNumberMaker(225), () => {
     player.helmet
-}, 'Starter Weapon-L', false, 'images/weapons/starterAxe2.jpg', randomNumberMaker(5));
+}, 'Starter Weapon-L', false, 'images/weapons/weapon2.jpg', randomNumberMaker(5));
 
 let newItemRingR = new Item('Starter Ring-R', 'Ring-R', randomNumberMaker(225), () => {
     player.helmet
-}, 'Starter Ring-R', false, 'images/rings/starterRingRight.jpg', randomNumberMaker(5));
+}, 'Starter Ring-R', false, 'images/rings/rightRing1.jpg', randomNumberMaker(5));
 
 let newItemRingL = new Item('Starter Ring-L', 'Ring-L', randomNumberMaker(225), () => {
     player.helmet
-}, 'Starter Ring-L', false, 'images/rings/starterRingLeft.jpg', randomNumberMaker(5));
+}, 'Starter Ring-L', false, 'images/rings/leftRing1.jpg', randomNumberMaker(5));
 
 let newItemBelt = new Item('Starter Belt', 'Belt', randomNumberMaker(225), () => {
     player.helmet
-}, 'Starter Belt', false, 'images/belts/starterBelt.jpg', randomNumberMaker(5));
+}, 'Starter Belt', false, 'images/belts/belt1.jpg', randomNumberMaker(5));
 
 let newItemNecklace = new Item('Starter Necklace', 'Necklace', randomNumberMaker(225), () => {
     player.helmet
-}, 'Starter Necklace', false, 'images/necklaces/starterNecklace.jpg', randomNumberMaker(5));
+}, 'Starter Necklace', false, 'images/necklaces/necklace1.jpg', randomNumberMaker(5));
 
 let newItemHands = new Item('Starter Hands', 'Hands', randomNumberMaker(225), () => {
     player.helmet
-}, 'Starter Hands', false, 'images/armor/starterGloves.jpg', randomNumberMaker(5));
+}, 'Starter Hands', false, 'images/armor/gloves1.jpg', randomNumberMaker(5));
 
 let newItemFeet = new Item('Starter Feet', 'Feet', randomNumberMaker(225), () => {
     player.helmet
