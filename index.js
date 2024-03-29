@@ -24,7 +24,9 @@ let currentPlayer = 0; //Current Player Init
 let arrayPlayerChoices = [];
 let arrayPlayerFamiliars = [];
 
-const familiar3 = new Familiar('Friendy', 'Fire', 'familiar1', randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), null, null, null, 'Smack', 'Crack', 'Popple', 5);
+const startFamiliar = new Familiar('Friendy', 'Fire', 'familiar1', randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), null, null, null, 'Smack', 'Crack', 'Popple', 5);
+// Going to try to make it so that the familiar is unique to each of the starting classes.
+
 let currentEnemy = familiar3;
 let currentFamiliar = familiar3;
 currentFamiliar.generateAttackPower();

@@ -337,7 +337,7 @@ buttonPlayerBattleControls[7].addEventListener('click', ()=>{
     if(usingAlt === false){
         displayPlayerClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
         displayFamiliarButtonSet(currentFamiliar, buttonPlayerBattleControls)
-        // document.querySelector('.div-container-player-side-img')
+        // .style.backgroundImage = `url(${'./images/playerClass/wizardProfile.jpg'})`
         usingAlt = true;
     } else {
         displayPlayerClass(wizard, document.querySelector('.div-container-player-side-stats'));
