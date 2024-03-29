@@ -11,13 +11,20 @@ const DivOwnedFamiliarContainer = document.querySelector('.div-familiar-containe
 //Creating the wizard and setting up the multiplier for the spell powers and durations
 let wizard = new PlayerClass(10, 10, 10, 10, 10, 10);
 wizard.gold = 100;
-// displayPlayerClass(wizard, )
-let currentPlayer = 0;
 // player span for gold, health, and mana
 let spanPlayerGold = document.querySelector('.span-player-gold');
 let spanPlayerHealth = document.querySelector('.span-player-health');
 let spanPlayerMana = document.querySelector('.span-player-mana');
+
+// global variables
+let currentDifficulty = .5; //Current difficulty init
+let currentPlayer = 0; //Current Player Init
+
+
 //Initializing starting familiar
+let arrayPlayerChoices = [];
+let arrayPlayerFamiliars = [];
+
 const familiar3 = new Familiar('Friendy', 'Fire', 'familiar1', randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), null, null, null, 'Smack', 'Crack', 'Popple', 5);
 let currentEnemy = familiar3;
 let currentFamiliar = familiar3;
@@ -26,10 +33,11 @@ currentFamiliar.generateAttackPower();
 currentFamiliar.generateHealth();
 currentFamiliar.generateAttackPower();
 currentFamiliar.generateMana();
+for (let i = 0; i < 20; i++) {
+    createFamiliarDiv(createRandomFamiliar(currentDifficulty), arrayPlayerFamiliars, DivFamiliarContainer, DivOwnedFamiliarContainer, `./images/familiars/familiar${i}.jpg`)
+}
 // End of initializing starting familiar
-let arrayPlayerChoices = [];
-let arrayPlayerFamiliars = [];
-//End of player choice array
+
 //Creating the playable classes of the game.
 createDifferentClasses('Priest', arrayPlayerChoices, 'priestProfileIMG');
 createDifferentClasses('Fighter', arrayPlayerChoices, 'fighterProfileIMG');
@@ -42,22 +50,14 @@ createDifferentClasses('Assassin', arrayPlayerChoices, 'assassinProfileIMG');
 wizard = arrayPlayerChoices[0];
 activatePlayerStatistics(wizard);
 wizard.generateAttackPower();
-displayPlayerClass(wizard, divPlayerStatistics);
-//End of Display
+displayPlayerClass(wizard, divPlayerStatistics)
+// End of init
+// Start of merchant 
+let arrayPlayerInventory = []; // array that holds the player inventory
+let arrayMerchantInventory = []; // array that holds the merchant inventory
+const divPlayerInventory = document.querySelector('.div-inventory-container'); // selecting the player inventory div
+const divMerchantInventory = document.querySelector('.div-item-container'); // selecting the merchant inventory div
 
-
-
-let currentDifficulty = .5;
-
-// CREATING RANDOM FAMILIARS
-for (let i = 0; i < 20; i++) {
-    createFamiliarDiv(createRandomFamiliar(currentDifficulty), arrayPlayerFamiliars, DivFamiliarContainer, DivOwnedFamiliarContainer, `./images/familiars/familiar${i}.jpg`)
-}
-//Left off here after randomally generating the familiars    //up to 10 of 21
-//End of Familiars
-
-
-//Start of the Merchant Code -- also need to build player inventory.
 
 let newItemHead = new Item('Starter Helmet', 'Head', randomNumberMaker(225), () => {
     player.helmet
@@ -99,12 +99,6 @@ let newItemFeet = new Item('Starter Feet', 'Feet', randomNumberMaker(225), () =>
     player.helmet
 }, 'Starter Feet', false, 'images/boots/boots.jpg', randomNumberMaker(5));
 
-let arrayPlayerInventory = []; // array that holds the player inventory
-let arrayMerchantInventory = []; // array that holds the merchant inventory
-const divPlayerInventory = document.querySelector('.div-inventory-container'); // selecting the player inventory div
-const divMerchantInventory = document.querySelector('.div-item-container'); // selecting the merchant inventory div
-
-
 //Creating the items to push into the merchant array
 createMerchantItem(newItemHead, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
 createMerchantItem(newItemWeaponL, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
@@ -116,25 +110,7 @@ createMerchantItem(newItemRingR, divMerchantInventory, arrayMerchantInventory, a
 createMerchantItem(newItemRingL, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
 createMerchantItem(newItemHands, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
 createMerchantItem(newItemFeet, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-
-
 //End of Merchant Code.
-
-
-let usingAlt = false;
-// heal, attack basic, defend, special 1 , special 2, special 3
-
-function giveReward(currentEnemy) {
-    //write code for overlay to appear that explains reward with a next button.
-    currentEnemy.reward();
-}
-const div_reward_container = document.querySelector('.end-of-battle-screen')
-const remove_reward_button = document.querySelector('.button-remove-reward-screen')
-
-remove_reward_button.addEventListener('click', () => {
-    div_reward_container.classList.add('hide')
-    document.querySelector('body').classList.remove('over-flow')
-})
 
 
 function checkForEndOfBattle() {
@@ -173,8 +149,6 @@ function checkForEndOfBattle() {
 
 
 
-let allMapSlots = document.querySelectorAll('.map-square');
-
 let rewardGold = 5;
 let arrayTestMonsters = [];
 
@@ -198,8 +172,12 @@ function display_end_of_battle_rewards_p_change(node_list, reward0, reward1, rew
     node_list[2].innerText = `Lumber: ${reward2}`
     node_list[3].innerText = `Stone: ${reward3}`
 }
-
 let reward_level = 1
+
+
+
+
+let allMapSlots = document.querySelectorAll('.map-square');
 allMapSlots.forEach((mapSlot) => {   //Putting the map slots on the map and initiating the battle
     arrayTestMonsters = []
     
@@ -230,28 +208,22 @@ let mapLevel = 1; //The level of the map
 
 //End of the map section44
 
-//Start of game functions that need to be called.
-buttonUnequip.forEach((button) => {//Fixing equip button display
-    button.addEventListener('click', () => {
-        displayPlayerClass(wizard, divPlayerStatistics);
-    })
-});
+
 //End of game functions that need to be called.
 
 // Resource Farm Start
 let population = 0;
 const h1Population = document.querySelector('.h1-population');
-
-
-
 const resourceFarm_ = new ResourceFarm();
+//end of resource farm
 
-
+// Start of essence
 const essenceCountAll = document.querySelectorAll('#span-essence-count');
 const essenceEssenceCountAll = document.querySelectorAll('.h1-total-essence')
 updateEssence(wizard, essenceCountAll)
 updateEssenceEssencePage(wizard, essenceEssenceCountAll)
+// End of essence
 
-
-
+// Building
 updateBuildingResourcePlayerTable(tdBuildHousePlayerHave, tdBuildHouseRequirementsAllSmall, tdBuildHouseRequirementsAllMedium, tdBuildHouseRequirementsAllLarge, resourceFarm_); // calling the function to display the map
+// End of building

@@ -1,5 +1,7 @@
 const buttonPlayerBattleControls = document.querySelectorAll('.button-player-control');
 const mapLevelHTML = document.querySelector('.h1-map-level');
+
+let usingAlt = false;
 //basic attack
 
 function makeMoveHavePower(multiplier){
