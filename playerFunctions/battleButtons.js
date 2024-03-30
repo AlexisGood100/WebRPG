@@ -8,11 +8,6 @@ function makeMoveHavePower(multiplier){
     return wizard.attackPower * multiplier
 }
 
-function displayFamiliarButtonSet(currentFamiliar, nodeList){
-nodeList[2].innerText = currentFamiliar.specialAbility1Des
-nodeList[3].innerText = currentFamiliar.specialAbility2Des
-nodeList[4].innerText = currentFamiliar.specialAbility3Des
-}
 
 
 
@@ -338,14 +333,14 @@ buttonPlayerBattleControls[7].addEventListener('click', ()=>{
     if(usingAlt === false){
         usingAlt = true;
         switchTo.style.backgroundImage = `url(${currentFamiliar.newImgPath})`;
-        displayPlayerClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
+        // displayPlayerClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
         console.log(`url(${currentFamiliar.newImgPath})`)
         displayFamiliarButtonSet(currentFamiliar, buttonPlayerBattleControls)
     } else if(usingAlt === true){
         usingAlt = false;
         switchTo.style.backgroundImage = `url(${wizard.originalImg})`;
         console.log(wizard.originalImg)
-        displayPlayerClass(wizard, document.querySelector('.div-container-player-side-stats'));
+        // displayPlayerClass(wizard, document.querySelector('.div-container-player-side-stats'));
         setBattleButtons()
     }
 

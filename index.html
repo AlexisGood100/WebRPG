@@ -357,14 +357,18 @@
 
             </div>
             <div class="button-controls-for-player-combat">
-                <button class="button-player-control">Attack</button>
-                <button class="button-player-control">Defend</button>
-                <button class="button-player-control">Special 1</button>
-                <button class="button-player-control">Special 2</button>
-                <button class="button-player-control">Special 3</button>
-                <button class="button-player-control">HP Potion</button>
-                <button class="button-player-control">MP Potion</button>
-                <button class="button-player-control">Switch</button>
+                <div class="button-player-control-container">
+                    <button class="button-player-control">Attack</button>
+                    <button class="button-player-control">Defend</button>
+                    <button class="button-player-control">Special 1</button>
+                    <button class="button-player-control">Special 2</button>
+                </div>
+                <div class="button-player-control-container">
+                    <button class="button-player-control">Special 3</button>
+                    <button class="button-player-control">HP Potion</button>
+                    <button class="button-player-control">MP Potion</button>
+                    <button class="button-player-control">Switch</button>
+                </div>
             </div>
 
         </div>
@@ -709,6 +713,7 @@ Fire
     <script src="displayFunctions/initiateBattle.js"></script>
     <script src="/displayFunctions/map.js"></script>
     <script src="/displayFunctions/hideAllDivs.js"></script>
+    <script src="/displayFunctions/familiar/displayFamiliarButtonSet.js"></script>
     <!-- End of Display functions / -->
     
     
