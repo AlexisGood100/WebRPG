@@ -14,7 +14,7 @@ const createRandomFamiliar = ( difficulty)=>{
     let specialAbility1Des = specialAttackArray1[specialAttackArrayIndex]
     let specialAbility2Des = specialAttackArray2[specialAttackArrayIndex]
     let specialAbility3Des = specialAttackArray3[specialAttackArrayIndex]
-    let startingStat = (Math.floor(Math.random() * randomNumber(20)+ 10) * difficulty)
+    let startingStat = (Math.floor(Math.random() * randomNumber(40)+ 10) * difficulty)
     let constitution = startingStat;
     let dexterity = startingStat;
     let strength = startingStat;
