@@ -18,4 +18,5 @@ function updateBuildingResourcePlayerTable(tableR1, tableR2, tableR3, tableR4, R
     tableR4[1].innerText = RSFARM.woodRL;
     tableR4[2].innerText = RSFARM.stoneRL;
     tableR4[3].innerText = RSFARM.lumberRL;
+
 }

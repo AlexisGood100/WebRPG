@@ -19,7 +19,6 @@ function bundleClassChoiceBases(){ //all the events use these lines regardless s
 }
 
 
-
 divPlayerClassChoices[0].addEventListener('click', () => {
     wizard = arrayPlayerChoices[0];
     wizard.class = "Priest";

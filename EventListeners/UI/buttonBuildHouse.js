@@ -29,6 +29,7 @@ buttonBuildHouse[0].addEventListener('click', ()=>{
         wizard.gold -= resourceFarm_.goldRS;
         updateFarmResourceActual()
         h1Population.innerText = `Population: ${population}`;
+        document.querySelector('.h1-population-harvest').innerText = `Population: ${population}`;
      updateWoodStoneAndGold();
     let new_house = new House()
     new_house.create_essence_clock(wizard);
@@ -50,12 +51,13 @@ buttonBuildHouse[1].addEventListener('click', ()=>{
     wizard.gold -= resourceFarm_.goldRM;
     updateFarmResourceActual()
     h1Population.innerText = `Population: ${population}`;
-    updateWoodStoneAndGold();
+    document.querySelector('.h1-population-harvest').innerText = `Population: ${population}`;
 let new_house = new House()
     new_house.create_essence_clock(wizard);
     if(current_houses <= house_limit){
         new_house.insert_house(houseContainer, 'medium')
         display_house_element_updates()
+        
     }
     display_house_element_updates()
     } else {
@@ -70,6 +72,7 @@ buttonBuildHouse[2].addEventListener('click', ()=>{
     wizard.gold -= resourceFarm_.goldRL;
     updateFarmResourceActual()
     h1Population.innerText = `Population: ${population}`;
+    document.querySelector('.h1-population-harvest').innerText = `Population: ${population}`;
     updateWoodStoneAndGold();
 let new_house = new House()
     new_house.create_essence_clock(wizard);
