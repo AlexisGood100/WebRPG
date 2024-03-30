@@ -23,15 +23,9 @@ let currentPlayer = 0; //Current Player Init
 //Initializing starting familiar
 let arrayPlayerChoices = [];
 
-
 let startFamiliar = new Familiar('Friendy', 'Fire', 'familiar1', randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), null, null, null, 'Smack', 'Crack', 'Popple', 5);
 startFamiliar.newImgPath = './images/familiars/wizardStarterFamiliar.jpg';
 let arrayPlayerFamiliars = [startFamiliar];
-
-
-
-
-
 
 let currentEnemy = null;
 let currentFamiliar = startFamiliar;
@@ -120,28 +114,23 @@ createMerchantItem(newItemFeet, divMerchantInventory, arrayMerchantInventory, ar
 function checkForEndOfBattle() {
     document.querySelector('.battle-overlay').classList.add('hide');
     winCount += 1;
-    if (winCount % 3 === 0) {
-        document.querySelectorAll('.div-item-container .div-merchant-item').forEach((div) => {
-            div.remove();
-        })
-    //    This is where the familiar unlock used to be. // Need to recreate function.
-        // 
-        updateBuildingResourcePlayerTable(tdBuildHousePlayerHave, tdBuildHouseRequirementsAllSmall, tdBuildHouseRequirementsAllMedium, tdBuildHouseRequirementsAllLarge, resourceFarm_); // calling the function to display the map
-    }
     giveReward(currentEnemy);
+
     h1MenuItemsAll.forEach((item) => {
         item.classList.remove('hide');
     });
+
     document.querySelector('.div-map-container').classList.remove('hide');
     updateBuildingResourcePlayerTable(tdBuildHousePlayerHave, tdBuildHouseRequirementsAllSmall, tdBuildHouseRequirementsAllMedium, tdBuildHouseRequirementsAllLarge, resourceFarm_); // calling the function to display the map
     div_reward_container.classList.remove('hide');
     document.querySelector('body').classList.add('over-flow');
     wizard.levelUp();
-    displayPlayerClass(wizard, divPlayerStatistics);
+    displayPlayerClass(wizard, document.querySelector('.div-player-statistics'));
     wizard.generateHealth();
     wizard.generateMagicPower()
     currentFamiliar.generateMagicPower()
     currentFamiliar.generateAttackPower();
+    currentFamiliar.level = wizard.level;
     spanPlayerGold.innerText = wizard.gold;
     currentDifficulty += .5
 }
@@ -158,9 +147,6 @@ const divsForHidingMainContainers = document.querySelectorAll('.overflow-hide')
 
 hide_all_divs(divsForHidingMainContainers)
 let reward_level = 1
-
-
-
 
 let allMapSlots = document.querySelectorAll('.map-square');
 allMapSlots.forEach((mapSlot) => {   //Putting the map slots on the map and initiating the battle
