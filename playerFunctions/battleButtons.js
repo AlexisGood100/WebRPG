@@ -332,17 +332,21 @@ buttonPlayerBattleControls[6].addEventListener('click', ()=>{
     }
 })
 
+let switchTo = document.querySelector('.div-container-player-side-img')
 //switching back and forth between familiars.
 buttonPlayerBattleControls[7].addEventListener('click', ()=>{
     if(usingAlt === false){
-        displayPlayerClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
-        displayFamiliarButtonSet(currentFamiliar, buttonPlayerBattleControls)
-        // .style.backgroundImage = `url(${'./images/playerClass/wizardProfile.jpg'})`
         usingAlt = true;
-    } else {
+        switchTo.style.backgroundImage = `url(${currentFamiliar.newImgPath})`;
+        displayPlayerClass(currentFamiliar, document.querySelector('.div-container-player-side-stats'));
+        console.log(`url(${currentFamiliar.newImgPath})`)
+        displayFamiliarButtonSet(currentFamiliar, buttonPlayerBattleControls)
+    } else if(usingAlt === true){
+        usingAlt = false;
+        switchTo.style.backgroundImage = `url(${wizard.originalImg})`;
+        console.log(wizard.originalImg)
         displayPlayerClass(wizard, document.querySelector('.div-container-player-side-stats'));
         setBattleButtons()
-        usingAlt = false;
     }
 
 })

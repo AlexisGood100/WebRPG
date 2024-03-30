@@ -1,6 +1,7 @@
 class Familiar {
     constructor(name, type, imgPath, constitution, strength, intelligence, dexterity, charisma, willPower, defense, speed, specialAbility1, specialAbility2, specialAbility3, specialAbility1Des, specialAbility2Des, specialAbility3Des, cost){
 this.name = name;
+this.newImgPath = '';
 this.health = constitution * 6;
 this.mana = intelligence * 7
 this.strength = strength;

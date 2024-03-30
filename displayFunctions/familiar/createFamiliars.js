@@ -3,6 +3,7 @@ let familiarDiv = document.createElement('div');
 familiarDiv.classList.add('div-familiar-container-1')
 let familiarDivTitle = document.createElement('h1');
 let familiarDivImg = document.createElement('div');
+familiar.newImgPath = imgPath;
 familiarDivImg.style.backgroundImage = `url(${imgPath})`;
 familiarDivImg.classList.add('div-familiar-image')
 

@@ -22,13 +22,19 @@ let currentPlayer = 0; //Current Player Init
 
 //Initializing starting familiar
 let arrayPlayerChoices = [];
-let arrayPlayerFamiliars = [];
 
-const startFamiliar = new Familiar('Friendy', 'Fire', 'familiar1', randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), null, null, null, 'Smack', 'Crack', 'Popple', 5);
-// Going to try to make it so that the familiar is unique to each of the starting classes.
 
-let currentEnemy = familiar3;
-let currentFamiliar = familiar3;
+let startFamiliar = new Familiar('Friendy', 'Fire', 'familiar1', randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), null, null, null, 'Smack', 'Crack', 'Popple', 5);
+startFamiliar.newImgPath = './images/familiars/wizardStarterFamiliar.jpg';
+let arrayPlayerFamiliars = [startFamiliar];
+
+
+
+
+
+
+let currentEnemy = null;
+let currentFamiliar = startFamiliar;
 currentFamiliar.generateAttackPower();
 currentFamiliar.generateHealth();
 currentFamiliar.generateAttackPower();
@@ -131,7 +137,7 @@ function checkForEndOfBattle() {
     div_reward_container.classList.remove('hide');
     document.querySelector('body').classList.add('over-flow');
     wizard.levelUp();
-    displayPlayerClass(wizard, document.querySelector('.player-div-statistics'));
+    displayPlayerClass(wizard, divPlayerStatistics);
     wizard.generateHealth();
     wizard.generateMagicPower()
     currentFamiliar.generateMagicPower()
