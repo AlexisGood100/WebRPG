@@ -36,6 +36,7 @@ currentFamiliar.generateMana();
 
 for (let i = 0; i < 20; i++) {
     createFamiliarDiv(createRandomFamiliar(currentDifficulty), arrayPlayerFamiliars, DivFamiliarContainer, DivOwnedFamiliarContainer, `./images/familiars/familiar${i}.jpg`)
+
 }
 // End of initializing starting familiar
 

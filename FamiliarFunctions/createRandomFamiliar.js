@@ -26,7 +26,8 @@ const createRandomFamiliar = ( difficulty)=>{
     let cost = (Math.floor(Math.random() * randomNumber(4)) + 1);
      let typeArray = ['Water', 'Fire', 'Earth', 'Air', 'Light', 'Dark'];
      let typeArrayRandom = typeArray[Math.round(Math.random() * 5)]
-    let randomFamiliar = new Familiar(nameArray[nameCalc], typeArrayRandom,  constitution, strength, intelligence, dexterity, charisma, willpower,defense, speed, null, null, null, specialAbility1Des, specialAbility2Des, specialAbility3Des, cost)
+    let randomFamiliar = new Familiar(nameArray[nameCalc], typeArrayRandom,  constitution, strength, intelligence, dexterity, charisma, willpower,defense, speed, null, null, null, specialAbility1Des, specialAbility2Des, specialAbility3Des, cost, cost)
+    console.log(randomFamiliar)
     randomFamiliar.generateAttackPower()
     randomFamiliar.generateMagicPower()
     randomFamiliar.generateHealth()
