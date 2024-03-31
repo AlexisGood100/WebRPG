@@ -61,11 +61,11 @@ const divMerchantInventory = document.querySelector('.div-item-container'); // s
 
 let newItemHead = new Item('Starter Helmet', 'Head', randomNumberMaker(225), () => {
     player.helmet
-}, 'Starter Helmet', false, 'images/hats/newHat2.jpg', randomNumberMaker(5));
+}, 'Starter Helmet', false, 'images/hats/hat1.jpg', randomNumberMaker(5));
 
 let newItemChest = new Item('Starter Chest', 'Chest', randomNumberMaker(225), () => {
     player.helmet
-}, 'Starter Chest', false, 'images/armor/breastPlate/breastPlate.jpg', randomNumberMaker(5));
+}, 'Starter Chest', false, 'images/breastPlate/breastplate1.jpg', randomNumberMaker(5));
 
 let newItemWeaponR = new Item('Starter Weapon-R', 'Weapon-R', randomNumberMaker(225), () => {
     player.helmet
@@ -97,7 +97,7 @@ let newItemHands = new Item('Starter Hands', 'Hands', randomNumberMaker(225), ()
 
 let newItemFeet = new Item('Starter Feet', 'Feet', randomNumberMaker(225), () => {
     player.helmet
-}, 'Starter Feet', false, 'images/boots/boots.jpg', randomNumberMaker(5));
+}, 'Starter Feet', false, 'images/boots/boot1.jpg', randomNumberMaker(5));
 
 //Creating the items to push into the merchant array
 createMerchantItem(newItemHead, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
