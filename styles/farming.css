@@ -1,21 +1,25 @@
 /* Default hidden state */
-.div-farming-container {
+.div-farming-container {    
     opacity: 0;
     transform: translateY(20px); /* Move down slightly to create a fade-in effect */
     pointer-events: none; /* Disable pointer events when hidden */
+    /* display: flex; */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition effect */
+    border:1px solid white;
+    width:100vw;
 }
 
 .h1-farming{
 padding: .2rem;
 margin:.2rem;
 text-decoration: underline;
+
 }
 
 /* Styles for the state */
 .div-farming-container {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0);    
     pointer-events: auto; /* Enable pointer events when */
 }
 
@@ -25,15 +29,16 @@ text-decoration: underline;
 
 /* Styles for the table */
 .div-farming-container table {
-    width: 100%;
-    /* margin-top: 20px; */
+    margin:0 auto;
+    width: 50%;
+
     border-collapse: collapse;
 }
 
 .div-farming-container th,
 .div-farming-container td {
     border: 1px solid #61dafb; /* Futuristic blue border for cells */
-    text-align: left;
+    text-align: center;
     padding: 10px;
 }
 .div-farming-container td{
@@ -65,6 +70,8 @@ text-decoration: underline;
     transition: background-color 0.3s ease; /* Smooth transition effect on hover */
 }
 
+
+
 .div-farming-container .sell-farm-btn:hover,
 .div-farming-container .upgrade-farm-btn:hover {
     background-color: #1e1e1e; /* Darker background color on hover */
@@ -77,6 +84,7 @@ text-decoration: underline;
     width:100px;
     height:100px;
     border:1px solid white;
+    margin-bottom:1%;
 }
 
 .corn{
