@@ -196,10 +196,7 @@ updateEssenceEssencePage(wizard, essenceEssenceCountAll)
 updateBuildingResourcePlayerTable(tdBuildHousePlayerHave, tdBuildHouseRequirementsAllSmall, tdBuildHouseRequirementsAllMedium, tdBuildHouseRequirementsAllLarge, resourceFarm_); // calling the function to display the map
 // End of building
 
-
-
-    
-
+// Java Shop initiation
 createJavaObj(javaConsititution, document.querySelector('.java-container'), wizard);
 createJavaObj(javaStrength, document.querySelector('.java-container'), wizard);
 createJavaObj(javaDexterity, document.querySelector('.java-container'), wizard);

@@ -8,15 +8,9 @@ class Java {
     }
     giveConstitutionAttributeToWizard(wizard){
         wizard.constitution += this.amount;
-        console.log(
-            'run const'
-        )
     }
     giveStrengthAttributeToWizard(wizard){
         wizard.strength += this.amount;
-        console.log(
-            'run str'
-        )
     }
     giveIntelligenceAttributeToWizard(wizard){
         wizard.intelligence += this.amount;
@@ -28,8 +22,6 @@ class Java {
         wizard.willpower += this.amount;
     }
 }
-
-
 
 function createJavaObj(java_obj, parent, wizard){
     let java_div = document.createElement('div');

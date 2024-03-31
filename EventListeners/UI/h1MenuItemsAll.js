@@ -5,7 +5,7 @@ const h1MenuItemsAll = document.querySelectorAll(".h1-menu-item");
 
 let allContainers = [document.querySelector('.container-for-stats-and-images'), document.querySelector('.div-merchant'), document.querySelector('.div-player-equip-area'), document.querySelector('.div-inventory-container-container'),
 document.querySelector('.div-familiar-container'), document.querySelector('.div-farming-container'), document.querySelector('.div-map-container')
-    , document.querySelector('.div-all-building-container'), document.querySelector('.div-harvesting-container')
+    , document.querySelector('.div-all-building-container'), document.querySelector('.div-harvesting-container'), document.querySelector('.div-java-shop')
 ]
 
 
@@ -83,3 +83,10 @@ h1MenuItemsAll[8].addEventListener('click', () => {
 
 })
 
+h1MenuItemsAll[9].addEventListener('click', () => {
+    findElementContainerByIndex(9, allContainers)
+    hideMenuEquipSlots(document.querySelectorAll('.div-equip-slot'))
+
+})
+
+// div-java-shop
