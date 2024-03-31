@@ -6,8 +6,26 @@ class Java {
         this.price = price;
         this.imgPath = imgPath;
     }
-    giveHealthAttributeToWizard(wizard){
+    giveConstitutionAttributeToWizard(wizard){
         wizard.constitution += this.amount;
+        console.log(
+            'run const'
+        )
+    }
+    giveStrengthAttributeToWizard(wizard){
+        wizard.strength += this.amount;
+        console.log(
+            'run str'
+        )
+    }
+    giveIntelligenceAttributeToWizard(wizard){
+        wizard.intelligence += this.amount;
+    }
+    giveCharmismaAttributeToWizard(wizard){
+        wizard.charisma += this.amount;
+    }
+    giveWillpowerAttributeToWizard(wizard){
+        wizard.willpower += this.amount;
     }
 }
 
@@ -35,11 +53,32 @@ function createJavaObj(java_obj, parent, wizard){
     parent.appendChild(java_div);
     let buttonBuy = document.createElement('button');
     buttonBuy.innerText = 'Buy';
-    buttonBuy.addEventListener('click', ()=>{
-        if(java_div.typeOfAttribute === 'Health'){
-            java_obj.giveConstitutionAttributeToWizard(wizard);
-        } else if(java_div.typeOfAttribute === 'Constitution'){
 
+    buttonBuy.addEventListener('click', ()=>{
+        console.log()
+        if(wizard.gold >= java_obj.price){
+
+            if(java_obj.typeOfAttribute === 'Constitution'){
+                java_obj.giveConstitutionAttributeToWizard(wizard);
+            
+            } else if(java_obj.typeOfAttribute === 'Strength'){
+            java_obj.giveStrengthAttributeToWizard(wizard);
+            }
+            else if(java_obj.typeOfAttribute === 'Intelligence'){
+            java_obj.giveIntelligenceAttributeToWizard(wizard);
+            }
+            else if(java_obj.typeOfAttribute === 'Willpower'){
+            java_obj.giveWillpowerAttributeToWizard(wizard);
+            } 
+            else if(java_obj.typeOfAttribute === 'Dexterity'){
+            java_obj.giveDexterityAttributeToWizard(wizard);
+            }
+           else if(java_obj.typeOfAttribute === 'Charisma'){
+            java_obj.giveCharismaAttributeToWizard(wizard);
+           }
+           wizard.gold -= java_obj.price
+        } else {
+            alert('Insufficient Gold.')
         }
     })
     java_div.appendChild(buttonBuy);
