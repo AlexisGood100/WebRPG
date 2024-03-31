@@ -197,9 +197,14 @@ updateBuildingResourcePlayerTable(tdBuildHousePlayerHave, tdBuildHouseRequiremen
 // End of building
 
 // Java Shop initiation
-createJavaObj(javaConsititution, document.querySelector('.java-container'), wizard);
-createJavaObj(javaStrength, document.querySelector('.java-container'), wizard);
-createJavaObj(javaDexterity, document.querySelector('.java-container'), wizard);
-createJavaObj(javaWillpower, document.querySelector('.java-container'), wizard);
-createJavaObj(javaIntelligence, document.querySelector('.java-container'), wizard);
-createJavaObj(javaCharisma, document.querySelector('.java-container'), wizard);
+createJavaObj(javaConsititution, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
+createJavaObj(javaStrength, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
+createJavaObj(javaDexterity, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
+createJavaObj(javaWillpower, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
+createJavaObj(javaIntelligence, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
+createJavaObj(javaCharisma, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
+createJavaObj(javaDefense, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
+createJavaObj(javaFamiliarDefense, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
+createJavaObj(javaFamiliarStrength, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
+createJavaObj(javaFamiliarConstitution, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
+

@@ -21,9 +21,27 @@ class Java {
     giveWillpowerAttributeToWizard(wizard){
         wizard.willpower += this.amount;
     }
+    giveDefenseAttributeToWizard(wizard){
+        wizard.defense += this.amount;
+    }
+    giveDefenseToFamiliar(familiarArr){
+        familiarArr.forEach((familiar)=>{
+            familiar.defense += 1;
+        })
+    }
+    giveStrengthToFamiliar(familiarArr){
+        familiarArr.forEach((familiar)=>{
+            familiar.strength += 1;
+        })
+    }
+    giveConsititutionToFamiliar(familiarArr){
+        familiarArr.forEach((familiar)=>{
+            familiar.constitution += 1;
+        })
+}
 }
 
-function createJavaObj(java_obj, parent, wizard){
+function createJavaObj(java_obj, parent, wizard, familiarArr){
     let java_div = document.createElement('div');
     java_div.classList.add('card');
     let java_img = document.createElement('div');
@@ -67,6 +85,15 @@ function createJavaObj(java_obj, parent, wizard){
             }
            else if(java_obj.typeOfAttribute === 'Charisma'){
             java_obj.giveCharismaAttributeToWizard(wizard);
+           } else if(java_obj.typeOfAttribute === 'Defense'){
+            java_obj.giveDefenseAttributeToWizard(wizard);
+           } else if(java_obj.typeOfAttribute === 'Familiar Defense'){
+            java_obj.giveDefenseToFamiliar(familiarArr)
+           } else if(java_obj.typeOfAttribute === 'Familiar Attack'){
+            java_obj.giveStrengthToFamiliar(familiarArr)
+           }
+           else if(java_obj.typeOfAttribute === 'Familiar Constitution'){
+            java_obj.giveConstitutionToFamiliar(familiarArr)
            }
            wizard.gold -= java_obj.price
         } else {

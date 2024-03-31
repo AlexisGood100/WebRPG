@@ -5,3 +5,7 @@ let javaDexterity = new Java('Space Race', 'Dexterity', 10, 150, './images/java/
 let javaWillpower = new Java('Space Race', 'Willpower', 10, 150, './images/java/java4.jpg')
 let javaIntelligence = new Java('Space Race', 'Intelligence', 10, 150, './images/java/java5.jpg')
 let javaCharisma = new Java('Space Race', 'Charisma', 10, 150, './images/java/java6.jpg')
+let javaDefense = new Java('Space Race', 'Defense', 10, 150, './images/java/java7.jpg')
+let javaFamiliarDefense = new Java('Space Race', 'Familiar Defense', 10, 150, './images/java/java8.jpg')
+let javaFamiliarStrength = new Java('Space Race', 'Familiar Strength', 10, 150, './images/java/java9.jpg')
+let javaFamiliarConstitution = new Java('Space Race', 'Familiar Constitution', 3, 150, './images/java/java1.jpg')
