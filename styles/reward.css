@@ -1,0 +1,23 @@
+
+.blue-color{
+    color:#61dafb;
+}
+.end-of-battle-screen{
+    width:100vw;
+    height:100vh;
+}
+.reward-box{
+    width:305px;
+    height:305px;
+    margin: 0 auto;
+    padding:1.5rem;
+    box-shadow:2px 2px 1px 3px black;
+    border:1px solid white;
+    background-position: center;
+}
+
+.reward-content{
+    margin:1rem;
+    border:4px solid black;
+    box-shadow: 1px 1px 1px 1px black;
+}

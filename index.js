@@ -135,15 +135,26 @@ createMerchantItem(newItemHands, divMerchantInventory, arrayMerchantInventory, a
 createMerchantItem(newItemFeet, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
 //End of Merchant Code.
 
+const allRewardChestImages = ['./images/rewardChests/chest1.jpg','./images/rewardChests/chest2.jpg','./images/rewardChests/chest3.jpg','./images/rewardChests/chest4.jpg']
+let rewardBox = document.querySelector('.reward-box')
+remove_reward_button.addEventListener('click', ()=>{
+    let rewardsContent = document.querySelectorAll('.reward-content')
+    rewardsContent.forEach((rewardContent)=>{
+    rewardContent.classList.remove('hide')
+    })
+})
 function checkForEndOfBattle() {
     document.querySelector('.battle-overlay').classList.add('hide');
     winCount += 1;
     giveReward(currentEnemy);
-
+    rewardBox.style.backgroundImage = `url('${allRewardChestImages[Math.floor(Math.random() * 3) + 1]}')`
     h1MenuItemsAll.forEach((item) => {
         item.classList.remove('hide');
     });
-
+    let rewards = document.querySelectorAll('.reward-content')
+    rewards.forEach((reward)=>{
+        reward.classList.remove('hide')
+    })
     document.querySelector('.div-map-container').classList.remove('hide');
     updateBuildingResourcePlayerTable(tdBuildHousePlayerHave, tdBuildHouseRequirementsAllSmall, tdBuildHouseRequirementsAllMedium, tdBuildHouseRequirementsAllLarge, resourceFarm_); // calling the function to display the map
     div_reward_container.classList.remove('hide');
