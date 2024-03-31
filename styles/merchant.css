@@ -42,12 +42,12 @@
     border: 2px solid #61dafb; /* Futuristic blue border */
     padding: 1.5rem;
     text-align: center;
-    width: 450px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
     background-position: center;
     background-color: #282c34; /* Dark bluish-gray background color */
-    border-radius: 8px; /* Slightly rounded corners for a sleek look */
+    border-radius: 30%; /* Slightly rounded corners for a sleek look */
     transition: all 0.3s ease; /* Smooth transition effect for hover */
     margin:1rem;
 }
