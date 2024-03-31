@@ -20,7 +20,7 @@
 /* Styles for the table */
 .div-farming-container table {
     width: 100%;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     border-collapse: collapse;
 }
 
@@ -65,4 +65,23 @@
     color:white;
     color:indigo;
     border:1px solid white;
+}
+
+.div-img-farm {
+    width:100px;
+    height:100px;
+    border:1px solid white;
+}
+
+.corn{
+    background-image: url('/images/farming/corn.jpg');
+}
+
+.chicken{
+    background-image: url('/images/farming/smallChicken.jpg');
+}
+
+.div-farm-images{
+    display:flex;
+    flex-wrap: wrap;
 }
