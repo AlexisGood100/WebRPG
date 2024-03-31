@@ -1,8 +1,9 @@
 /* Futuristic Player Equip Area Styles */
 
 .div-player-equip-area {
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* position:absolute; */
     border-radius: 5px;
     background-color: #1e1e1e; /* Dark futuristic background color */
     border: 2px solid #61dafb; /* Futuristic blue border */
@@ -30,10 +31,13 @@
     border: 2px solid #61dafb; /* Futuristic blue border */
     background-color: #282c34; /* Dark bluish-gray background color */
     border-radius: 8px; /* Slightly rounded corners for a sleek look */
-    width: 10%;
+    /* width: 10%;   */
     height: 200px;
     transition: all 0.3s ease; /* Smooth transition effect for hover */
 }
+
+
+
 
 .div-equip-slot:hover {
     border: 2px solid #ff00ff; /* Futuristic purple border on hover */

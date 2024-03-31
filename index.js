@@ -191,20 +191,21 @@ const essenceEssenceCountAll = document.querySelectorAll('.h1-total-essence')
 updateEssence(wizard, essenceCountAll)
 updateEssenceEssencePage(wizard, essenceEssenceCountAll)
 // End of essence
-
+let h1_java_counter = {count: 0};
 // Building
 updateBuildingResourcePlayerTable(tdBuildHousePlayerHave, tdBuildHouseRequirementsAllSmall, tdBuildHouseRequirementsAllMedium, tdBuildHouseRequirementsAllLarge, resourceFarm_); // calling the function to display the map
 // End of building
 
 // Java Shop initiation
-createJavaObj(javaConsititution, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
-createJavaObj(javaStrength, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
-createJavaObj(javaDexterity, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
-createJavaObj(javaWillpower, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
-createJavaObj(javaIntelligence, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
-createJavaObj(javaCharisma, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
-createJavaObj(javaDefense, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
-createJavaObj(javaFamiliarDefense, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
-createJavaObj(javaFamiliarStrength, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
-createJavaObj(javaFamiliarConstitution, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars);
+let spanForJavaCount = document.querySelector('.span-total-javas')
+createJavaObj(javaConsititution, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter );
+createJavaObj(javaStrength, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
+createJavaObj(javaDexterity, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
+createJavaObj(javaWillpower, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
+createJavaObj(javaIntelligence, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
+createJavaObj(javaCharisma, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
+createJavaObj(javaDefense, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
+createJavaObj(javaFamiliarDefense, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
+createJavaObj(javaFamiliarStrength, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
+createJavaObj(javaFamiliarConstitution, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
 

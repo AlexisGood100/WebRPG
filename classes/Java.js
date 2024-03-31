@@ -24,6 +24,11 @@ class Java {
     giveDefenseAttributeToWizard(wizard){
         wizard.defense += this.amount;
     }
+    giveDexterityAttributeToWizard(wizard){
+        wizard.dexterity += this.amount;
+    }
+    // End of wizard stat + method
+    //Familiar stat + method
     giveDefenseToFamiliar(familiarArr){
         familiarArr.forEach((familiar)=>{
             familiar.defense += 1;
@@ -39,9 +44,10 @@ class Java {
             familiar.constitution += 1;
         })
 }
+
 }
 
-function createJavaObj(java_obj, parent, wizard, familiarArr){
+function createJavaObj(java_obj, parent, wizard, familiarArr,spanForJavaCount, javaCounter){
     let java_div = document.createElement('div');
     java_div.classList.add('card');
     let java_img = document.createElement('div');
@@ -65,40 +71,37 @@ function createJavaObj(java_obj, parent, wizard, familiarArr){
     buttonBuy.innerText = 'Buy';
 
     buttonBuy.addEventListener('click', ()=>{
-        console.log()
-        if(wizard.gold >= java_obj.price){
-
+        javaCounter.count += 1
+        // if(wizard.gold >= java_obj.price){
             if(java_obj.typeOfAttribute === 'Constitution'){
                 java_obj.giveConstitutionAttributeToWizard(wizard);
-            
+                
             } else if(java_obj.typeOfAttribute === 'Strength'){
-            java_obj.giveStrengthAttributeToWizard(wizard);
+                java_obj.giveStrengthAttributeToWizard(wizard);
             }
             else if(java_obj.typeOfAttribute === 'Intelligence'){
-            java_obj.giveIntelligenceAttributeToWizard(wizard);
+                java_obj.giveIntelligenceAttributeToWizard(wizard);
             }
             else if(java_obj.typeOfAttribute === 'Willpower'){
-            java_obj.giveWillpowerAttributeToWizard(wizard);
+                java_obj.giveWillpowerAttributeToWizard(wizard);
             } 
             else if(java_obj.typeOfAttribute === 'Dexterity'){
-            java_obj.giveDexterityAttributeToWizard(wizard);
+                java_obj.giveDexterityAttributeToWizard(wizard);
             }
-           else if(java_obj.typeOfAttribute === 'Charisma'){
-            java_obj.giveCharismaAttributeToWizard(wizard);
-           } else if(java_obj.typeOfAttribute === 'Defense'){
-            java_obj.giveDefenseAttributeToWizard(wizard);
-           } else if(java_obj.typeOfAttribute === 'Familiar Defense'){
-            java_obj.giveDefenseToFamiliar(familiarArr)
-           } else if(java_obj.typeOfAttribute === 'Familiar Attack'){
-            java_obj.giveStrengthToFamiliar(familiarArr)
-           }
-           else if(java_obj.typeOfAttribute === 'Familiar Constitution'){
-            java_obj.giveConstitutionToFamiliar(familiarArr)
-           }
-           wizard.gold -= java_obj.price
-        } else {
-            alert('Insufficient Gold.')
-        }
+            else if(java_obj.typeOfAttribute === 'Charisma'){
+                java_obj.giveCharismaAttributeToWizard(wizard);
+            } else if(java_obj.typeOfAttribute === 'Defense'){
+                java_obj.giveDefenseAttributeToWizard(wizard);
+            } else if(java_obj.typeOfAttribute === 'Familiar Defense'){
+                java_obj.giveDefenseToFamiliar(familiarArr)
+            } else if(java_obj.typeOfAttribute === 'Familiar Attack'){
+                java_obj.giveStrengthToFamiliar(familiarArr)
+            }
+            else if(java_obj.typeOfAttribute === 'Familiar Constitution'){
+                java_obj.giveConstitutionToFamiliar(familiarArr)
+            }
+        wizard.gold -= java_obj.price
+        spanForJavaCount.innerText = javaCounter.count;
     })
     java_div.appendChild(buttonBuy);
 }
