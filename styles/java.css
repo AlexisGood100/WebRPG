@@ -1,7 +1,6 @@
 .div-java-shop{
     color:white;
     margin-top: 10%;
-
 }
 
 .java-img{
@@ -13,6 +12,15 @@
     background-position: center;
     margin:1rem;
 }
+
+
+.java-img:hover{
+    transform: scale(.8);
+    transition: 2s;
+    rotate: -360deg;
+   border: 4px solid gold;
+}
+
 
 .div-java-shop{
     width:90vw;
@@ -32,6 +40,10 @@
     background-color: black;
     box-shadow: 2px 2px 2px 4px solid white;
     margin:1rem;
+}
+
+.card:hover{
+border:2px solid gold;
 }
 .java-container button{
     margin:10px;
