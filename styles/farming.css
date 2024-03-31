@@ -6,6 +6,12 @@
     transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition effect */
 }
 
+.h1-farming{
+padding: .2rem;
+margin:.2rem;
+text-decoration: underline;
+}
+
 /* Styles for the state */
 .div-farming-container {
     opacity: 1;
@@ -81,7 +87,46 @@
     background-image: url('/images/farming/smallChicken.jpg');
 }
 
+
+
 .div-farm-images{
     display:flex;
     flex-wrap: wrap;
+}
+
+.pig{
+    background-image: url('/images/farming/pig.jpg');
+}
+
+.potatoes{
+    background-image: url('/images/farming/potatoes.jpg');
+    width:100px;
+    height:100px;
+    background-image: center;
+}
+
+.eggs{
+    background-image: url('/images/farming/eggs.jpg');
+}
+
+.carrots{
+    background-image: url('/images/farming/carrots.jpg');
+}
+
+.cow{
+    background-image: url('/images/farming/cow.jpg');
+}
+
+
+.div-farm-images{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.house-element{
+    background-position: center;
+    border: 2px white solid;
+    box-shadow: 2px 2px 2px 2px white;
 }

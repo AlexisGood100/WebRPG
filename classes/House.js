@@ -54,10 +54,13 @@ insert_house(parent, size){
     let house_element = document.createElement('div')
     if(size === 'small'){
         house_element.classList.add('house')
+        house_element.classList.add('house-element')
     } else if(size === 'medium'){
         house_element.classList.add('medium-house')
+        house_element.classList.add('house-element')
     } else if(size === 'large'){
         house_element.classList.add('large-house')
+        house_element.classList.add('house-element')
     }
     parent.append(house_element)
 }
