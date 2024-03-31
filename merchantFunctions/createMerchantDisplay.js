@@ -1,4 +1,4 @@
-function createMerchantDisplayItem(newItem, parent, array, playerInventoryArray, divPlayerInventory){
+function createMerchantDisplayItem(newItem, parent, array, playerInventoryArray, divPlayerInventory,itemSlots){
         let buttonBuy = document.createElement('button');
         buttonBuy.classList.add('button-buy')
         buttonBuy.innerText = 'Buy';
@@ -32,11 +32,12 @@ function createMerchantDisplayItem(newItem, parent, array, playerInventoryArray,
         let item = array.splice(newItem.id, 1);
         let nodeList = document.querySelectorAll('.div-merchant-item');
         giveIDtoList(arrayMerchantInventory);
+        giveIDtoList(playerInventoryArray)
             div.remove();
             console.log(nodeList);
          wizard.gold -= parseFloat(item[0].price);
          playerInventoryArray.push(item[0]);
-         createItemDisplay(divPlayerInventory, item[0], wizard);
+         createItemDisplay(divPlayerInventory, item[0], wizard, itemSlots);
          document.querySelector('#span-player-gold').innerText  = wizard.gold; 
         } else {alert('Insufficent gold')}
     });

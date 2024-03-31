@@ -41,7 +41,6 @@ familiarSpecialAbility2.innerText = familiar.specialAbility2Des;
 familiarSpecialAbility3.innerText = familiar.specialAbility3Des;
 if(familiar.type == 'Fire'){
     familiarPrice.innerText = `Cost: ${familiar.cost} Fire Essence.`;
-console.log(familiar.type)
 } else if (familiar.type == 'Water'){
     familiarPrice.innerText = `Cost: ${familiar.cost} Water Essence.`;
 

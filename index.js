@@ -99,17 +99,30 @@ let newItemFeet = new Item('Starter Feet', 'Feet', randomNumberMaker(225), () =>
     player.helmet
 }, 'Starter Feet', false, 'images/boots/boot1.jpg', randomNumberMaker(5));
 
+// Unequip code
+const allButtonsForUnequip = document.querySelectorAll('.button-unequip');
+let allImagesForEquipSlots = document.querySelectorAll('.div-equip-item-image')
+
+let itemSlots = [0, 0, 0, 0, 0, 0, 0, 0]
+
+allButtonsForUnequip[0].addEventListener('click', ()=>{
+    // createMerchantItem(itemSlots[0], divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
+    createItemDisplay(divPlayerInventory, itemSlots[0], wizard)
+    allImagesForEquipSlots[0].style.backgroundImage = '';
+    itemSlots[0] = 0;
+})
+
 //Creating the items to push into the merchant array
-createMerchantItem(newItemHead, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemWeaponL, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemWeaponR, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemChest, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemBelt, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemNecklace, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemRingR, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemRingL, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemHands, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
-createMerchantItem(newItemFeet, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory);
+createMerchantItem(newItemHead, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
+createMerchantItem(newItemWeaponL, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
+createMerchantItem(newItemWeaponR, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
+createMerchantItem(newItemChest, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
+createMerchantItem(newItemBelt, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
+createMerchantItem(newItemNecklace, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
+createMerchantItem(newItemRingR, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
+createMerchantItem(newItemRingL, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
+createMerchantItem(newItemHands, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
+createMerchantItem(newItemFeet, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
 //End of Merchant Code.
 
 function checkForEndOfBattle() {
@@ -208,4 +221,5 @@ createJavaObj(javaDefense, document.querySelector('.java-container'), wizard, ar
 createJavaObj(javaFamiliarDefense, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
 createJavaObj(javaFamiliarStrength, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
 createJavaObj(javaFamiliarConstitution, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
+
 
