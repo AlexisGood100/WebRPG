@@ -4,6 +4,15 @@
     transform: translateY(20px); /* Move down slightly to create a fade-in effect */
     pointer-events: none; /* Disable pointer events when hidden */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition effect */
+    width:100%;
+    margin:0 auto;
+    border:2px solid black;
+    box-shadow:2px 2px 2px 2px black;
+}
+
+.h1-element-title{
+    padding:.2rem;
+    text-decoration: underline;
 }
 
 /* Styles for the state */
@@ -30,17 +39,23 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 20px;
+    border:1px solid white;
 }
 
 /* Styles for each harvesting element item */
 .div-harvesting-container .div-elements-harvest-item {
-    width: 30%;
+    width: 22%;
     margin: 10px;
     text-align: center;
     background-color: #282c34; /* Dark bluish-gray background color */
     padding: 20px;
     border-radius: 10px;
+}
+
+.div-elements-harvest-item{
+    border:2px solid black;
+    box-shadow:2px 2px 2px 5px black;
+    background-color: grey;
 }
 
 /* Styles for element titles */
