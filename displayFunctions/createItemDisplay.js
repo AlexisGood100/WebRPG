@@ -42,28 +42,60 @@ function createItemDisplay(parent, item, player) {
     buttonEquipItem.addEventListener('click', () => {
         let equipSlotImage = document.querySelectorAll('.div-equip-item-image');
         let newItem = arrayPlayerInventory[item.id]
+        giveIDtoList(arrayPlayerInventory)
 
 
-        if (newItem.type === 'Head') { //working version
+        if (newItem.type === 'Head') {
             console.log('head')
             itemSlots[0] = newItem
             equipSlotImage[0].style.backgroundImage = `url(${newItem.imgPath})`
-            
+
         } else if (newItem.type === 'Chest') {
             console.log('chest')
             itemSlots[1] = newItem
             equipSlotImage[1].style.backgroundImage = `url(${newItem.imgPath})`
-        }
-        else if (newItem.type === 'Weapon-R') {
-            console.log('Weapon-R')
+
+        } else if (newItem.type === 'Hands') {
+            console.log('Hands')
             itemSlots[2] = newItem
-            equipSlotImage[2].style.backgroundImage = `url(${newItem.imgPath})`  
-            
-        } else if (newItem.type === 'Weapon-L') {
-            console.log('Weapon-L')
+            equipSlotImage[2].style.backgroundImage = `url(${newItem.imgPath})`
+        } else if (newItem.type === 'Feet') {
+            console.log('Feet')
             itemSlots[3] = newItem
             equipSlotImage[3].style.backgroundImage = `url(${newItem.imgPath})`
+        } else if (newItem.type === 'Weapon-R') {
+            console.log('Weapon-R')
+            itemSlots[4] = newItem
+            equipSlotImage[4].style.backgroundImage = `url(${newItem.imgPath})`
+
+        } else if (newItem.type === 'Weapon-L') {
+            console.log('Weapon-L')
+            itemSlots[5] = newItem
+            equipSlotImage[5].style.backgroundImage = `url(${newItem.imgPath})`
+
+        } else if (newItem.type === 'Ring-R') {
+            console.log('Ring-R')
+            itemSlots[6] = newItem
+            equipSlotImage[6].style.backgroundImage = `url(${newItem.imgPath})`
+
+        } else if (newItem.type === 'Ring-L') {
+            console.log('Ring-L')
+            itemSlots[7] = newItem
+            equipSlotImage[7].style.backgroundImage = `url(${newItem.imgPath})`
         }
+
+        else if (newItem.type === 'Belt') {
+            console.log('Belt')
+            itemSlots[8] = newItem
+            equipSlotImage[8].style.backgroundImage = `url(${newItem.imgPath})`
+        }
+
+        else if (newItem.type === 'Necklace') {
+            console.log('Necklace')
+            itemSlots[9] = newItem
+            equipSlotImage[9].style.backgroundImage = `url(${newItem.imgPath})`
+        }
+
 
         div.remove()
         player.defense += newItem

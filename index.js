@@ -105,12 +105,22 @@ let allImagesForEquipSlots = document.querySelectorAll('.div-equip-item-image')
 
 let itemSlots = [0, 0, 0, 0, 0, 0, 0, 0]
 
-allButtonsForUnequip[0].addEventListener('click', ()=>{
-    // createMerchantItem(itemSlots[0], divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
-    createItemDisplay(divPlayerInventory, itemSlots[0], wizard)
-    allImagesForEquipSlots[0].style.backgroundImage = '';
-    itemSlots[0] = 0;
-})
+// allButtonsForUnequip[0].addEventListener('click', ()=>{
+//     // createMerchantItem(itemSlots[0], divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
+//     createItemDisplay(divPlayerInventory, itemSlots[0], wizard)
+//     allImagesForEquipSlots[0].style.backgroundImage = '';
+//     itemSlots[0] = 0;
+// }) //Maybe add a loop to give them all because the only thing that is changing is the index, just need to regard the length of the unequip button nodelist.
+
+
+for(let i = 0; i <allButtonsForUnequip.length;i++){
+    allButtonsForUnequip[i].addEventListener('click', ()=>{
+        createItemDisplay(divPlayerInventory, itemSlots[i], wizard)
+        allImagesForEquipSlots[i].style.backgroundImage = '';
+        itemSlots[i] = 0;
+    })
+}
+
 
 //Creating the items to push into the merchant array
 createMerchantItem(newItemHead, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
