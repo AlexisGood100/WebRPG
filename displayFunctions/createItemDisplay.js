@@ -40,41 +40,33 @@ function createItemDisplay(parent, item, player) {
 
     //Button for Equipping an item.
     buttonEquipItem.addEventListener('click', () => {
-      
+        let equipSlotImage = document.querySelectorAll('.div-equip-item-image');
         let newItem = arrayPlayerInventory[item.id]
-        if (newItem.type === 'Head') {
+
+
+        if (newItem.type === 'Head') { //working version
             console.log('head')
             itemSlots[0] = newItem
-            let equipSlotImage = document.querySelectorAll('.div-equip-item-image');
             equipSlotImage[0].style.backgroundImage = `url(${newItem.imgPath})`
-            player.defense += newItem
-            div.remove()
-            console.log(equipSlotImage);
-
+            
         } else if (newItem.type === 'Chest') {
             console.log('chest')
             itemSlots[1] = newItem
-            let equipSlotImage = document.querySelectorAll('.div-equip-item-image');
             equipSlotImage[1].style.backgroundImage = `url(${newItem.imgPath})`
-            player.defense += newItem
-            console.log(equipSlotImage);
         }
         else if (newItem.type === 'Weapon-R') {
             console.log('Weapon-R')
             itemSlots[2] = newItem
-            let equipSlotImage = document.querySelectorAll('.div-equip-item-image');
-            equipSlotImage[2].style.backgroundImage = `url(${newItem.imgPath})`
-            player.defense += newItem
-            console.log(equipSlotImage);
+            equipSlotImage[2].style.backgroundImage = `url(${newItem.imgPath})`  
+            
         } else if (newItem.type === 'Weapon-L') {
             console.log('Weapon-L')
             itemSlots[3] = newItem
-            let equipSlotImage = document.querySelectorAll('.div-equip-item-image');
             equipSlotImage[3].style.backgroundImage = `url(${newItem.imgPath})`
-            player.defense += newItem
-            console.log(equipSlotImage);
         }
 
+        div.remove()
+        player.defense += newItem
     })
 }
 
