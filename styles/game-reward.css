@@ -1,0 +1,21 @@
+.inside-game-div{
+    background-color: black;
+    width:150px;
+    height:150px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.game{
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+
+.div-container-for-game{
+    color:white;    
+}
+
+.div-container-for-game h1{
+    margin:.5rem;
+}

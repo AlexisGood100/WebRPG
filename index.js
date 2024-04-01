@@ -244,3 +244,45 @@ createJavaObj(javaFamiliarStrength, document.querySelector('.java-container'), w
 createJavaObj(javaFamiliarConstitution, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
 
 
+let GameRewardDiv = document.querySelectorAll('.inside-game-div');
+const gameContainer = document.querySelector('.game')
+
+const createGameRewardDivs = (parent) =>{
+
+let gameDiv = document.createElement('div')
+
+gameDiv.classList.add('inside-game-div')
+
+parent.appendChild(gameDiv)
+
+}
+
+for(let i = 0;i<=50;i++){
+createGameRewardDivs(gameContainer)
+}
+
+const gameStart = document.querySelector('.button-start-game')
+gameStart.addEventListener('click', (e)=>{
+    GameRewardDiv = document.querySelectorAll('.inside-game-div')
+    
+});
+setInterval(()=>{
+    createColorOnIndex(colors[Math.floor(Math.random() * 4) + 1])
+    setTimeout(()=>{
+        nodeList_ =  GameRewardDiv = document.querySelectorAll('.inside-game-div')
+        nodeList_.forEach((element)=>{
+            element.style.backgroundColor = 'black';
+        })
+    }, 500)
+}, 1000)
+
+const colors = ['red', 'blue', 'white', 'orange', 'green'];
+
+// Left off in the middle of the creation of this mini-game
+
+const createColorOnIndex = (color) =>{
+    nodeList_ =  GameRewardDiv = document.querySelectorAll('.inside-game-div')
+    nodeList_[Math.floor(Math.random() * 49) + 1].style.backgroundColor = color;
+}
+
+
