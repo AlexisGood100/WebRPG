@@ -244,6 +244,18 @@ createJavaObj(javaFamiliarStrength, document.querySelector('.java-container'), w
 createJavaObj(javaFamiliarConstitution, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 let GameRewardDiv = document.querySelectorAll('.inside-game-div');
 const gameContainer = document.querySelector('.game')
 
@@ -256,33 +268,94 @@ gameDiv.classList.add('inside-game-div')
 parent.appendChild(gameDiv)
 
 }
-
-for(let i = 0;i<=50;i++){
+let spanForScore = document.querySelector('.span-score');
+let scoreForGame = {score: 0}
+for(let i = 0;i<=19;i++){
 createGameRewardDivs(gameContainer)
 }
 
 const gameStart = document.querySelector('.button-start-game')
 gameStart.addEventListener('click', (e)=>{
-    GameRewardDiv = document.querySelectorAll('.inside-game-div')
-    
-});
-setInterval(()=>{
-    createColorOnIndex(colors[Math.floor(Math.random() * 4) + 1])
-    setTimeout(()=>{
-        nodeList_ =  GameRewardDiv = document.querySelectorAll('.inside-game-div')
-        nodeList_.forEach((element)=>{
-            element.style.backgroundColor = 'black';
-        })
-    }, 500)
-}, 1000)
 
-const colors = ['red', 'blue', 'white', 'orange', 'green'];
+setInterval(()=>{
+    assignColorsToAll(checkForColor(assignSelectedColor()));
+},3000);
+
+    nodeList_ = document.querySelectorAll('.inside-game-div');
+    nodeList_.forEach((element)=>{
+        element.addEventListener('click',()=>{
+       
+          
+            if(element.style.backgroundColor === currentColor){
+             
+                console.log('score')
+                scoreForGame.score += 1;
+                spanForScore.innerText = scoreForGame.score;
+            } else {
+            
+                console.log('no score')
+                scoreForGame.score -= 1;
+                spanForScore.innerText = scoreForGame.score;
+            }
+        })
+    })
+});
+
+function removeElementByValue(arr, value) {
+    const index = arr.indexOf(value);
+    if (index !== -1) {
+        arr.splice(index, 1);
+    }
+    return arr;
+}
+
 
 // Left off in the middle of the creation of this mini-game
+const randomNumber1 = (bounds) =>{
+    return Math.floor(Math.random() * bounds)
+}
 
-const createColorOnIndex = (color) =>{
-    nodeList_ =  GameRewardDiv = document.querySelectorAll('.inside-game-div')
-    nodeList_[Math.floor(Math.random() * 49) + 1].style.backgroundColor = color;
+
+const assignColorsToAll = (currentColor_) =>{
+    let colors = ['red', 'blue', 'white', 'orange', 'green'];
+    let newColors = removeElementByValue(colors, currentColor_.color);
+    nodeList_ = document.querySelectorAll('.inside-game-div');
+
+    console.log(newColors)
+    
+   
+    nodeList_.forEach((element,i)=>{
+        if(i === currentColor_.index){
+            console.log('Found')
+        } else{
+            element.style.backgroundColor = newColors[Math.floor(Math.random() * newColors.length)]
+        }
+    })
+  
+
+}
+
+let currentColor = ''
+
+const assignSelectedColor = () =>{
+    let colors = ['red', 'blue', 'white', 'orange', 'green'];
+    let randomNum = randomNumber1(colors.length)
+    let currentColor_ = colors[randomNum]
+    let randomNum2 = randomNumber1(nodeList_.length);
+    let obj = {currentColor:currentColor_, index: randomNum2}
+        nodeList_ = document.querySelectorAll('.inside-game-div');
+        nodeList_[randomNum2].style.backgroundColor = currentColor_;
+        document.querySelector('.color-choice').innerText = currentColor_;
+        currentColor = obj.currentColor;
+        return obj;
+}
+
+const checkForColor = (assignSelectedColor) =>{
+    setTimeout(()=>{
+        nodeList_ = document.querySelectorAll('.inside-game-div');
+    }, 2000)
+    let assignSelectedColor_ = {color: document.querySelector('.color-choice').innerText, index:assignSelectedColor.index}
+    return assignSelectedColor_
 }
 
 
