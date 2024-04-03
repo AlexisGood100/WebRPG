@@ -113,8 +113,8 @@ let itemSlots = [0, 0, 0, 0, 0, 0, 0, 0]
 // }) //Maybe add a loop to give them all because the only thing that is changing is the index, just need to regard the length of the unequip button nodelist.
 
 
-for(let i = 0; i <allButtonsForUnequip.length;i++){
-    allButtonsForUnequip[i].addEventListener('click', ()=>{
+for (let i = 0; i < allButtonsForUnequip.length; i++) {
+    allButtonsForUnequip[i].addEventListener('click', () => {
         createItemDisplay(divPlayerInventory, itemSlots[i], wizard)
         allImagesForEquipSlots[i].style.backgroundImage = '';
         itemSlots[i] = 0;
@@ -123,24 +123,24 @@ for(let i = 0; i <allButtonsForUnequip.length;i++){
 
 
 //Creating the items to push into the merchant array
-createMerchantItem(newItemHead, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
-createMerchantItem(newItemWeaponL, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
-createMerchantItem(newItemWeaponR, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
-createMerchantItem(newItemChest, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
-createMerchantItem(newItemBelt, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
-createMerchantItem(newItemNecklace, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
-createMerchantItem(newItemRingR, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
-createMerchantItem(newItemRingL, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
-createMerchantItem(newItemHands, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
-createMerchantItem(newItemFeet, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
+createMerchantItem(newItemHead, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory, itemSlots);
+createMerchantItem(newItemWeaponL, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory, itemSlots);
+createMerchantItem(newItemWeaponR, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory, itemSlots);
+createMerchantItem(newItemChest, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory, itemSlots);
+createMerchantItem(newItemBelt, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory, itemSlots);
+createMerchantItem(newItemNecklace, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory, itemSlots);
+createMerchantItem(newItemRingR, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory, itemSlots);
+createMerchantItem(newItemRingL, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory, itemSlots);
+createMerchantItem(newItemHands, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory, itemSlots);
+createMerchantItem(newItemFeet, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory, itemSlots);
 //End of Merchant Code.
 
-const allRewardChestImages = ['./images/rewardChests/chest1.jpg','./images/rewardChests/chest2.jpg','./images/rewardChests/chest3.jpg','./images/rewardChests/chest4.jpg']
+const allRewardChestImages = ['./images/rewardChests/chest1.jpg', './images/rewardChests/chest2.jpg', './images/rewardChests/chest3.jpg', './images/rewardChests/chest4.jpg']
 let rewardBox = document.querySelector('.reward-box')
-remove_reward_button.addEventListener('click', ()=>{
+remove_reward_button.addEventListener('click', () => {
     let rewardsContent = document.querySelectorAll('.reward-content')
-    rewardsContent.forEach((rewardContent)=>{
-    rewardContent.classList.remove('hide')
+    rewardsContent.forEach((rewardContent) => {
+        rewardContent.classList.remove('hide')
     })
 })
 function checkForEndOfBattle() {
@@ -152,7 +152,7 @@ function checkForEndOfBattle() {
         item.classList.remove('hide');
     });
     let rewards = document.querySelectorAll('.reward-content')
-    rewards.forEach((reward)=>{
+    rewards.forEach((reward) => {
         reward.classList.remove('hide')
     })
     document.querySelector('.div-map-container').classList.remove('hide');
@@ -186,7 +186,7 @@ let reward_level = 1
 let allMapSlots = document.querySelectorAll('.map-square');
 allMapSlots.forEach((mapSlot) => {   //Putting the map slots on the map and initiating the battle
     arrayTestMonsters = []
-    
+
     mapSlot.addEventListener('click', () => {
         reward_level += 1
         let newMonster = createRandomEnemies(() => {
@@ -225,14 +225,14 @@ const essenceEssenceCountAll = document.querySelectorAll('.h1-total-essence')
 updateEssence(wizard, essenceCountAll)
 updateEssenceEssencePage(wizard, essenceEssenceCountAll)
 // End of essence
-let h1_java_counter = {count: 0};
+let h1_java_counter = { count: 0 };
 // Building
 updateBuildingResourcePlayerTable(tdBuildHousePlayerHave, tdBuildHouseRequirementsAllSmall, tdBuildHouseRequirementsAllMedium, tdBuildHouseRequirementsAllLarge, resourceFarm_); // calling the function to display the map
 // End of building
 
 // Java Shop initiation
 let spanForJavaCount = document.querySelector('.span-total-javas')
-createJavaObj(javaConsititution, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter );
+createJavaObj(javaConsititution, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
 createJavaObj(javaStrength, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
 createJavaObj(javaDexterity, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
 createJavaObj(javaWillpower, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
@@ -245,66 +245,43 @@ createJavaObj(javaFamiliarConstitution, document.querySelector('.java-container'
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-let GameRewardDiv = document.querySelectorAll('.inside-game-div');
-const gameContainer = document.querySelector('.game')
-
-const createGameRewardDivs = (parent) =>{
-
-let gameDiv = document.createElement('div')
-
-gameDiv.classList.add('inside-game-div')
-
-parent.appendChild(gameDiv)
-
-}
-let spanForScore = document.querySelector('.span-score');
-let scoreForGame = {score: 0}
-for(let i = 0;i<=19;i++){
-createGameRewardDivs(gameContainer)
-}
-
-
+//Mini-Game
+let scoreForGame = { score: 0 }
 let timer = 0;
-
-const runTimer = (num)=>{
-
-   let interval = setInterval(()=>{
-    if(timer === 100){
-        stopInterval(interval)
-    } else {
-        timer += 1;
-        document.querySelector(".span-timer").innerText = timer;
-    }
-   }, num)
-
-//    scoreForGame.score = 0;
-//    gameStart.classList.remove('hide')
-}
 
 
 const gameStart = document.querySelector('.button-start-game')
-gameStart.addEventListener('click', (e)=>{
+gameStart.addEventListener('click', (e) => {
+    timer = 0;
     gameStart.classList.add('hide');
-    setInterval(()=>{
-        assignColorsToAll(checkForColor(assignSelectedColor()));
-    },2000);
+    let colorAssignInterval = setInterval(() => {
+        document.querySelector(".span-timer").classList.remove('hide')
+        if (timer === 5) {
+            clearInterval(colorAssignInterval)
+            nodeList_ = document.querySelectorAll('.inside-game-div');
+            nodeList_.forEach((element)=>{
+                element.style.backgroundColor = 'crimson'
+                wizard.gold += scoreForGame.score;
+                console.log(wizard.gold)
+                timer = 0;
+                scoreForGame.score = 0;
+                spanForScore.innerText = scoreForGame.score;
+                gameStart.classList.remove('hide');
+                console.log('You have earned ' + scoreForGame.score + " points.")
+                document.querySelector('.span-timer').innerText = 0;
+                document.querySelector(".span-timer").classList.add('hide')
+            })
+        } else {
+            assignColorsToAll(checkForColor(assignSelectedColor()));
+        }
+    }, 2000);
+    
     runTimer(1000)
 
     nodeList_ = document.querySelectorAll('.inside-game-div');
-    nodeList_.forEach((element)=>{
-        element.addEventListener('click',()=>{
-            if(element.style.backgroundColor === currentColor){
+    nodeList_.forEach((element) => {
+        element.addEventListener('click', () => {
+            if (element.style.backgroundColor === currentColor) {
                 console.log('score')
                 scoreForGame.score += 1;
                 spanForScore.innerText = scoreForGame.score;
@@ -316,60 +293,28 @@ gameStart.addEventListener('click', (e)=>{
         })
     })
 });
-
-function removeElementByValue(arr, value) {
-    const index = arr.indexOf(value);
-    if (index !== -1) {
-        arr.splice(index, 1);
-    }
-    return arr;
-}
+//End of mini-game
 
 
-// Left off in the middle of the creation of this mini-game
-const randomNumber1 = (bounds) =>{
-    return Math.floor(Math.random() * bounds)
-}
 
+const runTimer = (num) => {
 
-const assignColorsToAll = (currentColor_) =>{
-    let colors = ['red', 'blue', 'white', 'orange', 'green'];
-    let newColors = removeElementByValue(colors, currentColor_.color);
-    nodeList_ = document.querySelectorAll('.inside-game-div');
-
-    console.log(newColors)
-    
-   
-    nodeList_.forEach((element,i)=>{
-        if(i === currentColor_.index){
-            console.log('Found')
+    let interval = setInterval(() => {
+        if (timer === 5) {
+            clearInterval(interval)
+            return
         } else{
-            element.style.backgroundColor = newColors[Math.floor(Math.random() * newColors.length)]
+            timer += 1;
+            document.querySelector(".span-timer").innerText = timer;
         }
-    })
+    }, num)
+
 }
 
-let currentColor = ''
 
-const assignSelectedColor = () =>{
-    let colors = ['red', 'blue', 'white', 'orange', 'green'];
-    let randomNum = randomNumber1(colors.length)
-    let currentColor_ = colors[randomNum]
-    let randomNum2 = randomNumber1(nodeList_.length);
-    let obj = {currentColor:currentColor_, index: randomNum2}
-        nodeList_ = document.querySelectorAll('.inside-game-div');
-        nodeList_[randomNum2].style.backgroundColor = currentColor_;
-        document.querySelector('.color-choice').innerText = currentColor_;
-        currentColor = obj.currentColor;
-        return obj;
-}
 
-const checkForColor = (assignSelectedColor) =>{
-    setTimeout(()=>{
-        nodeList_ = document.querySelectorAll('.inside-game-div');
-    }, 2000)
-    let assignSelectedColor_ = {color: document.querySelector('.color-choice').innerText, index:assignSelectedColor.index}
-    return assignSelectedColor_
-}
+
+
+
 
 
