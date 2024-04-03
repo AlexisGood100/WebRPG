@@ -274,25 +274,41 @@ for(let i = 0;i<=19;i++){
 createGameRewardDivs(gameContainer)
 }
 
+
+let timer = 0;
+
+const runTimer = (num)=>{
+
+   let interval = setInterval(()=>{
+    if(timer === 100){
+        stopInterval(interval)
+    } else {
+        timer += 1;
+        document.querySelector(".span-timer").innerText = timer;
+    }
+   }, num)
+
+//    scoreForGame.score = 0;
+//    gameStart.classList.remove('hide')
+}
+
+
 const gameStart = document.querySelector('.button-start-game')
 gameStart.addEventListener('click', (e)=>{
-
-setInterval(()=>{
-    assignColorsToAll(checkForColor(assignSelectedColor()));
-},3000);
+    gameStart.classList.add('hide');
+    setInterval(()=>{
+        assignColorsToAll(checkForColor(assignSelectedColor()));
+    },2000);
+    runTimer(1000)
 
     nodeList_ = document.querySelectorAll('.inside-game-div');
     nodeList_.forEach((element)=>{
         element.addEventListener('click',()=>{
-       
-          
             if(element.style.backgroundColor === currentColor){
-             
                 console.log('score')
                 scoreForGame.score += 1;
                 spanForScore.innerText = scoreForGame.score;
             } else {
-            
                 console.log('no score')
                 scoreForGame.score -= 1;
                 spanForScore.innerText = scoreForGame.score;
@@ -331,8 +347,6 @@ const assignColorsToAll = (currentColor_) =>{
             element.style.backgroundColor = newColors[Math.floor(Math.random() * newColors.length)]
         }
     })
-  
-
 }
 
 let currentColor = ''
