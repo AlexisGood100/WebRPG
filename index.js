@@ -366,107 +366,69 @@ allMagicalAttackElements[15].addEventListener('click', ()=>{
 //end of setting the event listeners to start the magical attack
 
 //This is the movement mechanism once the attacks are started
+
+
+function forwardElementalAttack(nodeList, classList, index1, index2, imagePath1, imagePath2){
+    if(nodeList[index1].classList.contains(classList)){
+        nodeList[index1].style.backgroundImage = `url('${imagePath2}')`;
+        nodeList[index1].classList.remove(classList);
+        nodeList[index2].style.backgroundImage = `url('${imagePath1}')`;
+        nodeList[index2].classList.add(classList);
+    }
+}
 setInterval(()=>{
     if(allMagicalAttackElements[1].classList.contains('p-fire')){
-        allMagicalAttackElements[1].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
-        allMagicalAttackElements[1].classList.remove('p-fire');
-
-        allMagicalAttackElements[2].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalAttackFire.jpg')`;
-        allMagicalAttackElements[2].classList.add('p-fire');
-
+    forwardElementalAttack(allMagicalAttackElements, 'p-fire', 1, 2, './images/miniGame/magicalSpellsGame/elementalAttackFire.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
     } else if(allMagicalAttackElements[2].classList.contains('p-fire')){
-            allMagicalAttackElements[2].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
-            allMagicalAttackElements[2].classList.remove('p-fire');
-    
-            allMagicalAttackElements[3].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalAttackFire.jpg')`;
-            allMagicalAttackElements[3].classList.add('p-fire');
+        forwardElementalAttack(allMagicalAttackElements, 'p-fire', 2, 3, './images/miniGame/magicalSpellsGame/elementalAttackFire.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
+    }  else if(allMagicalAttackElements[3].classList.contains('p-fire')){
+    forwardElementalAttack(allMagicalAttackElements, 'p-fire', 3, 4, './images/miniGame/magicalSpellsGame/elementalAttackFire.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
+    }
+    else if(allMagicalAttackElements[4].classList.contains('p-fire')){
+        forwardElementalAttack(allMagicalAttackElements, 'p-fire', 3, 4, './images/miniGame/magicalSpellsGame/elementalAttackFire.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
         }
-        else if(allMagicalAttackElements[3].classList.contains('p-fire')){
-            allMagicalAttackElements[3].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
-            allMagicalAttackElements[3].classList.remove('p-fire');
-    
-            allMagicalAttackElements[4].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalAttackFire.jpg')`;
-            allMagicalAttackElements[4].classList.add('p-fire');
-        }
-    },3000);
+ 
+    },1000);
 
     setInterval(()=>{
         if(allMagicalAttackElements[6].classList.contains('p-ice')){
-            allMagicalAttackElements[6].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
-            allMagicalAttackElements[6].classList.remove('p-ice');
-    
-            allMagicalAttackElements[7].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalAttackIce.jpg')`;
-            allMagicalAttackElements[7].classList.add('p-ice');
-    
-        } else if(allMagicalAttackElements[7].classList.contains('p-ice')){
-                allMagicalAttackElements[7].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
-                allMagicalAttackElements[7].classList.remove('p-ice');
-        
-                allMagicalAttackElements[8].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalAttackIce.jpg')`;
-                allMagicalAttackElements[8].classList.add('p-ice');
+            forwardElementalAttack(allMagicalAttackElements, 'p-ice', 6, 7, './images/miniGame/magicalSpellsGame/elementalAttackIce.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
+            } else if(allMagicalAttackElements[7].classList.contains('p-ice')){
+                forwardElementalAttack(allMagicalAttackElements, 'p-ice', 7, 8, './images/miniGame/magicalSpellsGame/elementalAttackIce.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
+            }  else if(allMagicalAttackElements[8].classList.contains('p-ice')){
+            forwardElementalAttack(allMagicalAttackElements, 'p-ice', 8, 9, './images/miniGame/magicalSpellsGame/elementalAttackIce.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
             }
-            else if(allMagicalAttackElements[8].classList.contains('p-ice')){
-                allMagicalAttackElements[8].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
-                allMagicalAttackElements[8].classList.remove('p-ice');
-        
-                allMagicalAttackElements[9].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalAttackIce.jpg')`;
-                allMagicalAttackElements[9].classList.add('p-ice');
-            }
-            else if(allMagicalAttackElements[10].classList.contains('p-ice')){
-                allMagicalAttackElements[9].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalAttackIce.jpg')`;
-                allMagicalAttackElements[9].classList.remove('p-ice');
-                
-                allMagicalAttackElements[10].classList.remove('p-ice');
-             
-            }
-        },3000);
+            else if(allMagicalAttackElements[9].classList.contains('p-ice')){
+                forwardElementalAttack(allMagicalAttackElements, 'p-ice', 8, 9, './images/miniGame/magicalSpellsGame/elementalAttackIce.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
+                }
+            },1000);
 
-        setInterval(()=>{
-            if(allMagicalAttackElements[11].classList.contains('p-air')){
-                allMagicalAttackElements[11].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
-                allMagicalAttackElements[11].classList.remove('p-air');
-        
-                allMagicalAttackElements[12].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalAttackAir.jpg')`;
-                allMagicalAttackElements[12].classList.add('p-air');
-        
-            } else if(allMagicalAttackElements[12].classList.contains('p-air')){
-                    allMagicalAttackElements[12].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
-                    allMagicalAttackElements[12].classList.remove('p-air');
-            
-                    allMagicalAttackElements[13].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalAttackAir.jpg')`;
-                    allMagicalAttackElements[13].classList.add('p-air');
-                }
-                else if(allMagicalAttackElements[13].classList.contains('p-air')){
-                    allMagicalAttackElements[13].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
-                    allMagicalAttackElements[13].classList.remove('p-air');
-            
-                    allMagicalAttackElements[14].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalAttackAir.jpg')`;
-                    allMagicalAttackElements[14].classList.add('p-air');
-                }
-            },3000);
+            setInterval(()=>{
+                if(allMagicalAttackElements[11].classList.contains('p-air')){
+                    forwardElementalAttack(allMagicalAttackElements, 'p-air', 11, 12, './images/miniGame/magicalSpellsGame/elementalAttackAir.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
+                    } else if(allMagicalAttackElements[12].classList.contains('p-air')){
+                        forwardElementalAttack(allMagicalAttackElements, 'p-air', 12, 13, './images/miniGame/magicalSpellsGame/elementalAttackAir.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
+                    }  else if(allMagicalAttackElements[13].classList.contains('p-air')){
+                    forwardElementalAttack(allMagicalAttackElements, 'p-air', 13, 14, './images/miniGame/magicalSpellsGame/elementalAttackAir.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
+                    }
+                    else if(allMagicalAttackElements[14].classList.contains('p-air')){
+                        forwardElementalAttack(allMagicalAttackElements, 'p-air', 13, 14, './images/miniGame/magicalSpellsGame/elementalAttackAir.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
+                        }
+                    },1000);
 
             setInterval(()=>{
                 if(allMagicalAttackElements[16].classList.contains('p-earth')){
-                    allMagicalAttackElements[16].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
-                    allMagicalAttackElements[16].classList.remove('p-earth');
-            
-                    allMagicalAttackElements[17].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalAttackEarth.jpg')`;
-                    allMagicalAttackElements[17].classList.add('p-earth');
-            
-                } else if(allMagicalAttackElements[17].classList.contains('p-earth')){
-                        allMagicalAttackElements[17].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
-                        allMagicalAttackElements[17].classList.remove('p-earth');
-                
-                        allMagicalAttackElements[18].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalAttackEarth.jpg')`;
-                        allMagicalAttackElements[18].classList.add('p-earth');
+                    forwardElementalAttack(allMagicalAttackElements, 'p-earth', 16, 17, './images/miniGame/magicalSpellsGame/elementalAttackEarth.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
+                    } else if(allMagicalAttackElements[17].classList.contains('p-earth')){
+                        forwardElementalAttack(allMagicalAttackElements, 'p-earth', 17, 18, './images/miniGame/magicalSpellsGame/elementalAttackEarth.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
+                    }  else if(allMagicalAttackElements[18].classList.contains('p-earth')){
+                    forwardElementalAttack(allMagicalAttackElements, 'p-earth', 18, 19, './images/miniGame/magicalSpellsGame/elementalAttackEarth.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
                     }
-                    else if(allMagicalAttackElements[18].classList.contains('p-earth')){
-                        allMagicalAttackElements[18].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
-                        allMagicalAttackElements[18].classList.remove('p-earth');
-          
-                        allMagicalAttackElements[19].classList.remove('p-earth');
-                    }
-                },3000);
+                    else if(allMagicalAttackElements[19].classList.contains('p-earth')){
+                        forwardElementalAttack(allMagicalAttackElements, 'p-earth', 18, 19, './images/miniGame/magicalSpellsGame/elementalAttackEarth.jpg', './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')
+                        }
+                    },1000);
+               
 
 
 
@@ -594,23 +556,6 @@ setInterval(()=>{
                     },2000);
             
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ///////////collision detection
 setInterval(()=>{
     if(allMagicalAttackElements[3].classList.contains('p-fire') && allMagicalAttackElements[3].classList.contains('e-fire')){
@@ -645,9 +590,6 @@ setInterval(()=>{
         allMagicalAttackElements[5].classList.remove('p-fire') 
 
 
-        
-
-
         console.log('collision: ' +allMagicalAttackElements[4])
         console.log('score')
     }
@@ -660,7 +602,6 @@ setInterval(()=>{
         allMagicalAttackElements[6].classList.remove('p-ice') 
          allMagicalAttackElements[6].classList.remove('e-ice')
 
-    
 
 
         console.log('collision:' + allMagicalAttackElements[3])
@@ -696,7 +637,14 @@ setInterval(()=>{
    
 },1000)
 // end of collision detection
+function checkForCollision(index, nodeList_, classList){
+    if(nodeList_[index].classList.contains(classList) && nodeList_[index].classList.contains(classList)){
+        nodeList_[index].classList.remove(classList) 
+         nodeList_[index].classList.remove(classList)
 
+        console.log('collision:' + allMagicalAttackElements[3])
+    }
+}
 setInterval(()=>{
     if(allMagicalAttackElements[16].classList.contains('p-earth') && allMagicalAttackElements[16].classList.contains('e-earth')){
         allMagicalAttackElements[16].classList.remove('p-earth') 
@@ -719,16 +667,13 @@ setInterval(()=>{
 
         console.log('collision: ' +allMagicalAttackElements[1])
     }
-    if(allMagicalAttackElements[19].classList.contains('p-earth') && allMagicalAttackElements[18].classList.contains('e-earth')){
+    if(allMagicalAttackElements[19].classList.contains('p-earth')){
         allMagicalAttackElements[19].classList.remove('p-earth') 
         
 
         console.log('collision: ' +allMagicalAttackElements[1])
     }
   
-  
-  
-   
 },1000)
 //End of air collision
 
