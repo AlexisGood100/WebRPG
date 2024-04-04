@@ -1,9 +1,20 @@
 .magical-attack{
-    background-color: blue;
+    box-shadow: 2px 2px 2px 2px  black;
     width:250px;
     height:250px;
     border-radius: 50%;
+    
 }
+
+.magical-attack:hover{
+box-shadow: 1px 2px 2px 1px  gold;
+transform: scale(0.95);
+transform: 1s;
+border:2px solid white;
+}
+
+
+
 
 .div-play-game-for-random-reward-duel{
     margin:0 auto;
