@@ -30,7 +30,8 @@
     <link rel="stylesheet" href="styles/resources.css">   <!-- Resources  -->
     <link rel="stylesheet" href="styles/java.css"> <!-- Java -->
     <link rel="stylesheet" href="styles/reward.css"> <!-- Rewards -->
-    <link rel="stylesheet" href="/styles/game-reward.css"> <!-- Game for Reward -->
+    <link rel="stylesheet" href="/styles/games/game-reward.css"> <!-- Game for Reward. -->
+    <link rel="stylesheet" href="styles/games/magicSpellsGame.css"> <!-- Styles for the magic duel game. -->
     <title>webRPG</title>
 </head>
 
@@ -73,7 +74,7 @@
 
 
 <!-- Not finished make sure to come back to scene -->
-<div class="div-scene-container">
+<div class="div-scene-container hide">
    <div class="div-scene-constituents">
     <h1 class="h1-scene">Scene Title</h1>
     <div class="div-inside-image">
@@ -731,6 +732,23 @@ Fire
         <h1>Timer: <span class="span-timer">0</span></h1>
         <div class="div-game-container">
             <div class="game">
+        <!-- Left off making the game rules. -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="div-play-game-for-random-reward-duel">
+    <div class="div-container-for-game">
+        <h1>Welcome to the Challenge.</h1>
+        <h1>Click the Activate button to begin the challenge.</h1>
+        <h1>Try to click the circle while the color is activated to gain 1 points.</h1>
+        <h1>If the circle loses color or is not the correct color display, lose 1 point.</h1>
+        <button class="button-start-game-duel">Start Game</button>
+        <h1>Score: <span class="span-score-duel"></span></h1>
+        <div class="div-game-container">
+            <div class="game-duel">
         <!-- Left off making the game rules. -->
             </div>
         </div>

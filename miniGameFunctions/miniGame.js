@@ -3,19 +3,19 @@
 let GameRewardDiv = document.querySelectorAll('.inside-game-div');
 const gameContainer = document.querySelector('.game')
 
-const createGameRewardDivs = (parent) =>{
+const createGameRewardDivs = (parent, classList, num) => {
+    for (let i = 0; i <= num; i++) {
+        let gameDiv = document.createElement('div')
+        gameDiv.classList.add(classList)
 
-let gameDiv = document.createElement('div')
-
-gameDiv.classList.add('inside-game-div')
-
-parent.appendChild(gameDiv)
-
+        parent.appendChild(gameDiv)
+    }
 }
+
+createGameRewardDivs(gameContainer, 'inside-game-div', 19)
+
 let spanForScore = document.querySelector('.span-score');
-for(let i = 0;i<=19;i++){
-    createGameRewardDivs(gameContainer)
-}
+
 
 
 
@@ -28,18 +28,18 @@ function removeElementByValue(arr, value) {
 }
 
 // Left off in the middle of the creation of this mini-game
-const randomNumber1 = (bounds) =>{
+const randomNumber1 = (bounds) => {
     return Math.floor(Math.random() * bounds)
 }
 
-const assignColorsToAll = (currentColor_) =>{
+const assignColorsToAll = (currentColor_) => {
     let colors = ['red', 'blue', 'white', 'orange', 'green'];
     let newColors = removeElementByValue(colors, currentColor_.color);
     nodeList_ = document.querySelectorAll('.inside-game-div');
-    nodeList_.forEach((element,i)=>{
-        if(i === currentColor_.index){
+    nodeList_.forEach((element, i) => {
+        if (i === currentColor_.index) {
             console.log('Found')
-        } else{
+        } else {
             element.style.backgroundColor = newColors[Math.floor(Math.random() * newColors.length)]
         }
     })
@@ -47,24 +47,24 @@ const assignColorsToAll = (currentColor_) =>{
 
 let currentColor = ''
 
-const assignSelectedColor = () =>{
+const assignSelectedColor = () => {
     let colors = ['red', 'blue', 'white', 'orange', 'green'];
     let randomNum = randomNumber1(colors.length)
     let currentColor_ = colors[randomNum]
     let randomNum2 = randomNumber1(nodeList_.length);
-    let obj = {currentColor:currentColor_, index: randomNum2}
-        nodeList_ = document.querySelectorAll('.inside-game-div');
-        nodeList_[randomNum2].style.backgroundColor = currentColor_;
-        document.querySelector('.color-choice').innerText = currentColor_;
-        currentColor = obj.currentColor;
-        return obj;
+    let obj = { currentColor: currentColor_, index: randomNum2 }
+    nodeList_ = document.querySelectorAll('.inside-game-div');
+    nodeList_[randomNum2].style.backgroundColor = currentColor_;
+    document.querySelector('.color-choice').innerText = currentColor_;
+    currentColor = obj.currentColor;
+    return obj;
 }
 
-const checkForColor = (assignSelectedColor) =>{
-    setTimeout(()=>{
+const checkForColor = (assignSelectedColor) => {
+    setTimeout(() => {
         nodeList_ = document.querySelectorAll('.inside-game-div');
     }, 2000)
-    let assignSelectedColor_ = {color: document.querySelector('.color-choice').innerText, index:assignSelectedColor.index}
+    let assignSelectedColor_ = { color: document.querySelector('.color-choice').innerText, index: assignSelectedColor.index }
     return assignSelectedColor_
 }
 
