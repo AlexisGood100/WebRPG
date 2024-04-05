@@ -13,7 +13,8 @@ document.querySelector('.div-familiar-container'),
     , document.querySelector('.div-all-building-container'),
      document.querySelector('.div-harvesting-container'),
       document.querySelector('.div-java-shop'),
-    document.querySelector('.div-play-game-for-random-reward')
+    document.querySelector('.div-play-game-for-random-reward'),
+    document.querySelector('.div-play-game-for-random-reward-duel')
 ]
 
 
@@ -101,5 +102,10 @@ h1MenuItemsAll[9].addEventListener('click', () => {
 
 h1MenuItemsAll[10].addEventListener('click', () => {
     findElementContainerByIndex(10, allContainers)
+    hideMenuEquipSlots(document.querySelectorAll('.div-equip-slot'))
+})
+
+h1MenuItemsAll[11].addEventListener('click', () => {
+    findElementContainerByIndex(11, allContainers)
     hideMenuEquipSlots(document.querySelectorAll('.div-equip-slot'))
 })

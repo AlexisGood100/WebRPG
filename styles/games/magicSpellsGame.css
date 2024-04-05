@@ -1,9 +1,10 @@
 .magical-attack{
     box-shadow: 2px 2px 2px 2px  black;
-    width:250px;
-    height:250px;
-    border-radius: 50%;
-    
+    width:240px;
+    height:200px;
+    border-radius: 100%;
+    transition: .4s;
+    /* border:1px solid white; */
 }
 
 .magical-attack:hover{

@@ -312,3 +312,18 @@ const runTimer = (num) => {
 }
 
 // the duel part of the game.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,10 +3,10 @@ const divPlayerClassChoices = document.querySelectorAll('.div-player-choice');
 const imgForClass = document.querySelector('.div-player-image')
 const divContainerPlayerSide = document.querySelector('.div-container-player-side-img')
 const allStartClassChoiceImages = document.querySelectorAll('.div-class-image');
-allStartClassChoiceImages[0].style.backgroundImage = `url(${'./images/playerClass/priestProfile.jpg'})`
-allStartClassChoiceImages[1].style.backgroundImage = `url(${'./images/playerClass/fighterProfile.jpg'})`
-allStartClassChoiceImages[2].style.backgroundImage = `url(${'./images/playerClass/wizardProfile.jpg'})`
-allStartClassChoiceImages[3].style.backgroundImage = `url(${'./images/playerClass/assassinProfile.jpeg'})`
+allStartClassChoiceImages[0].style.backgroundImage = `url(${'./images/playerClass/priestProfile1.jpg'})`
+allStartClassChoiceImages[1].style.backgroundImage = `url(${'./images/playerClass/fighterProfile1.jpg'})`
+allStartClassChoiceImages[2].style.backgroundImage = `url(${'./images/playerClass/wizardProfile1.jpg'})`
+allStartClassChoiceImages[3].style.backgroundImage = `url(${'./images/playerClass/assassinProfile1.jpg'})`
 
 function bundleClassChoiceBases(){ //all the events use these lines regardless so I just abstracted them to this function.
     activatePlayerStatistics(wizard);
