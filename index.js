@@ -294,7 +294,7 @@ createSkillSlot('middle-2-skill-tree-div', 'F-Defense', 1, document.querySelecto
 createSkillSlot('middle-3-skill-tree-div', 'F-Willpower', 1, document.querySelector('.div-skill-tree'))
 createSkillSlot('middle-4-skill-tree-div', '+Difficulty', 1, document.querySelector('.div-skill-tree'))
 createSkillSlot('middle-5-skill-tree-div', '+Item Ratings', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('middle-6-skill-tree-div', '+F Stats', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('middle-6-skill-tree-div', '+F Strength', 1, document.querySelector('.div-skill-tree'))
 
 
 

@@ -32,7 +32,6 @@ allMagicalAttackElements[19].classList.add('e-earth');
 allMagicalAttackElements[0].addEventListener('click', () => {
     allMagicalAttackElements[1].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalAttackFire.jpg')`;
     allMagicalAttackElements[1].classList.add('p-fire');
-
 })
 
 allMagicalAttackElements[5].addEventListener('click', () => {
@@ -140,7 +139,7 @@ function checkForCollision(index, nodeList_, classList) {
     if (nodeList_[index].classList.contains(classList) && nodeList_[index].classList.contains(classList)) {
         nodeList_[index].classList.remove(classList)
         nodeList_[index].classList.remove(classList)
-        
+        collisionCount += 1;
         console.log('collision:' + allMagicalAttackElements[3])
     }
 }
@@ -244,159 +243,6 @@ function moveEnemyAttackForward() {
         }
     }, 2000);
 }
-
-
-
-    ///////////collision detection
-    function collisionDetection(){
-            setInterval(() => {
-    if (allMagicalAttackElements[3].classList.contains('p-fire') && allMagicalAttackElements[3].classList.contains('e-fire')) {
-        allMagicalAttackElements[3].classList.remove('p-fire')
-        allMagicalAttackElements[3].classList.remove('e-fire')
-        
-        
-        console.log('collision:' + allMagicalAttackElements[3])
-    }
-    if (allMagicalAttackElements[2].classList.contains('p-fire') && allMagicalAttackElements[2].classList.contains('e-fire')) {
-        allMagicalAttackElements[2].classList.remove('p-fire')
-        allMagicalAttackElements[2].classList.remove('e-fire')
-        
-        console.log('collision: ' + allMagicalAttackElements[2])
-    }
-    if (allMagicalAttackElements[1].classList.contains('p-fire') && allMagicalAttackElements[1].classList.contains('e-fire')) {
-        allMagicalAttackElements[1].classList.remove('p-fire')
-        allMagicalAttackElements[1].classList.remove('e-fire')
-        
-        console.log('collision: ' + allMagicalAttackElements[1])
-    }
-    if (allMagicalAttackElements[4].classList.contains('p-fire') && allMagicalAttackElements[4].classList.contains('e-fire')) {
-        allMagicalAttackElements[4].classList.remove('p-fire')
-        allMagicalAttackElements[4].classList.remove('e-fire')
-
-        
-        
-        console.log('collision: ' + allMagicalAttackElements[4])
-        console.log('score')
-    }
-    if (allMagicalAttackElements[5].classList.contains('p-fire')) {
-        allMagicalAttackElements[5].classList.remove('p-fire')
-        
-        
-        console.log('collision: ' + allMagicalAttackElements[4])
-        console.log('score')
-    }
-    
-
-    if (allMagicalAttackElements[6].classList.contains('p-ice') && allMagicalAttackElements[6].classList.contains('e-ice')) {
-        allMagicalAttackElements[6].classList.remove('p-ice')
-        allMagicalAttackElements[6].classList.remove('e-ice')
-        
-        
-        
-        console.log('collision:' + allMagicalAttackElements[3])
-    }
-    if (allMagicalAttackElements[7].classList.contains('p-ice') && allMagicalAttackElements[7].classList.contains('e-ice')) {
-        allMagicalAttackElements[7].classList.remove('p-ice')
-        allMagicalAttackElements[7].classList.remove('e-ice')
-        
-        
-        
-        console.log('collision: ' + allMagicalAttackElements[2])
-    }
-    if (allMagicalAttackElements[8].classList.contains('p-ice') && allMagicalAttackElements[8].classList.contains('e-ice')) {
-        allMagicalAttackElements[8].classList.remove('p-ice')
-        allMagicalAttackElements[8].classList.remove('e-ice')
-        
-        
-    }
-    if (allMagicalAttackElements[9].classList.contains('p-ice') && allMagicalAttackElements[9].classList.contains('e-ice')) {
-        allMagicalAttackElements[9].classList.remove('p-ice')
-        
-        
-        
-        console.log('score')
-    }
-    if (allMagicalAttackElements[10].classList.contains('p-ice')) {
-        allMagicalAttackElements[10].classList.remove('p-ice')
-        
-        
-        
-        console.log('score')
-    }
-    
-// end of collision detection
-
-    if (allMagicalAttackElements[16].classList.contains('p-earth') && allMagicalAttackElements[16].classList.contains('e-earth')) {
-        allMagicalAttackElements[16].classList.remove('p-earth')
-        allMagicalAttackElements[16].classList.remove('e-earth')
-        
-        
-        
-        console.log('collision:' + allMagicalAttackElements[3])
-    }
-    if (allMagicalAttackElements[17].classList.contains('p-earth') && allMagicalAttackElements[17].classList.contains('e-earth')) {
-        allMagicalAttackElements[17].classList.remove('p-earth')
-        allMagicalAttackElements[17].classList.remove('e-earth')
-        
-        
-        console.log('collision: ' + allMagicalAttackElements[2])
-    }
-    if (allMagicalAttackElements[18].classList.contains('p-earth') && allMagicalAttackElements[18].classList.contains('e-earth')) {
-        allMagicalAttackElements[18].classList.remove('p-earth')
-        allMagicalAttackElements[18].classList.remove('e-earth')
-        
-        console.log('collision: ' + allMagicalAttackElements[1])
-    }
-    if (allMagicalAttackElements[19].classList.contains('p-earth')) {
-        allMagicalAttackElements[19].classList.remove('p-earth')
-        
-        
-        console.log('collision: ' + allMagicalAttackElements[1])
-    }
-//End of air collision
-
-
-    if (allMagicalAttackElements[11].classList.contains('p-earth') && allMagicalAttackElements[11].classList.contains('e-earth')) {
-        allMagicalAttackElements[11].classList.remove('p-earth')
-        allMagicalAttackElements[11].classList.remove('e-earth')
-
-
-        console.log('collision:' + allMagicalAttackElements[3])
-    }
-    if (allMagicalAttackElements[12].classList.contains('p-earth') && allMagicalAttackElements[12].classList.contains('e-earth')) {
-        allMagicalAttackElements[12].classList.remove('p-earth')
-        allMagicalAttackElements[12].classList.remove('e-earth')
-
-
-        console.log('collision: ' + allMagicalAttackElements[2])
-    }
-    if (allMagicalAttackElements[13].classList.contains('p-earth') && allMagicalAttackElements[13].classList.contains('e-earth')) {
-        allMagicalAttackElements[13].classList.remove('p-earth')
-        allMagicalAttackElements[13].classList.remove('e-earth')
-
-
-        console.log('collision: ' + allMagicalAttackElements[1])
-    }
-    if (allMagicalAttackElements[14].classList.contains('p-earth') && allMagicalAttackElements[14].classList.contains('e-earth')) {
-        allMagicalAttackElements[14].classList.remove('p-earth')
-        allMagicalAttackElements[14].classList.remove('e-earth')
-
-
-        console.log('score')
-    } if (allMagicalAttackElements[15].classList.contains('p-earth')) {
-        allMagicalAttackElements[15].classList.remove('p-earth')
-        allMagicalAttackElements[14].classList.remove('p-earth')
-        allMagicalAttackElements[14].classList.remove('e-earth')
-
-
-        console.log('score')
-    }
-
-}, 1000)
-}
-// let starterDefaultIamgeForMagicalAttacks = './images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg';
-// let allMagicalAttackElements = document.querySelectorAll('.magical-attack')
-
 
 allMagicalAttackElements.forEach((magicalAttackElement) => {
     magicalAttackElement.style.backgroundImage = `url('${starterDefaultIamgeForMagicalAttacks}')`;
@@ -530,12 +376,12 @@ setInterval(() => {
     else if (allMagicalAttackElements[1].classList.contains('e-fire')) {
         allMagicalAttackElements[1].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
         allMagicalAttackElements[1].classList.remove('e-fire');
-        // allMagicalAttackElements[1].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalAttackFire.jpg')`;
         allMagicalAttackElements[0].classList.add('e-fire');
     }
-}, 2000);
+    setTimeout(()=>{
+        allMagicalAttackElements[0].classList.remove('e-fire')
+    }, 1000)
 
-setInterval(() => {
     if (allMagicalAttackElements[8].classList.contains('e-ice')) {
         allMagicalAttackElements[8].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
         allMagicalAttackElements[8].classList.remove('e-ice');
@@ -556,10 +402,10 @@ setInterval(() => {
 
         allMagicalAttackElements[5].classList.add('e-ice');
     }
-}, 2000);
+    setTimeout(()=>{
+        allMagicalAttackElements[5].classList.remove('e-ice')
+    }, 1000)
 
-
-setInterval(() => {
     if (allMagicalAttackElements[13].classList.contains('e-air')) {
         allMagicalAttackElements[13].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
         allMagicalAttackElements[13].classList.remove('e-air');
@@ -579,13 +425,10 @@ setInterval(() => {
         allMagicalAttackElements[11].classList.remove('e-air');
 
         allMagicalAttackElements[10].classList.add('e-air');
-
-
     }
-}, 2000);
-
-
-setInterval(() => {
+    setTimeout(()=>{
+        allMagicalAttackElements[10].classList.remove('e-air')
+    }, 1000)
     if (allMagicalAttackElements[18].classList.contains('e-earth')) {
         allMagicalAttackElements[18].classList.remove('e-earth');
         allMagicalAttackElements[18].style.backgroundImage = `url('./images/miniGame/magicalSpellsGame/elementalDefaultBackground.jpg')`;
@@ -607,75 +450,98 @@ setInterval(() => {
 
         allMagicalAttackElements[15].classList.add('e-earth');
     }
+    setTimeout(()=>{
+        allMagicalAttackElements[15].classList.remove('e-earth')
+    }, 1000)
 }, 2000);
+
 
 
 function checkForCollision(index, nodeList_, eClassList, pClassList) {
     if (nodeList_[index].classList.contains(eClassList) && nodeList_[index].classList.contains(pClassList)) {
         nodeList_[index].classList.remove(eClassList)
         nodeList_[index].classList.remove(pClassList)
-
+        collisionCount.total += 1;
+        updateCollision(collisionCount)
         console.log('collision:' + allMagicalAttackElements[3])
     }
 }
+let scoreElements = {score: 0}
+function runCdetection(){
 
-///////////collision detection
-setInterval(() => {
-    checkForCollision(1, allMagicalAttackElements, 'e-earth', 'p-earth')
-    checkForCollision(2, allMagicalAttackElements, 'e-earth', 'p-earth')
-    checkForCollision(3, allMagicalAttackElements, 'e-earth', 'p-earth')
+        checkForCollision(1, allMagicalAttackElements, 'e-earth', 'p-earth')
+        checkForCollision(2, allMagicalAttackElements, 'e-earth', 'p-earth')
+        checkForCollision(3, allMagicalAttackElements, 'e-earth', 'p-earth')
+        
+        if (allMagicalAttackElements[4].classList.contains('p-fire') && allMagicalAttackElements[4].classList.contains('e-fire')) {
+            allMagicalAttackElements[4].classList.remove('p-fire')
+            allMagicalAttackElements[4].classList.remove('e-fire')
 
-    if (allMagicalAttackElements[4].classList.contains('p-fire') && allMagicalAttackElements[4].classList.contains('e-fire')) {
-        allMagicalAttackElements[4].classList.remove('p-fire')
-        allMagicalAttackElements[4].classList.remove('e-fire')
+            scoreElements.score += 1;
+            document.querySelector('.h1-score-duel').innerText = `Score: ${scoreElements.score}`;
+      
+       
+        }
+        
+        // end of collision detection
+        
+        checkForCollision(6, allMagicalAttackElements, 'e-ice', 'p-ice')
+        checkForCollision(7, allMagicalAttackElements, 'e-ice', 'p-ice')
+        checkForCollision(8, allMagicalAttackElements, 'e-ice', 'p-ice')
+        
+        if (allMagicalAttackElements[9].classList.contains('p-ice') && allMagicalAttackElements[9].classList.contains('e-ice')) {
+            allMagicalAttackElements[9].classList.remove('p-ice')
+          
+            scoreElements.score += 1;
+            document.querySelector('.h1-score-duel').innerText = `Score: ${scoreElements.score}`;
+         
+        }
+        
 
+        // end of collision detection
+        
+        
+        checkForCollision(16, allMagicalAttackElements, 'e-earth', 'p-earth')
+        checkForCollision(17, allMagicalAttackElements, 'e-earth', 'p-earth')
+        checkForCollision(18, allMagicalAttackElements, 'e-earth', 'p-earth')
+        if (allMagicalAttackElements[19].classList.contains('p-earth')) {
+            allMagicalAttackElements[19].classList.remove('p-earth')
+             scoreElements.score += 1;
+             document.querySelector('.h1-score-duel').innerText = `Score: ${scoreElements.score}`;
+        }
+        
+        //End of air collision
+        checkForCollision(11, allMagicalAttackElements, 'e-air', 'p-air')
+        checkForCollision(12, allMagicalAttackElements, 'e-air', 'p-air')
+        checkForCollision(13, allMagicalAttackElements, 'e-air', 'p-air')
+        if (allMagicalAttackElements[14].classList.contains('p-earth') && allMagicalAttackElements[14].classList.contains('e-earth')) {
+            allMagicalAttackElements[14].classList.remove('p-earth')
+            scoreElements.score += 1;
+           document.querySelector('.h1-score-duel').innerText = `Score: ${scoreElements.score}`;
+        } 
+        
 
+}
 
-        console.log('collision: ' + allMagicalAttackElements[4])
-        console.log('score')
-    }
+function updateCollision(){
+    document.querySelector('.span-score-collision').innerText = collisionCount.total;
+}
 
-// end of collision detection
-
-    checkForCollision(6, allMagicalAttackElements, 'e-ice', 'p-ice')
-    checkForCollision(7, allMagicalAttackElements, 'e-ice', 'p-ice')
-    checkForCollision(8, allMagicalAttackElements, 'e-ice', 'p-ice')
-
-    if (allMagicalAttackElements[9].classList.contains('p-ice') && allMagicalAttackElements[9].classList.contains('e-ice')) {
-        allMagicalAttackElements[9].classList.remove('p-ice')
-
-        console.log('score')
-    }
-
-
-// end of collision detection
-
-
-    checkForCollision(16, allMagicalAttackElements, 'e-earth', 'p-earth')
-    checkForCollision(17, allMagicalAttackElements, 'e-earth', 'p-earth')
-    checkForCollision(18, allMagicalAttackElements, 'e-earth', 'p-earth')
-    if (allMagicalAttackElements[19].classList.contains('p-earth')) {
-        allMagicalAttackElements[19].classList.remove('p-earth')
-
-        console.log('collision: ' + allMagicalAttackElements[1])
-    }
-
-//End of air collision
-    checkForCollision(11, allMagicalAttackElements, 'e-air', 'p-air')
-    checkForCollision(12, allMagicalAttackElements, 'e-air', 'p-air')
-    checkForCollision(13, allMagicalAttackElements, 'e-air', 'p-air')
-    if (allMagicalAttackElements[14].classList.contains('p-earth') && allMagicalAttackElements[14].classList.contains('e-earth')) {
-        allMagicalAttackElements[14].classList.remove('p-earth')
-        allMagicalAttackElements[14].classList.remove('e-earth')
-
-       console.log('collision')
-    } 
-
-}, 1000)
-
+let collisionCount = {total: 0}
 //initiation 
 //1 - start enemy attack and player attack.
 //2 detect collision
-enableEnemyAttack()
-collisionDetection()
-enablePlayerForwardAttacks()
+function runGame(){ //call this to start the game.
+    setInterval(()=>{
+
+        enableEnemyAttack()
+        enablePlayerForwardAttacks()
+        runCdetection()
+    }, 3500)
+}
+
+
+document.querySelector('.button-start-game-duel').addEventListener('click', ()=>{
+    runGame()
+})
+
