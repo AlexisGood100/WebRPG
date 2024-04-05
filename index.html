@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="styles/reward.css"> <!-- Rewards -->
     <link rel="stylesheet" href="/styles/games/game-reward.css"> <!-- Game for Reward. -->
     <link rel="stylesheet" href="styles/games/magicSpellsGame.css"> <!-- Styles for the magic duel game. -->
+    <link rel="stylesheet" href="/styles/skillTree.css"> <!-- Skill Tree -->
     <title>webRPG</title>
 </head>
 
@@ -74,7 +75,7 @@
 
 
 <!-- Not finished make sure to come back to scene -->
-<div class="div-scene-container">
+<div class="div-scene-container hide">
    <div class="div-scene-constituents">
     <h1 class="h1-scene">Scene Title</h1>
     <div class="div-inside-image">
@@ -741,7 +742,7 @@ Fire
 </div>
 
 
-<div class="div-play-game-for-random-reward-duel hide">
+<div class="div-play-game-for-random-reward-duel">
     <div class="div-container-for-game">
         <h1>Welcome to the Challenge.</h1>
         <h1>Click the Activate button to begin the challenge.</h1>
@@ -756,6 +757,23 @@ Fire
         </div>
     </div>
 </div>
+
+
+<div class="div-level-up-skill-tree hide">
+    <div class="div-container-skill-tree">
+        <h1>Unlock a reward for each level.</h1>
+        <h1>Each time you win a battle, you experience increases and you gain a level point to spend</h1>
+        <div class="experience-bar"></div>
+        <h1>Level Points: <span class="span-level-points">0</span></h1>
+        <div class="div-skill-tree">
+
+        </div>
+    </div>
+</div>
+
+
+
+
 
 
 
@@ -774,6 +792,7 @@ Fire
 <script src="/miniGameFunctions/miniGame.js"> </script>
     <!-- End of Mini-Game -->
     <!-- Mini Game // Wizard duel -->
+    <script src="/miniGameFunctions/magicSpellGame/initateEnemyAttack.js"></script>
 <script src="/miniGameFunctions/magicSpellGame/forwardElementalAttack.js"></script>
     <!-- End of wizard duel mini game -->
     

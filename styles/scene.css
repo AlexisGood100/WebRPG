@@ -1,12 +1,27 @@
 /* This is for the scene container */
 .div-scene-container{
-    margin-top: 1rem;
     /* width:100vw;  */
     height:100vh;
-    background-color: black;
+    background-image: url('/styles/background/ocean.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
     margin-bottom: 10rem;
     border:1px solid white;
+    box-shadow: 2px 2px 2px 2px black;
 }
+
+.div-scene-container p{
+
+    margin:1rem;
+    padding:1rem;
+}
+
+.div-scene-container h1{
+    margin:1rem;
+    padding:1rem;
+}
+
+
 
 .div-scene-container button{
     background-color: #007bff;
@@ -16,6 +31,7 @@
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     border-radius:25%;
+    box-shadow: 2px 2px 4px 1px black;
 }
 
 .div-scene-container button:hover{
@@ -28,7 +44,8 @@
 .h1-scene{
     text-align: center;
     color:white;
-    margin:.5rem;
+    /* margin:.5rem; */
+    /* box-shadow: 2px 2px 2px 2px black; */
 }
 
 .div-inside-image{
@@ -38,11 +55,16 @@
     margin: 0 auto;
     border-radius: 10%;
     border: 2px solid white;
-    box-shadow: 2px 2px 4px 4px black;
+    box-shadow: 2px 2px 4px 8px black;
+}
+.div-inside-image:hover{
+    transition: 10s;
+    transform: scale(1.2);
 }
 
 .p-story-container{
     width:75vw;
     text-align: center;
     margin: 0 auto;
+    
 }

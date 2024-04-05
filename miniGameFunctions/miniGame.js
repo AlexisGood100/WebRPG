@@ -69,3 +69,66 @@ const checkForColor = (assignSelectedColor) => {
 }
 
 
+//Mini-Game
+let scoreForGame = { score: 0 }
+let timer = 0;
+const gameStart = document.querySelector('.button-start-game')
+gameStart.addEventListener('click', (e) => {
+    timer = 0;
+    gameStart.classList.add('hide');
+    let colorAssignInterval = setInterval(() => {
+        document.querySelector(".span-timer").classList.remove('hide')
+        if (timer === 5) {
+            clearInterval(colorAssignInterval)
+            nodeList_ = document.querySelectorAll('.inside-game-div');
+            nodeList_.forEach((element)=>{
+                element.style.backgroundColor = 'crimson'
+                wizard.gold += scoreForGame.score;
+                console.log(wizard.gold)
+                timer = 0;
+                scoreForGame.score = 0;
+                spanForScore.innerText = scoreForGame.score;
+                gameStart.classList.remove('hide');
+                console.log('You have earned ' + scoreForGame.score + " points.")
+                document.querySelector('.span-timer').innerText = 0;
+                document.querySelector(".span-timer").classList.add('hide')
+            })
+        } else {
+            assignColorsToAll(checkForColor(assignSelectedColor()));
+        }
+    }, 2000);
+    
+    runTimer(1000)
+
+    nodeList_ = document.querySelectorAll('.inside-game-div');
+    nodeList_.forEach((element) => {
+        element.addEventListener('click', () => {
+            if (element.style.backgroundColor === currentColor) {
+                console.log('score')
+                scoreForGame.score += 1;
+                spanForScore.innerText = scoreForGame.score;
+            } else {
+                console.log('no score')
+                scoreForGame.score -= 1;
+                spanForScore.innerText = scoreForGame.score;
+            }
+        })
+    })
+});
+//End of mini-game
+
+
+
+const runTimer = (num) => {
+
+    let interval = setInterval(() => {
+        if (timer === 5) {
+            clearInterval(interval)
+            return
+        } else{
+            timer += 1;
+            document.querySelector(".span-timer").innerText = timer;
+        }
+    }, num)
+
+}

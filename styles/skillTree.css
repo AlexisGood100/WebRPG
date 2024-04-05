@@ -1,0 +1,115 @@
+.div-level-up-skill-tree{
+    color:white;
+}
+
+.div-skill-tree{
+width:42vw;
+background-image: url('/images/skillTree/skillTree.jpg');
+height:81vh;
+margin:0 auto;
+}
+
+.skill-div{
+    width:86px;
+    height:86px;
+    background-color: black;
+    border-radius: 100%;
+    border: 2px solid gold;
+    box-shadow: 2px 2px 2px 3px solid black;
+}
+
+.left-1-skill-tree-div{
+    position: absolute;
+    margin-top:1.5%;
+    margin-left: 1.5%;
+    background-image: url('/images/skillTree/skillStrength.jpg');
+}
+.left-2-skill-tree-div{
+    position: absolute;
+    margin-top:7.5%;
+    margin-left: 1.5%;
+    background-image: url('/images/skillTree/skillDexterity.jpg');
+}
+.left-3-skill-tree-div{
+    position: absolute;
+    margin-top:13.5%;
+    margin-left: 1.5%;
+}
+.left-4-skill-tree-div{
+    position: absolute;
+    margin-top:20%;
+    margin-left: 1.5%;
+}
+.left-5-skill-tree-div{
+    position: absolute;
+    margin-top:30%;
+    margin-left: 1.5%;
+}
+.left-6-skill-tree-div{
+    position: absolute;
+    margin-top:36%;
+    margin-left: 1.5%;
+}
+
+.right-1-skill-tree-div{
+    position: absolute;
+    margin-top:1.5%;
+    margin-left: 36.5%;
+}
+.right-2-skill-tree-div{
+    position: absolute;
+    margin-top:7.5%;
+    margin-left: 36.5%;
+}
+.right-3-skill-tree-div{
+    position: absolute;
+    margin-top:13.5%;
+    margin-left: 36.5%;
+}
+.right-4-skill-tree-div{
+    position: absolute;
+    margin-top:22%;
+    margin-left: 36.5%;
+}
+.right-5-skill-tree-div{
+    position: absolute;
+    margin-top:30%;
+    margin-left: 36.5%;
+}
+.right-6-skill-tree-div{
+    position: absolute;
+    margin-top:36%;
+    margin-left: 36.5%;
+}
+
+
+.middle-1-skill-tree-div{
+    position: absolute;
+    margin-top:3.5%;
+    margin-left: 18.5%;
+}
+.middle-2-skill-tree-div{
+    position: absolute;
+    margin-top:10.5%;
+    margin-left: 18.5%;
+}
+.middle-3-skill-tree-div{
+    position: absolute;
+    margin-top:17%;
+    margin-left: 18.5%;
+}
+.middle-4-skill-tree-div{
+    position: absolute;
+    margin-top:24%;
+    margin-left: 18.5%;
+}
+.middle-5-skill-tree-div{
+    position: absolute;
+    margin-top:30%;
+    margin-left: 18.5%;
+}
+.middle-6-skill-tree-div{
+    position: absolute;
+    margin-top:36%;
+    margin-left: 18.5%;
+}

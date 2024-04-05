@@ -159,8 +159,7 @@ function checkForEndOfBattle() {
     updateBuildingResourcePlayerTable(tdBuildHousePlayerHave, tdBuildHouseRequirementsAllSmall, tdBuildHouseRequirementsAllMedium, tdBuildHouseRequirementsAllLarge, resourceFarm_); // calling the function to display the map
     div_reward_container.classList.remove('hide');
     document.querySelector('body').classList.add('over-flow');
-    wizard.levelUp();
-    displayPlayerClass(wizard, document.querySelector('.div-player-statistics'));
+    // wizard.levelUp(); // This is the level up function
     wizard.generateHealth();
     wizard.generateMagicPower()
     currentFamiliar.generateMagicPower()
@@ -168,6 +167,7 @@ function checkForEndOfBattle() {
     currentFamiliar.level = wizard.level;
     spanPlayerGold.innerText = wizard.gold;
     currentDifficulty += .5
+    displayPlayerClass(wizard, document.querySelector('.div-player-statistics'));
 }
 
 //End of the battle section
@@ -245,74 +245,56 @@ createJavaObj(javaFamiliarConstitution, document.querySelector('.java-container'
 
 
 
-//Mini-Game
-let scoreForGame = { score: 0 }
-let timer = 0;
 
-
-const gameStart = document.querySelector('.button-start-game')
-gameStart.addEventListener('click', (e) => {
-    timer = 0;
-    gameStart.classList.add('hide');
-    let colorAssignInterval = setInterval(() => {
-        document.querySelector(".span-timer").classList.remove('hide')
-        if (timer === 5) {
-            clearInterval(colorAssignInterval)
-            nodeList_ = document.querySelectorAll('.inside-game-div');
-            nodeList_.forEach((element)=>{
-                element.style.backgroundColor = 'crimson'
-                wizard.gold += scoreForGame.score;
-                console.log(wizard.gold)
-                timer = 0;
-                scoreForGame.score = 0;
-                spanForScore.innerText = scoreForGame.score;
-                gameStart.classList.remove('hide');
-                console.log('You have earned ' + scoreForGame.score + " points.")
-                document.querySelector('.span-timer').innerText = 0;
-                document.querySelector(".span-timer").classList.add('hide')
-            })
-        } else {
-            assignColorsToAll(checkForColor(assignSelectedColor()));
-        }
-    }, 2000);
-    
-    runTimer(1000)
-
-    nodeList_ = document.querySelectorAll('.inside-game-div');
-    nodeList_.forEach((element) => {
-        element.addEventListener('click', () => {
-            if (element.style.backgroundColor === currentColor) {
-                console.log('score')
-                scoreForGame.score += 1;
-                spanForScore.innerText = scoreForGame.score;
-            } else {
-                console.log('no score')
-                scoreForGame.score -= 1;
-                spanForScore.innerText = scoreForGame.score;
+function createSkillSlot(classListForAbsolutePositioning, skillUp, skillNum, parent) {
+    // if (wizard.requiredLevel >= skillNum) {
+        let skillDiv = document.createElement('div');
+        skillDiv.classList.add('skill-div');
+        skillDiv.classList.add(classListForAbsolutePositioning);
+        let skillNumP = document.createElement('p');
+        skillNumP.innerText = skillNum;
+        let skillUpP = document.createElement('p');
+        skillUpP.innerText = skillUp;
+        skillDiv.appendChild(skillNumP);
+        skillDiv.appendChild(skillUpP);
+        parent.appendChild(skillDiv);
+        
+        //event listener for the skill tree
+        skillDiv.addEventListener('click', ()=>{
+            let wizardLevel = wizard.level
+            if(skillUp === 'Strength'){
+                wizard.strength += parseFloat(wizardLevel);
+                console.log(wizardLevel)
+                console.log(wizard.strength)
+            }
+            if(skillUp === 'Intelligence'){
+                wizard.attack += wizardLevel;
             }
         })
-    })
-});
-//End of mini-game
+   
+    }
 
 
 
-const runTimer = (num) => {
+createSkillSlot('left-1-skill-tree-div', 'Strength', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('left-2-skill-tree-div', 'Dexterity', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('left-3-skill-tree-div', 'Intelligence', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('left-4-skill-tree-div', 'Willpower', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('left-5-skill-tree-div', 'Charisma', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('left-6-skill-tree-div', 'Defense', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('right-1-skill-tree-div', 'Willpower', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('right-2-skill-tree-div', 'Consititution', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('right-3-skill-tree-div', 'F-Strength', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('right-4-skill-tree-div', 'F-Dexterity', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('right-5-skill-tree-div', 'F-Intelligence', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('right-6-skill-tree-div', 'F-Willpower', 1, document.querySelector('.div-skill-tree'))
 
-    let interval = setInterval(() => {
-        if (timer === 5) {
-            clearInterval(interval)
-            return
-        } else{
-            timer += 1;
-            document.querySelector(".span-timer").innerText = timer;
-        }
-    }, num)
-
-}
-
-// the duel part of the game.
-
+createSkillSlot('middle-1-skill-tree-div', 'F-Charisma', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('middle-2-skill-tree-div', 'F-Defense', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('middle-3-skill-tree-div', 'F-Willpower', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('middle-4-skill-tree-div', '+Difficulty', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('middle-5-skill-tree-div', '+Item Ratings', 1, document.querySelector('.div-skill-tree'))
+createSkillSlot('middle-6-skill-tree-div', '+F Stats', 1, document.querySelector('.div-skill-tree'))
 
 
 
