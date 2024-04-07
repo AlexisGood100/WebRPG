@@ -1,13 +1,35 @@
-/* This is for the scene container */
+/* This is for the scene container
 .div-scene-container{
-    /* width:100vw;  */
+    width:100vw; 
     height:100vh;
-    background-image: url('/styles/background/ocean.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 10rem;
-    border:1px solid white;
+    background-image: url('/1aaf006f-c5be-4ce0-9a87-1322dcc5eb24.mp4'); 
+    /* background-size: cover; */
+    /* background-position: center;
+    animation: playAnimation 5s steps(25) infinite;  */ */
+    /* background-repeat: no-repeat; */
+    /* margin-bottom: 10rem; */
+    /* border:1px solid white;
     box-shadow: 2px 2px 2px 2px black;
+} */
+
+.div-scene-container{ 
+    position: relative;
+    width: 100vw;
+     height: 100vh;
+    /* background-image: url('/vOcean.mp4'); Replace 'your_image.jpg' with your image file  */
+    background-size: cover;
+    background-position: center;
+    animation: playAnimation 5s steps(25) infinite; /* Adjust duration and steps as needed */
+}
+
+@keyframes playAnimation {
+    from { background-position: 0; }
+    to { background-position: -16000px; } /* Adjust value based on the width of your image */
+}
+
+.div-flex-view{
+    display:flex;
+    justify-content: center;
 }
 
 .div-scene-container p{

@@ -297,15 +297,3 @@ createSkillSlot('middle-5-skill-tree-div', '+Item Ratings', 1, document.querySel
 createSkillSlot('middle-6-skill-tree-div', '+F Strength', 1, document.querySelector('.div-skill-tree'))
 
 
-
-
-
-
-
-
-
-
-
-
-
-

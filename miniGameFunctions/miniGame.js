@@ -65,6 +65,7 @@ const checkForColor = (assignSelectedColor) => {
         nodeList_ = document.querySelectorAll('.inside-game-div');
     }, 2000)
     let assignSelectedColor_ = { color: document.querySelector('.color-choice').innerText, index: assignSelectedColor.index }
+    console.log('check for color')
     return assignSelectedColor_
 }
 
@@ -95,6 +96,7 @@ gameStart.addEventListener('click', (e) => {
             })
         } else {
             assignColorsToAll(checkForColor(assignSelectedColor()));
+
         }
     }, 2000);
     
