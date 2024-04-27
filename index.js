@@ -1,3 +1,5 @@
+
+
 //Global Variables
 const h1PlayerInfo = document.querySelectorAll('.h1-info');
 const divPlayerStatistics = document.querySelector('.div-player-statistics');
@@ -297,3 +299,31 @@ createSkillSlot('middle-5-skill-tree-div', '+Item Ratings', 1, document.querySel
 createSkillSlot('middle-6-skill-tree-div', '+F Strength', 1, document.querySelector('.div-skill-tree'))
 
 
+const video = document.getElementById('video');
+
+function startGame() {
+    video.play(); // Start playing the video
+    // Other game initialization code goes here
+}
+
+// Call the startGame function when the game loads
+// window.onload = startGame;
+
+
+
+
+// Saving the character
+
+document.querySelector('.button-save-game').addEventListener('click', ()=>{
+
+})
+
+
+
+
+let nullCheck = [h1PlayerInfo, divEnemyStatistics, divEnemyStatistics, buttonBuffSpell, buttonDamageSpell, divBattleWindow, divPlayerEquip,DivFamiliarContainer,DivOwnedFamiliarContainer]
+nullCheck.forEach((constant, i)=>{
+    if(constant === null){
+        return `Constant in index ${i} is null.`
+    }
+})

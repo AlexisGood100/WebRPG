@@ -14,7 +14,7 @@ function generateRandomNumberOf() {
 }
 
 const imageForDice = document.querySelector('.div-image-dice');
-imageForDice.style.backgroundImage = `url(${'./images/dice.jpg'})`
+imageForDice.style.backgroundImage = `url(${'./images/dice.jpg'})   ` //this is where the dice image is being inserted.
 
 
 const buttonRoll = document.querySelector('.roll-die');

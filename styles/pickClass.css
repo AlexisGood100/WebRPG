@@ -49,14 +49,6 @@
     overflow: hidden; /* Ensure the image stays within the border */
 }
 
-#video{
-    width: 301px;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px; /* Rounded corners for a sleek look */
-    overflow: hidden; /* Ensure the image stays within the border */
-}
 
 
 .button-choose-class {
