@@ -81,29 +81,29 @@ parentHTML.appendChild(familiarDiv);
 familiarBuyButton.addEventListener('click', ()=>{
     arrayOwnedFamiliars.push(familiar);
     if(familiar.type === 'Fire'){
-        wizard.fireEssence -= familiar.cost;
-        updateEssence(wizard, essenceEssenceCountAll)
+        newEssenceContainer.fireEssence -= familiar.cost;
+        updateEssence(newEssenceContainer, essenceEssenceCountAll)
     }
     if(familiar.type === 'Air'){
-        wizard.airEssence -= familiar.cost;
-        updateEssence(wizard, essenceEssenceCountAll)
+        newEssenceContainer.airEssence -= familiar.cost;
+        updateEssence(newEssenceContainer, essenceEssenceCountAll)
     }
     if(familiar.type === 'Water'){
-        wizard.waterEssence -= familiar.cost;
-        updateEssence(wizard, essenceEssenceCountAll)
+        newEssenceContainer.waterEssence -= familiar.cost;
+        updateEssence(newEssenceContainer, essenceEssenceCountAll)
     }
     if(familiar.type === 'Earth'){
-        wizard.earthEssence -= familiar.cost;
-        updateEssence(wizard, essenceEssenceCountAll)
+        newEssenceContainer.earthEssence -= familiar.cost;
+        updateEssence(newEssenceContainer, essenceEssenceCountAll)
     }
     if(familiar.type === 'Light'){
-        wizard.lightEssence -= familiar.cost;        
-         updateEssence(wizard, essenceEssenceCountAll)
+        newEssenceContainer.lightEssence -= familiar.cost;        
+         updateEssence(newEssenceContainer, essenceEssenceCountAll)
     }
     if(familiar.type === 'Dark'){
-        wizard.darkEssence -= familiar.cost;
+        newEssenceContainer.darkEssence -= familiar.cost;
       
-        updateEssence(wizard, essenceEssenceCountAll)
+        updateEssence(newEssenceContainer, essenceEssenceCountAll)
     }
 
 

@@ -19,15 +19,12 @@ class PlayerClass {
         this.mana = 0;
         this.level = 1;
         this.playerPopulation = 0;
-        this.fireEssence = 2;
-        this.waterEssence = 2;
-        this.earthEssence = 2;
-        this.lightEssence = 2;
-        this.airEssence = 2;
-        this.darkEssence = 2;
         this.healthPotions = 0;
         this.manaPotions = 0;
         this.originalImg = ''
+
+
+
         this.armorset = {
 
             head: {

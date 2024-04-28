@@ -24,7 +24,11 @@ let familiarSandSkills = [skillSandStrike, skillAdvancedSandStrike, skillsOverhe
 // global variables
 let currentDifficulty = .5; //Current difficulty init
 let currentPlayer = 0; //Current Player Init
+// essence
+let newEssenceContainer = new essenceContainer();
 
+
+// 
 //Initializing starting familiar
 let arrayPlayerChoices = [];
 
