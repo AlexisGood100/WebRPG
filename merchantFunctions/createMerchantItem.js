@@ -3,3 +3,5 @@ function createMerchantItem(newItem, parent, array, arrayPlayerInventory, divPla
     giveIDtoList(array);
     createMerchantDisplayItem(newItem, parent, array, arrayPlayerInventory, divPlayerInventory);
     }
+
+    

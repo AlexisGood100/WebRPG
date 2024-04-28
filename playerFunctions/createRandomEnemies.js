@@ -8,7 +8,7 @@ function createRandomEnemies(reward, difficulty, arrayMonsters, mapLevel) {
     let defense = 0;
     if(mapLevel % 5 === 0){
         console.log('Boss')
-    constitution += parseFloat((Math.floor(Math.random() * 22) * difficulty));
+    constitution += parseFloat((Math.floor(Math.random() * 40) * difficulty));
     dexterity += (Math.floor(Math.random() * 22) * difficulty);
     strength += (Math.floor(Math.random() * 13) * difficulty);
     charisma += (Math.floor(Math.random() * 22) * difficulty);
@@ -23,7 +23,7 @@ function createRandomEnemies(reward, difficulty, arrayMonsters, mapLevel) {
     arrayMonsters.push(randomMonster);
     return randomMonster;
      } else {
-        constitution += parseFloat((Math.floor(Math.random() * 17) * difficulty));
+        constitution += parseFloat((Math.floor(Math.random() * 10) + 15  * difficulty));
         dexterity += (Math.floor(Math.random() * 17) * difficulty);
         strength += (Math.floor(Math.random() * 9) * difficulty);
         charisma += (Math.floor(Math.random() * 17) * difficulty);

@@ -289,25 +289,6 @@ createJavaObj(javaFamiliarStrength, document.querySelector('.java-container'), w
 createJavaObj(javaFamiliarConstitution, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
 // End of java shop code
 
-
-
-    
-    
-   
-
-    // Testing this code out for later - video
-    // const video = document.getElementById('video');
-    
-    // function startGame() {
-    //     video.play(); // Start playing the video
-    //     // Other game initialization code goes here
-    // }
-    
-    // // Call the startGame function when the game loads
-    // // window.onload = startGame;
-    
-    
-    
     
 // Saving the character
 

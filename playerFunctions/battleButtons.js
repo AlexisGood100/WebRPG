@@ -47,6 +47,7 @@ buttonPlayerBattleControls[0].addEventListener('click', ()=>{
         doDamageBasic(wizard, currentEnemy,1)
         setStatusHit(document.querySelector('.div-enemy-background-img'))
         removeStatusHit(document.querySelector('.div-enemy-background-img'))
+        wizard.health -= currentEnemy.attackPower;
         
         if(currentEnemy.health <= 0){
             checkForEndOfBattle();
@@ -74,6 +75,7 @@ buttonPlayerBattleControls[0].addEventListener('click', ()=>{
 buttonPlayerBattleControls[1].addEventListener('click', ()=>{ //defense
     if(usingAlt === false){
         wizard.defense += 10;
+        wizard.health -= currentEnemy.attackPower;
         displayPlayerClass(wizard, document.querySelector('.div-container-player-side-stats'));
         setTimeout(()=>{
             wizard.defense -= 10;
@@ -91,15 +93,19 @@ buttonPlayerBattleControls[2].addEventListener('click', ()=>{
     if(usingAlt === false){
         if(wizard.class === 'Fighter'){
             currentEnemy.health -= makeMoveHavePower(2.5);
+                    wizard.health -= currentEnemy.attackPower;
         if(wizard.class === 'Priest'){
             currentEnemy.health -= makeMoveHavePower(1.6);
+                    wizard.health -= currentEnemy.attackPower;
         }
         if(wizard.class === 'Assassin'){
             currentEnemy.health -= makeMoveHavePower(2.6);
+                    wizard.health -= currentEnemy.attackPower;
              
         }
         if(wizard.class === 'Wizard'){
             currentEnemy.health -= makeMoveHavePower(2.6);
+                    wizard.health -= currentEnemy.attackPower;
         }
             setStatusHit(document.querySelector('.div-enemy-background-img'))
             removeStatusHit(document.querySelector('.div-enemy-background-img'))
@@ -191,19 +197,23 @@ buttonPlayerBattleControls[4].addEventListener('click', ()=>{
     if(usingAlt === false){
         if(wizard.class === 'Fighter'){
             currentEnemy.health -= makeMoveHavePower(5.6);
+                    wizard.health -= currentEnemy.attackPower; 
 
         }
         if(wizard.class === 'Priest'){
             currentEnemy.health -= makeMoveHavePower(5.6);
+                    wizard.health -= currentEnemy.attackPower;        
 
         }
         if(wizard.class === 'Assassin'){
             currentEnemy.health -= makeMoveHavePower(5.6)
+                    wizard.health -= currentEnemy.attackPower;
             
    
         }
         if(wizard.class === 'Wizard'){
             currentEnemy.health -= makeMoveHavePower(5.6)
+                    wizard.health -= currentEnemy.attackPower;
 
 
         } if(currentEnemy.health <= 0){

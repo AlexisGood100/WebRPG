@@ -21,35 +21,26 @@ const createRandomFamiliar = (difficulty)=>{
     let randomFamiliar = null;
 if(typeArrayRandom == 'Water'){
     skillArray = familiarWaterSkills
-     randomFamiliar = new Familiar(familiarNameArray[nameCalc], typeArrayRandom,null, constitution, strength, intelligence, dexterity, charisma, willpower, defense, skillArray, 10, 10)
-     console.log('Test Fam above')
-    }
+}
 if(typeArrayRandom == 'Fire'){
-    skillArray = familiarFireSkills
-     randomFamiliar = new Familiar(familiarNameArray[nameCalc], typeArrayRandom,null, constitution, strength, intelligence, dexterity, charisma, willpower, defense, skillArray, 10, 10)     
+    skillArray = familiarFireSkills     
 }
 if(typeArrayRandom == 'Air'){
-    skillArray = familiarAirSkills
-     randomFamiliar = new Familiar(familiarNameArray[nameCalc], typeArrayRandom,null, constitution, strength, intelligence, dexterity, charisma, willpower, defense, skillArray, 10, 10)           
+    skillArray = familiarAirSkills           
 }
 if(typeArrayRandom == 'Earth'){
     skillArray = familiarEarthSkills
-    randomFamiliar = new Familiar(familiarNameArray[nameCalc], typeArrayRandom,null, constitution, strength, intelligence, dexterity, charisma, willpower, defense, skillArray, 10, 10)
 }
 if(typeArrayRandom == 'Light'){
-    skillArray = familiarLightSkills
-     randomFamiliar = new Familiar(familiarNameArray[nameCalc], typeArrayRandom,null, constitution, strength, intelligence, dexterity, charisma, willpower, defense, skillArray, 10, 10)
+    skillArray = familiarLightSkills    
 }
-
 if(typeArrayRandom == 'Dark'){
-    skillArray = familiarDarkSkills
-     randomFamiliar = new Familiar(familiarNameArray[nameCalc], typeArrayRandom,null, constitution, strength, intelligence, dexterity, charisma, willpower, defense, skillArray, 10, 10)
+    skillArray = familiarDarkSkills 
 }
- 
-    console.log(randomFamiliar)
+randomFamiliar = new Familiar(familiarNameArray[nameCalc], typeArrayRandom,null, constitution, strength, intelligence, dexterity, charisma, willpower, defense, skillArray, speed, cost)
     randomFamiliar.generateAttackPower()
     randomFamiliar.generateMagicPower()
-    randomFamiliar.generateHealth()-
+    randomFamiliar.generateHealth()
     randomFamiliar.generateMana()
     return randomFamiliar;
 }
