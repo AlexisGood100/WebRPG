@@ -44,7 +44,6 @@ function createItemDisplay(parent, item, player) {
         let newItem = arrayPlayerInventory[item.id]
         giveIDtoList(arrayPlayerInventory)
 
-
         if (newItem.type === 'Head') {
             console.log('head')
             itemSlots[0] = newItem

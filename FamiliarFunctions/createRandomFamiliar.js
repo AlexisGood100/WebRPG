@@ -2,11 +2,6 @@ const randomNumber = (bound) =>{
     return Math.floor(Math.random() * bound);
 }
 
-
-
-
-
-
 const createRandomFamiliar = (difficulty)=>{
     let nameCalc = Math.floor(Math.random()*familiarNameArray.length - 1) + 1 
     let startingStat = (Math.floor(Math.random() * randomNumber(40)+ 10) * difficulty)

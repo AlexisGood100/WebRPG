@@ -26,9 +26,13 @@ let currentDifficulty = .5; //Current difficulty init
 let currentPlayer = 0; //Current Player Init
 // essence
 let newEssenceContainer = new essenceContainer();
+// armor set and weapon set
 
-
+        let playerWeaponSet = new weaponSet();
+        let playerArmorSet = new armorSet();
 // 
+
+
 //Initializing starting familiar
 let arrayPlayerChoices = [];
 
