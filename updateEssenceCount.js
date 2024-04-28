@@ -7,7 +7,6 @@ function updateEssence(essenceContainer, essence_element_node){
     essence_element_node[5].innerText  = ` Total Dark Essence: ${essenceContainer.darkEssence}`
 }
 
-
 function updateEssenceEssencePage(essenceContainer, essenceEssence_nodeList){
         essenceEssence_nodeList[0].innerText  = `Current Essence: Current Essence: ${essenceContainer.fireEssence}`
         essenceEssence_nodeList[1].innerText  = `Current Essence: ${essenceContainer.airEssence}`

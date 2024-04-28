@@ -154,14 +154,6 @@ let allImagesForEquipSlots = document.querySelectorAll('.div-equip-item-image')
 
 let itemSlots = [0, 0, 0, 0, 0, 0, 0, 0]
 
-// allButtonsForUnequip[0].addEventListener('click', ()=>{
-//     // createMerchantItem(itemSlots[0], divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory,itemSlots);
-//     createItemDisplay(divPlayerInventory, itemSlots[0], wizard)
-//     allImagesForEquipSlots[0].style.backgroundImage = '';
-//     itemSlots[0] = 0;
-// }) //Maybe add a loop to give them all because the only thing that is changing is the index, just need to regard the length of the unequip button nodelist.
-
-
 for (let i = 0; i < allButtonsForUnequip.length; i++) {
     allButtonsForUnequip[i].addEventListener('click', () => {
         createItemDisplay(divPlayerInventory, itemSlots[i], wizard)
@@ -169,7 +161,7 @@ for (let i = 0; i < allButtonsForUnequip.length; i++) {
         itemSlots[i] = 0;
     })
 }
-
+// end of unequip code
 
 //Creating the items to push into the merchant array
 createMerchantItem(newItemHead, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory, itemSlots);
@@ -184,6 +176,7 @@ createMerchantItem(newItemHands, divMerchantInventory, arrayMerchantInventory, a
 createMerchantItem(newItemFeet, divMerchantInventory, arrayMerchantInventory, arrayPlayerInventory, divPlayerInventory, itemSlots);
 //End of Merchant Code.
 
+// Start of reward code
 const allRewardChestImages = ['./images/rewardChests/chest1.jpg', './images/rewardChests/chest2.jpg', './images/rewardChests/chest3.jpg', './images/rewardChests/chest4.jpg']
 let rewardBox = document.querySelector('.reward-box')
 remove_reward_button.addEventListener('click', () => {
@@ -192,6 +185,9 @@ remove_reward_button.addEventListener('click', () => {
         rewardContent.classList.remove('hide')
     })
 })
+// End of reward code
+
+
 function checkForEndOfBattle() {
     document.querySelector('.battle-overlay').classList.add('hide');
     winCount += 1;
@@ -208,7 +204,7 @@ function checkForEndOfBattle() {
     updateBuildingResourcePlayerTable(tdBuildHousePlayerHave, tdBuildHouseRequirementsAllSmall, tdBuildHouseRequirementsAllMedium, tdBuildHouseRequirementsAllLarge, resourceFarm_); // calling the function to display the map
     div_reward_container.classList.remove('hide');
     document.querySelector('body').classList.add('over-flow');
-    // wizard.levelUp(); // This is the level up function
+    wizard.levelUp()
     wizard.generateHealth();
     wizard.generateMagicPower()
     currentFamiliar.generateMagicPower()
@@ -271,8 +267,8 @@ const resourceFarm_ = new ResourceFarm();
 // Start of essence
 const essenceCountAll = document.querySelectorAll('#span-essence-count');
 const essenceEssenceCountAll = document.querySelectorAll('.h1-total-essence')
-updateEssence(wizard, essenceCountAll)
-updateEssenceEssencePage(wizard, essenceEssenceCountAll)
+updateEssence(newEssenceContainer, essenceCountAll)
+updateEssenceEssencePage(newEssenceContainer, essenceEssenceCountAll)
 // End of essence
 let h1_java_counter = { count: 0 };
 // Building
