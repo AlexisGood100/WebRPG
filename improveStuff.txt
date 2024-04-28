@@ -1,0 +1,14 @@
+1 - Could the armor set be abstracted from the player class and put into its own class?
+This could make it more managable and decrease the code inside of the Player Class.
+
+2 - Add skill tree to the menu
+The skill tree lets the user use level up points to get skills.
+Still have to rework the functionality and how it fits in.
+
+3 - Implement backend save function
+This will check if the user has a player and skip straight to the gameplay part of the game.
+
+4 - Work on the games and make sure they play correctly.
+It doesn't look good, or play well if the games don't work correctly.
+
+5 - createRandomFamiliar.js - modify this so that it isn't one big function

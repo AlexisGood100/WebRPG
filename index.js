@@ -29,6 +29,12 @@ let startFamiliar = new Familiar('Friendy', 'Fire', 'familiar1', randomNumberMak
 startFamiliar.newImgPath = './images/familiars/wizardStarterFamiliar.jpg';
 let arrayPlayerFamiliars = [startFamiliar];
 
+
+//Familiar global variables
+let familiarNameArray = ['Godble', 'Jackson', 'JapBat', 'Squiggles', 'Razha', 'Yabado', 'Bobo'];
+let familiarTypeArray = ['Water', 'Fire', 'Earth', 'Air', 'Light', 'Dark'];
+//
+
 let currentEnemy = null;
 let currentFamiliar = startFamiliar;
 currentFamiliar.generateAttackPower();
@@ -260,7 +266,6 @@ function createSkillSlot(classListForAbsolutePositioning, skillUp, skillNum, par
         skillDiv.appendChild(skillNumP);
         skillDiv.appendChild(skillUpP);
         parent.appendChild(skillDiv);
-        
         //event listener for the skill tree
         skillDiv.addEventListener('click', ()=>{
             let wizardLevel = wizard.level
@@ -290,7 +295,6 @@ createSkillSlot('right-3-skill-tree-div', 'F-Strength', 1, document.querySelecto
 createSkillSlot('right-4-skill-tree-div', 'F-Dexterity', 1, document.querySelector('.div-skill-tree'))
 createSkillSlot('right-5-skill-tree-div', 'F-Intelligence', 1, document.querySelector('.div-skill-tree'))
 createSkillSlot('right-6-skill-tree-div', 'F-Willpower', 1, document.querySelector('.div-skill-tree'))
-
 createSkillSlot('middle-1-skill-tree-div', 'F-Charisma', 1, document.querySelector('.div-skill-tree'))
 createSkillSlot('middle-2-skill-tree-div', 'F-Defense', 1, document.querySelector('.div-skill-tree'))
 createSkillSlot('middle-3-skill-tree-div', 'F-Willpower', 1, document.querySelector('.div-skill-tree'))
@@ -316,7 +320,9 @@ function startGame() {
 
 document.querySelector('.button-save-game').addEventListener('click', ()=>{
 
-})
+});
+//Still working on this. I am going to break the game down before working on this, so i can do it right
+//and have it connect to the database. It will fetch if the player exists in the database
 
 
 

@@ -1,5 +1,4 @@
 class PlayerClass {
-
     constructor(constitution, dexterity, strength, charisma, willpower, intelligence, reward=null, imgPath=null) {
         this.constitution = constitution;
         this.dexterity = dexterity;
