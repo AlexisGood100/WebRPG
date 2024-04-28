@@ -1,6 +1,7 @@
 class Familiar {
-    constructor(name, type, imgPath, constitution, strength, intelligence, dexterity, charisma, willPower, defense, speed, specialAbility1, specialAbility2, specialAbility3, specialAbility1Des, specialAbility2Des, specialAbility3Des, cost){
+    constructor(name, type, imgPath, constitution, strength, intelligence, dexterity, charisma, willPower, defense, specialAbilityArray, speed,cost){
 this.name = name;
+this.sAa = specialAbilityArray
 this.newImgPath = '';
 this.level = 1;
 this.health = constitution * 6;
@@ -17,16 +18,16 @@ this.attackPower = 0;
 this.mana = 0;
 this.type = type;
 this.intelligence = intelligence;
-this.specialAbility1 = specialAbility1.name;
-this.specialAbility2 = specialAbility2.name;
-this.specialAbility3 = specialAbility3.name;
-this.specialAbility1Des = specialAbility1Des.desc;
-this.specialAbility2Des = specialAbility2Des.desc;
-this.specialAbility3Des = specialAbility3Des.desc;
+this.specialAbility1 = this.sAa[0].name;
+this.specialAbility2 = this.sAa[1].name;
+this.specialAbility3 = this.sAa[2].name;
+this.specialAbility1Des = this.sAa[0].desc;
+this.specialAbility2Des = this.sAa[1].desc;
+this.specialAbility3Des = this.sAa[2].desc;
 this.imgPath = imgPath;
 this.class = type;
 this.cost = cost;
-
+console.log(this.specialAbility1)
     }
     generateHealth() {
         let healthCalculation = Math.round(parseFloat(this.constitution * 4.5));

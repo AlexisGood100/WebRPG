@@ -56,9 +56,10 @@ p {
     border: 2px solid #61dafb; /* Futuristic blue border */
     border-radius: 10px; /* Rounded corners for a sleek look */
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Futuristic glow effect */
-    height:62vh;
+    height:75vh;
     padding: 20px;
     margin: 20px; /* Adjust margin as needed */
+    
 }
 
 
@@ -115,4 +116,9 @@ p {
 
 .h1-familiar-div-title{
   color: #ff00ff;
+}
+
+.h1-familiar-skill-header{
+  color:white;
+  text-align: center;
 }

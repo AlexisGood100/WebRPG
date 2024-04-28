@@ -17,7 +17,10 @@ wizard.gold = 100;
 let spanPlayerGold = document.querySelector('.span-player-gold');
 let spanPlayerHealth = document.querySelector('.span-player-health');
 let spanPlayerMana = document.querySelector('.span-player-mana');
-
+const skillSandStrike = new Skills('Sand Strike', 10, 'Swing your weapon and fling the sand from the ground at the enemy.');
+const skillAdvancedSandStrike = new Skills('Advanced Sand Strike', 15, 'An improved version of the sand strike');
+const skillsOverheadSandStrike = new Skills('Overhead Sand Strike', 25, 'Heave your sword behind your head and then swing it downward, bringing the ground with it.')
+let familiarSandSkills = [skillSandStrike, skillAdvancedSandStrike, skillsOverheadSandStrike];//Im adding sand later
 // global variables
 let currentDifficulty = .5; //Current difficulty init
 let currentPlayer = 0; //Current Player Init
@@ -25,7 +28,7 @@ let currentPlayer = 0; //Current Player Init
 //Initializing starting familiar
 let arrayPlayerChoices = [];
 
-let startFamiliar = new Familiar('Friendy', 'Fire', 'familiar1', randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), randomNumberMaker(10), null, null, null, 'Smack', 'Crack', 'Popple', 5);
+let startFamiliar = new Familiar('Friendy', 'Fire', 'familiar1',10, 10, 10, 10, 10, 10, 10, familiarSandSkills, 10, 100);
 startFamiliar.newImgPath = './images/familiars/wizardStarterFamiliar.jpg';
 let arrayPlayerFamiliars = [startFamiliar];
 
@@ -41,11 +44,41 @@ currentFamiliar.generateAttackPower();
 currentFamiliar.generateHealth();
 currentFamiliar.generateAttackPower();
 currentFamiliar.generateMana();
-
+//Earth
+const skillEarthStrike = new Skills('Earth Strike', 'Embue your weapon in Earth and strike enemy', 10)
+const skillAdvancedEarthStrike = new Skills('Advanced Earth Strike', 'Improved version of Earth Strike', 10)
+const skillEarthBlast = new Skills('Earth Blast', 'Summon a ball of Earth to propel towards enemy.', 10)
+let familiarEarthSkills = [skillEarthStrike, skillAdvancedEarthStrike, skillEarthBlast];
+//Air
+const skillAirStrike = new Skills('Air Strike', 'Embue your weapon in Air and strike enemy', 10)
+const skillAdvancedAirStrike = new Skills('Advanced Air Strike', 'Improved version of Air Strike', 10)
+const skillAirBlast = new Skills('Air Blast', 'Summon a ball of Air to propel towards enemy.', 10)
+let familiarAirSkills = [skillAirStrike, skillAdvancedAirStrike, skillAirBlast];
+//Dark
+const skillLightStrike = new Skills('Light Strike', 'Embue your weapon in fire and strike enemy', 10)
+const skillAdvancedLightStrike = new Skills('Advanced Light Strike', 'Improved version of Light Strike', 10)
+const skillLightBlast = new Skills('Light Blast', 'Summon a ball of fire to propel towards enemy.', 10)
+let familiarLightSkills = [skillLightStrike, skillAdvancedLightStrike, skillLightBlast];
+//Light
+const skillDarkStrike = new Skills('Dark Strike', 'Embue your weapon in Dark and strike enemy', 10)
+const skillAdvancedDarkStrike = new Skills('Advanced Dark Strike', 'Improved version of Dark Strike', 10)
+const skillDarkBlast = new Skills('Dark Blast', 'Summon a ball of Dark to propel towards enemy.', 10)
+let familiarDarkSkills = [skillDarkStrike, skillAdvancedDarkStrike, skillDarkBlast];    
+//Fire
+const skillFireStrike = new Skills('Fire Strike', 'Embue your weapon in fire and strike enemy', 10)
+const skillAdvancedFireStrike = new Skills('Advanced Fire Strike', 'Improved version of Fire Strike', 10)
+const skillFireBlast = new Skills('Fire Blast', 'Summon a ball of fire to propel towards enemy.', 10)
+let familiarFireSkills = [skillFireStrike, skillAdvancedFireStrike, skillFireBlast];
+//Water
+const skillWaterStrike = new Skills('Water Strike', 'Embue your weapon in Water and strike enemy', 10)
+const skillAdvancedWaterStrike = new Skills('Advanced Water Strike', 'Improved version of Water Strike', 10)
+const skillWaterBlast = new Skills('Water Blast', 'Summon a ball of fire to propel towards enemy.', 10)
+let familiarWaterSkills = [skillWaterStrike, skillAdvancedWaterStrike, skillWaterBlast];
 for (let i = 0; i < 20; i++) {
     createFamiliarDiv(createRandomFamiliar(currentDifficulty), arrayPlayerFamiliars, DivFamiliarContainer, DivOwnedFamiliarContainer, `./images/familiars/familiar${i}.jpg`)
 
 }
+
 // End of initializing starting familiar
 
 //Creating the playable classes of the game.

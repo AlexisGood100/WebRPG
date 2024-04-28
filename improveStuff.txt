@@ -11,4 +11,3 @@ This will check if the user has a player and skip straight to the gameplay part 
 4 - Work on the games and make sure they play correctly.
 It doesn't look good, or play well if the games don't work correctly.
 
-5 - createRandomFamiliar.js - modify this so that it isn't one big function
