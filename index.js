@@ -287,72 +287,28 @@ createJavaObj(javaDefense, document.querySelector('.java-container'), wizard, ar
 createJavaObj(javaFamiliarDefense, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
 createJavaObj(javaFamiliarStrength, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
 createJavaObj(javaFamiliarConstitution, document.querySelector('.java-container'), wizard, arrayPlayerFamiliars, document.querySelector('.span-total-javas'), h1_java_counter);
+// End of java shop code
 
 
 
-
-function createSkillSlot(classListForAbsolutePositioning, skillUp, skillNum, parent) {
-    // if (wizard.requiredLevel >= skillNum) {
-        let skillDiv = document.createElement('div');
-        skillDiv.classList.add('skill-div');
-        skillDiv.classList.add(classListForAbsolutePositioning);
-        let skillNumP = document.createElement('p');
-        skillNumP.innerText = skillNum;
-        let skillUpP = document.createElement('p');
-        skillUpP.innerText = skillUp;
-        skillDiv.appendChild(skillNumP);
-        skillDiv.appendChild(skillUpP);
-        parent.appendChild(skillDiv);
-        //event listener for the skill tree
-        skillDiv.addEventListener('click', ()=>{
-            let wizardLevel = wizard.level
-            if(skillUp === 'Strength'){
-                wizard.strength += parseFloat(wizardLevel);
-                console.log(wizardLevel)
-                console.log(wizard.strength)
-            }
-            if(skillUp === 'Intelligence'){
-                wizard.attack += wizardLevel;
-            }
-        })
+    
+    
    
-    }
 
-
-
-createSkillSlot('left-1-skill-tree-div', 'Strength', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('left-2-skill-tree-div', 'Dexterity', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('left-3-skill-tree-div', 'Intelligence', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('left-4-skill-tree-div', 'Willpower', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('left-5-skill-tree-div', 'Charisma', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('left-6-skill-tree-div', 'Defense', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('right-1-skill-tree-div', 'Willpower', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('right-2-skill-tree-div', 'Consititution', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('right-3-skill-tree-div', 'F-Strength', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('right-4-skill-tree-div', 'F-Dexterity', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('right-5-skill-tree-div', 'F-Intelligence', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('right-6-skill-tree-div', 'F-Willpower', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('middle-1-skill-tree-div', 'F-Charisma', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('middle-2-skill-tree-div', 'F-Defense', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('middle-3-skill-tree-div', 'F-Willpower', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('middle-4-skill-tree-div', '+Difficulty', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('middle-5-skill-tree-div', '+Item Ratings', 1, document.querySelector('.div-skill-tree'))
-createSkillSlot('middle-6-skill-tree-div', '+F Strength', 1, document.querySelector('.div-skill-tree'))
-
-
-const video = document.getElementById('video');
-
-function startGame() {
-    video.play(); // Start playing the video
-    // Other game initialization code goes here
-}
-
-// Call the startGame function when the game loads
-// window.onload = startGame;
-
-
-
-
+    // Testing this code out for later - video
+    // const video = document.getElementById('video');
+    
+    // function startGame() {
+    //     video.play(); // Start playing the video
+    //     // Other game initialization code goes here
+    // }
+    
+    // // Call the startGame function when the game loads
+    // // window.onload = startGame;
+    
+    
+    
+    
 // Saving the character
 
 document.querySelector('.button-save-game').addEventListener('click', ()=>{
@@ -360,13 +316,4 @@ document.querySelector('.button-save-game').addEventListener('click', ()=>{
 });
 //Still working on this. I am going to break the game down before working on this, so i can do it right
 //and have it connect to the database. It will fetch if the player exists in the database
-
-
-
-
-let nullCheck = [h1PlayerInfo, divEnemyStatistics, divEnemyStatistics, buttonBuffSpell, buttonDamageSpell, divBattleWindow, divPlayerEquip,DivFamiliarContainer,DivOwnedFamiliarContainer]
-nullCheck.forEach((constant, i)=>{
-    if(constant === null){
-        return `Constant in index ${i} is null.`
-    }
-})
+// This is going to come way later
